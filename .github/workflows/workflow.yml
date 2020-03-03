@@ -19,8 +19,10 @@ jobs:
         
     # Tests
     - name: Tests
+      working-directory: P8-API
       run: dotnet test
 
     # Build
     - name: Build with dotnet
+      working-directory: P8-API
       run: dotnet build
