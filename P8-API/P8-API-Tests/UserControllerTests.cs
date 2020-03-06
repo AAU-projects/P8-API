@@ -86,7 +86,6 @@ namespace P8_API_Tests
 
         [TestCase("1", ExpectedResult = StatusCodes.Status204NoContent)]
         [TestCase("2", ExpectedResult = StatusCodes.Status404NotFound)]
-        [TestCase(5, ExpectedResult = StatusCodes.Status404NotFound)]
         public int? DeleteUser_Success(string id)
         {
             // Prepare objects
