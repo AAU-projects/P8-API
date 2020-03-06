@@ -11,13 +11,13 @@ namespace P8_API_Tests
 {
     public class UserControllerTests
     {
-        private Mock<IDatabaseService> _mockDB;
+        private Mock<IUserService> _mockDB;
         private UserController _controller;
 
         [SetUp]
         public void Setup()
         {
-            _mockDB = new Mock<IDatabaseService>();
+            _mockDB = new Mock<IUserService>();
             _controller = new UserController(_mockDB.Object);
         }
 
@@ -27,13 +27,13 @@ namespace P8_API_Tests
         {
             // Prepare objects
             User mockUser = new User("1", "test1@gmail.com");
-            _mockDB.Setup(x => x.GetUser("1")).Returns(mockUser);
+            _mockDB.Setup(x => x.Get("1")).Returns(mockUser);
 
             // Run Get Request
             var result = _controller.Get(id);
 
             // Do Assertions
-            return result == mockUser;
+            return result.Value == mockUser;
         }
 
         [Test]
@@ -42,10 +42,10 @@ namespace P8_API_Tests
             // Prepare objects
             User mockUser = new User("1", "test1@gmail.com");
             User mockUser2 = new User("2", "test2@gmail.com");
-            _mockDB.Setup(x => x.GetAllUsers()).Returns(new List<User>{ mockUser, mockUser2});
+            _mockDB.Setup(x => x.Get()).Returns(new List<User>{ mockUser, mockUser2});
 
             // Run Get Request
-            List<User> result = _controller.Get();
+            List<User> result = _controller.Get().Value;
 
             // Do Assertions
             Assert.AreEqual(result.Count, 2);
