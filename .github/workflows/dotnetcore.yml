@@ -22,14 +22,11 @@ jobs:
       working-directory: P8-API/
       run: dotnet build --configuration Release
     
-  Artifact:
-    needs: [build]
-    runs-on: [ubuntu-latest]
-    steps:
-      - name: Upload artifact
-        uses: actions/upload-artifact@v1.0.0
-        with:
-          # Artifact name
-          name: API
-          # Directory containing files to upload
-          path: /home/runner/work/P8-API/P8-API/P8-API/P8-API/bin/Release/netcoreapp3.1/
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        # Artifact name
+        name: API
+        # Directory containing files to upload
+        working-directory: P8-API/
+        path: /bin/Release/netcoreapp3.1/
