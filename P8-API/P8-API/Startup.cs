@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using P8_API.Models;
 using P8_API.Services;
 
 namespace P8_API
@@ -26,8 +28,14 @@ namespace P8_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IDatabaseService, DatabaseService>();
-            services.AddControllers();
+            services.Configure<DatabaseSettings>(
+                Configuration.GetSection(nameof(DatabaseSettings)));
+
+            services.AddSingleton<IDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
+
+            services.AddSingleton<IUserService, UserService>();
+            services.AddControllers().AddNewtonsoftJson(options => options.UseMemberCasing()); ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

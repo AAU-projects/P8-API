@@ -9,46 +9,68 @@ using P8_API.Services;
 namespace P8_API.Controllers
 {
     [Route("api/v1/[controller]")]
-    public class UserController : Controller
+    [ApiController]
+    public class UserController : ControllerBase
     {
-        private readonly IDatabaseService _databaseService;
+        private readonly IUserService _userService;
 
         // Constructor
-        public UserController(IDatabaseService dbservice)
+        public UserController(IUserService userservice)
         {
-            _databaseService = dbservice;
+            _userService = userservice;
         }
 
         // GET: api/<controller>
         [HttpGet]
-        public List<User> Get()
+        public ActionResult<List<User>> Get()
         {
-            return _databaseService.GetAllUsers();
+            return _userService.Get();
         }
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public User Get(string id)
+        public ActionResult<User> Get(string id)
         {
-            return _databaseService.GetUser(id);
+            return _userService.Get(id);
         }
 
         // POST api/<controller>
         [HttpPost]
-        public void Post([FromBody]string value)
+        public ActionResult<User> Post(User user)
         {
+            return _userService.Create(user);
         }
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public IActionResult Put(string id, User inUser)
         {
+            var user = _userService.Get(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            _userService.Update(id, user);
+
+            return NoContent();
         }
 
         // DELETE api/<controller>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(string id)
         {
+            var user = _userService.Get(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            _userService.Remove(user.Id);
+
+            return NoContent();
         }
     }
 }
