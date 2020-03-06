@@ -28,5 +28,5 @@ jobs:
         # Artifact name
         name: API
         # Directory containing files to upload
-        working-directory: P8-API/
+        working-directory: P8-API/P8-API/P8-API/
         path: /bin/Release/netcoreapp3.1/
