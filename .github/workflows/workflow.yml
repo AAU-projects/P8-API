@@ -29,7 +29,7 @@ jobs:
     # Build
     - name: Build with dotnet
       working-directory: P8-API
-      run: dotnet build
+      run: dotnet build --configuration Release
     
     # Artifact
     - name: Upload Artifact
