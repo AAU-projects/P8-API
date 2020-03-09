@@ -36,6 +36,6 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         # Artifact name
-        name: ${{ github.event.number }}
+        name: API-${{ github.event.number }}
         # Directory containing files to upload
         path: /home/runner/work/P8-API/P8-API/P8-API/P8-API/bin/Release/netcoreapp3.1/
