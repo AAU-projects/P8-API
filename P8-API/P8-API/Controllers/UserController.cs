@@ -13,11 +13,13 @@ namespace P8_API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IAuthenticationService _authenticationService;
 
         // Constructor
-        public UserController(IUserService userservice)
+        public UserController(IUserService _userservice, IAuthenticationService authenticationService)
         {
-            _userService = userservice;
+            _userService = _userservice;
+            _authenticationService = authenticationService;
         }
 
         // GET: api/<controller>
@@ -34,11 +36,57 @@ namespace P8_API.Controllers
             return _userService.Get(id);
         }
 
-        // POST api/<controller>
+        // POST api/<controller>/register
         [HttpPost]
-        public ActionResult<User> Post(User user)
+        [Route("register")]
+        public IActionResult PostRegister(User user)
         {
-            return _userService.Create(user);
+            if (String.IsNullOrEmpty(user.LicensePlate) || String.IsNullOrEmpty(user.Email))
+                return BadRequest();
+
+            if (_userService.Get(user.Email) != null)
+                return Conflict();
+
+            if (user.LicensePlate.Length > 7)
+                return BadRequest();
+
+            return Ok(_userService.Create(user));
+        }
+
+        // POST api/<controller>/login
+        [HttpPost]
+        [Route("login")]
+        public IActionResult PostLogin(User auth)
+        {
+            if (_userService.Get(auth.Email) == null)
+                return BadRequest();
+
+            User result = _authenticationService.Authenticate(auth.Email, auth.Pincode);
+
+            if (result == null)
+                return Unauthorized();
+
+            return Ok(result);
+        }
+
+        // POST api/<controller>/pincode
+        [HttpPost]
+        [Route("pincode")]
+        public IActionResult PostPincode([FromBody] string email)
+        {
+            if (_userService.Get(email) == null)
+                return BadRequest();
+
+
+            return Ok(_authenticationService.GeneratePinAuthentication(email));
+        }
+
+        // POST api/<controller>/pincode
+        [HttpPost]
+        [Route("test")]
+        public IActionResult test([FromBody] string token)
+        {
+            return Ok(_authenticationService.ValidateToken(token));
         }
 
         // PUT api/<controller>/5

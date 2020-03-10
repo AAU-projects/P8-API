@@ -37,11 +37,15 @@ namespace P8_API.Services
         /// </summary>
         /// <param name="id">The unique id of the user</param>
         /// <returns>a user</returns>
-        public User Get(string id)
+        public User Get(string input)
         {
             try
             {
-                return _users.Find(u => u.Id == id).FirstOrDefault();
+                User user = _users.Find(u => u.Email == input).FirstOrDefault();
+                if (user != null)
+                    return user;
+
+                return _users.Find(u => u.Id == input).FirstOrDefault();
             }
             catch (FormatException)
             {

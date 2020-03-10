@@ -1,27 +1,30 @@
-﻿using Moq;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Moq;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using P8_API.Services;
 using P8_API.Controllers;
 using P8_API.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
+using P8_API.Services;
+using System.Collections.Generic;
 
 namespace P8_API_Tests
 {
     public class UserControllerTests
     {
-        private Mock<IUserService> _mockDB;
+        private Mock<IUserService> _userService;
+        private Mock<IAuthenticationService> _authenticationService;
         private UserController _controller;
 
         [SetUp]
         public void Setup()
         {
-            _mockDB = new Mock<IUserService>();
-            _controller = new UserController(_mockDB.Object);
+            _userService = new Mock<IUserService>();
+            _authenticationService = new Mock<IAuthenticationService>();
+            _controller = new UserController(_userService.Object, _authenticationService.Object);
+
+            // Initilizes the database with a user using the email no@gmail.com
+            User mockUser = new User("13439332", "no@gmail.com", "FG35382");
+            _userService.Setup(x => x.Get("no@gmail.com")).Returns(mockUser);
         }
 
         [TestCase("1", ExpectedResult = true)]
@@ -29,8 +32,8 @@ namespace P8_API_Tests
         public bool GetUser_UserExists_Success(string id)
         {
             // Prepare objects
-            User mockUser = new User("1", "test1@gmail.com");
-            _mockDB.Setup(x => x.Get("1")).Returns(mockUser);
+            User mockUser = new User("1", "test1@gmail.com", "FG35383");
+            _userService.Setup(x => x.Get("1")).Returns(mockUser);
 
             // Run Get Request
             var result = _controller.Get(id);
@@ -43,9 +46,9 @@ namespace P8_API_Tests
         public void GetAllUsers_Success()
         {
             // Prepare objects
-            User mockUser = new User("1", "test1@gmail.com");
-            User mockUser2 = new User("2", "test2@gmail.com");
-            _mockDB.Setup(x => x.Get()).Returns(new List<User>{ mockUser, mockUser2});
+            User mockUser = new User("1", "test1@gmail.com", "asdsssss");
+            User mockUser2 = new User("2", "test2@gmail.com", "asd");
+            _userService.Setup(x => x.Get()).Returns(new List<User>{ mockUser, mockUser2});
 
             // Run Get Request
             List<User> result = _controller.Get().Value;
@@ -58,10 +61,10 @@ namespace P8_API_Tests
         public void UpdateUser_Success()
         {
             // Prepare objects
-            User mockUser = new User("1", "test1@gmail.com");
-            User UpdatedUser = new User("1", "testnew@gmail.com");
-            _mockDB.Setup(x => x.Get("1")).Returns(mockUser);
-            _mockDB.Setup(x => x.Update("1", UpdatedUser)).Callback((string id, User user) => mockUser = user);
+            User mockUser = new User("1", "test1@gmail.com", "FG35383");
+            User UpdatedUser = new User("1", "testnew@gmail.com", "FG35383");
+            _userService.Setup(x => x.Get("1")).Returns(mockUser);
+            _userService.Setup(x => x.Update("1", UpdatedUser)).Callback((string id, User user) => mockUser = user);
             
             // Run Post Request
             _controller.Put("1", UpdatedUser);
@@ -70,18 +73,22 @@ namespace P8_API_Tests
             Assert.AreEqual(mockUser.Email, UpdatedUser.Email);
         }
 
-        [Test]
-        public void CreateUser_Success()
+        [TestCase("1", "test1@gmail.com", "FG35383", ExpectedResult = StatusCodes.Status200OK)]
+        [TestCase("2", "test1@gmail.com", "FG353834", ExpectedResult = StatusCodes.Status400BadRequest)]
+        [TestCase("3", "test1@gmail.com", null, ExpectedResult = StatusCodes.Status400BadRequest)]
+        [TestCase("4", "no@gmail.com", "FG35383", ExpectedResult = StatusCodes.Status409Conflict)] 
+        public int? CreateUser_Success(string id, string email, string licenseplate)
         {
             // Prepare objects
-            User mockUser = new User("1", "test1@gmail.com");
-            _mockDB.Setup(x => x.Create(mockUser)).Returns(mockUser);
+            User mockUser = new User(id, email, licenseplate);
+
+            _userService.Setup(x => x.Create(mockUser)).Returns(mockUser);
 
             // Run Post Request
-            var res = _controller.Post(mockUser);
+            var res = _controller.PostLogin(mockUser);
 
             // Do Assertions
-            Assert.AreEqual(mockUser.Email, res.Value.Email);
+            return ((IStatusCodeActionResult)_controller.PostLogin(mockUser)).StatusCode;
         }
 
         [TestCase("1", ExpectedResult = StatusCodes.Status204NoContent)]
@@ -89,9 +96,9 @@ namespace P8_API_Tests
         public int? DeleteUser_Success(string id)
         {
             // Prepare objects
-            User mockUser = new User("1", "test1@gmail.com");
-            _mockDB.Setup(x => x.Get("1")).Returns(mockUser);
-            _mockDB.Setup(x => x.Remove(id));
+            User mockUser = new User("1", "test1@gmail.com", "FG35383");
+            _userService.Setup(x => x.Get("1")).Returns(mockUser);
+            _userService.Setup(x => x.Remove(id));
 
             // Run Post Request
             return ((IStatusCodeActionResult)_controller.Delete(id)).StatusCode;

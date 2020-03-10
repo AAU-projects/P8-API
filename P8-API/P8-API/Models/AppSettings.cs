@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace P8_API.Models
 {
-    public interface IDatabaseSettings
+    public class AppSettings : IAppSettings
     {
-        string ConnectionString { get; set; }
-        string DatabaseName { get; set; }
+        public string Secret { get; set; }
     }
 }
