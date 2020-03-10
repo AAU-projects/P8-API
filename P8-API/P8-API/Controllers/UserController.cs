@@ -52,7 +52,7 @@ namespace P8_API.Controllers
                 return NotFound();
             }
 
-            _userService.Update(id, user);
+            _userService.Update(id, inUser);
 
             return NoContent();
         }
