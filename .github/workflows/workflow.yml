@@ -6,6 +6,7 @@ on:
     branches: 
       - develop
       - master
+      - CI
 
 jobs:
   test-and-build:
@@ -34,6 +35,7 @@ jobs:
     
     # Artifact
     - name: Upload Artifact
+      if: github.event.pull_request.merged
       uses: actions/upload-artifact@v1.0.0
       with:
         # Artifact name
@@ -44,12 +46,26 @@ jobs:
   deploy:
     needs: [test-and-build]
     runs-on: [ubuntu-latest]
-    #if: github.event.pull_request.merged
+    if: github.event.pull_request.merged
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v1.0.0
         with:
           # Artifact name
           name: API-${{ github.event.number }}
+      
+      - name: ftp-action
+        uses: sebastianpopp/ftp-action@v1.1.0
+        with:
+          # FTP host
+          host: ${{ secrets.HOST }}
+          # FTP user
+          user: ${{ secrets.USER }}
+          # FTP password
+          password: ${{ secrets.PASSWORD }}
+          # Local directory
+          localDir: API-${{ github.event.number }}
+          # Remote directory
+          remoteDir: test
       
     
