@@ -54,8 +54,8 @@ jobs:
           # Artifact name
           name: API-${{ github.event.number }}
       
-      - name: ftp-action
-        uses: sebastianpopp/ftp-action@v1.1.0
+      - name: Upload Files
+        uses: isthatcentered/dist-to-ftp@v1
         with:
           # FTP host
           host: ${{ secrets.HOST }}
@@ -64,8 +64,9 @@ jobs:
           # FTP password
           password: ${{ secrets.PASSWORD }}
           # Local directory
-          localDir: API-${{ github.event.number }}
+          path: API-${{ github.event.number }}
           # Remote directory
-          remoteDir: test
+          into: test
+          cleanupExisting: true
       
     
