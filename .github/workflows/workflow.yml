@@ -6,7 +6,6 @@ on:
     branches: 
       - develop
       - master
-      - CI
 
 jobs:
   test-and-build:
