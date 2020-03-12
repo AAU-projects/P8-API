@@ -51,10 +51,10 @@ namespace P8_API.Services
                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.Secret)) // The same key as the one that generate the token
             };
 
-            // Validate the token
+            SecurityToken validatedToken;
             try
             {  
-                ClaimsPrincipal principal = tokenHandler.ValidateToken(authToken, validationParameters);
+                ClaimsPrincipal principal = tokenHandler.ValidateToken(authToken, validationParameters, out validatedToken);
                 string email = principal.Identities.FirstOrDefault().Claims.FirstOrDefault().Value;
 
                 // Matches the email from the token with a user in the system 
@@ -104,7 +104,7 @@ namespace P8_API.Services
         /// Generates a pincode for a user
         /// </summary>
         /// <param name="email">Email linked to the pincode</param>
-        /// <returns>A user with a pincode</returns>
+        /// <returns>A pincode for that user</returns>
         public User GeneratePinAuthentication(string email)
         {
             string code = GeneratePincode();
@@ -118,11 +118,11 @@ namespace P8_API.Services
         }
 
         /// <summary>
-        /// Validates that a pincode exisits for that email
+        /// Validates that a pincode exist for that email and pincode
         /// </summary>
         /// <param name="email">Email linked to the pincode</param>
         /// <param name="pincode">Pincode that is valid</param>
-        /// <returns>A pincode for that user</returns>
+        /// <returns>a user object if valid email and pincode</returns>
         private User GetPincode(string email, string pincode)
         {
             User user = _users.Find(p =>

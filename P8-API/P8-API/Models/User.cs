@@ -21,11 +21,15 @@ namespace P8_API.Models
         public DateTime PinExpirationDate { get; set; }
         public DateTime TokenExpirationDate { get; set; }
 
-
-
         public User(string id, string email, string licenseplate)
         {
             Id = id;
+            Email = email;
+            LicensePlate = licenseplate;
+        }
+
+        public User(string email, string licenseplate)
+        {
             Email = email;
             LicensePlate = licenseplate;
         }

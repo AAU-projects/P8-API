@@ -5,6 +5,7 @@ using NUnit.Framework;
 using P8_API.Controllers;
 using P8_API.Models;
 using P8_API.Services;
+using System;
 using System.Collections.Generic;
 
 namespace P8_API_Tests
@@ -23,8 +24,9 @@ namespace P8_API_Tests
             _controller = new UserController(_userService.Object, _authenticationService.Object);
 
             // Initilizes the database with a user using the email no@gmail.com
-            User mockUser = new User("13439332", "no@gmail.com", "FG35382");
-            _userService.Setup(x => x.Get("no@gmail.com")).Returns(mockUser);
+            User mockUser = new User("13439332", "exist@gmail.com", "FG35382");
+            mockUser.UpdatePincode("1234", DateTime.Now.AddDays(365));
+            _userService.Setup(x => x.Get("exist@gmail.com")).Returns(mockUser);
         }
 
         [TestCase("1", ExpectedResult = true)]
@@ -73,22 +75,28 @@ namespace P8_API_Tests
             Assert.AreEqual(mockUser.Email, UpdatedUser.Email);
         }
 
-        [TestCase("1", "test1@gmail.com", "FG35383", ExpectedResult = StatusCodes.Status200OK)]
-        [TestCase("2", "test1@gmail.com", "FG353834", ExpectedResult = StatusCodes.Status400BadRequest)]
-        [TestCase("3", "test1@gmail.com", null, ExpectedResult = StatusCodes.Status400BadRequest)]
-        [TestCase("4", "no@gmail.com", "FG35383", ExpectedResult = StatusCodes.Status409Conflict)] 
-        public int? CreateUser_Success(string id, string email, string licenseplate)
+        [TestCase("1", "test@gmail.com", "1234", "AB34567", ExpectedResult = StatusCodes.Status400BadRequest)]
+        [TestCase("2", "exist@gmail.com", "1233", "AB34567", ExpectedResult = StatusCodes.Status401Unauthorized)]
+        [TestCase("3", "exist@gmail.com", "1234", "AB34567", ExpectedResult = StatusCodes.Status200OK)]
+        public int? PostLogin_Success(string id, string email, string pincode, string licenseplate)
         {
             // Prepare objects
             User mockUser = new User(id, email, licenseplate);
-
-            _userService.Setup(x => x.Create(mockUser)).Returns(mockUser);
+            mockUser.UpdatePincode(pincode, DateTime.Now.AddDays(365));
 
             // Run Post Request
             var res = _controller.PostLogin(mockUser);
 
             // Do Assertions
             return ((IStatusCodeActionResult)_controller.PostLogin(mockUser)).StatusCode;
+        }
+
+        [TestCase("test@gmail.com", ExpectedResult = StatusCodes.Status400BadRequest)]
+        [TestCase("exist@gmail.com", ExpectedResult = StatusCodes.Status200OK)]
+        public int? PostPincode_Success(string email)
+        {
+            // Do Assertions
+            return ((IStatusCodeActionResult)_controller.PostPincode(email)).StatusCode;
         }
 
         [TestCase("1", ExpectedResult = StatusCodes.Status204NoContent)]
@@ -102,6 +110,22 @@ namespace P8_API_Tests
 
             // Run Post Request
             return ((IStatusCodeActionResult)_controller.Delete(id)).StatusCode;
+        }
+
+        [TestCase("hello@you.com", "", ExpectedResult = StatusCodes.Status400BadRequest)]
+        [TestCase("", "SG43534", ExpectedResult = StatusCodes.Status400BadRequest)]
+        [TestCase("exist@gmail.com", "SG43534", ExpectedResult = StatusCodes.Status409Conflict)]
+        [TestCase("licenseplate@gmail.com", "SG435346", ExpectedResult = StatusCodes.Status400BadRequest)]
+        [TestCase("newuser@gmail.com", "SG43534", ExpectedResult = StatusCodes.Status200OK)]
+        public int? PostRegister_Sucess(string email, string licenseplate)
+        {
+            // Prepare objects
+            User mockUser = new User(email, licenseplate);
+
+            _userService.Setup(x => x.Create(mockUser)).Returns(mockUser);
+
+            // Run Post Request
+            return ((IStatusCodeActionResult)_controller.PostRegister(mockUser)).StatusCode;
         }
     }
 }

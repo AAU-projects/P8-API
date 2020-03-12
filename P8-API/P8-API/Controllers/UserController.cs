@@ -81,7 +81,7 @@ namespace P8_API.Controllers
             return Ok(_authenticationService.GeneratePinAuthentication(email));
         }
 
-        // POST api/<controller>/pincode
+        // POST api/<controller>/test
         [HttpPost]
         [Route("test")]
         public IActionResult test([FromBody] string token)
