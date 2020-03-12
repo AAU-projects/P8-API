@@ -76,4 +76,9 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: sudo systemctl restart api-${{ github.ref }}.service
+      
+      - name: GitHub Actions Artifact Cleaner
+        uses: glassechidna/artifact-cleaner@v2
+        with:
+          name: API-${{ github.event.number }}
     
