@@ -32,17 +32,32 @@ namespace P8_API.Services
             _users = database.GetCollection<User>("Users");
         }
 
+        /// <summary>
+        /// Validates the authentication token
+        /// </summary>
+        /// <param name="authToken">the authentication token as a string</param>
+        /// <param name="appsettings">App settings</param>
+        /// <returns>True if a valid token</returns>
         public bool ValidateToken(string authToken)
         {
             User user;
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var validationParameters = GetValidationParameters();
 
-            SecurityToken validatedToken;
-            try
+            // Initilize JWT token handler & parameters
+            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+            TokenValidationParameters validationParameters = new TokenValidationParameters()
             {
-                ClaimsPrincipal principal = tokenHandler.ValidateToken(authToken, validationParameters, out validatedToken);
+                ValidIssuer = "RouteAPI",
+                ValidAudience = "RouteAPI",
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.Secret)) // The same key as the one that generate the token
+            };
+
+            // Validate the token
+            try
+            {  
+                ClaimsPrincipal principal = tokenHandler.ValidateToken(authToken, validationParameters);
                 string email = principal.Identities.FirstOrDefault().Claims.FirstOrDefault().Value;
+
+                // Matches the email from the token with a user in the system 
                 user = _users.Find(u => u.Email == email).FirstOrDefault();
             }
             catch (Exception) // TODO implment all types of exception of invalid token.
@@ -50,22 +65,16 @@ namespace P8_API.Services
                 return false;
             }
 
+            // Return true if email is found ie. the token is valid 
             return user != null;
         }
 
-        private TokenValidationParameters GetValidationParameters()
-        {
-            return new TokenValidationParameters()
-            {
-                ValidateLifetime = false, // Because there is no expiration in the generated token
-                ValidateAudience = false, // Because there is no audiance in the generated token
-                ValidateIssuer = false,   // Because there is no issuer in the generated token
-                ValidIssuer = "RouteAPI",
-                ValidAudience = "RouteAPI",
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.Secret)) // The same key as the one that generate the token
-            };
-        }
-
+        /// <summary>
+        /// Authenticates a user and generates a unique token linked to the user's email
+        /// </summary>
+        /// <param name="email">the user's email as a string</param>
+        /// <param name="pincode">the pincode to authenticate the user</param>
+        /// <returns>A user with a valid token</returns>
         public User Authenticate(string email, string pincode)
         {
             User user = GetPincode(email, pincode);
@@ -91,11 +100,11 @@ namespace P8_API.Services
             return user;
         }
 
-
         /// <summary>
-        /// Creates a pincode in the DB
+        /// Generates a pincode for a user
         /// </summary>
         /// <param name="email">Email linked to the pincode</param>
+        /// <returns>A user with a pincode</returns>
         public User GeneratePinAuthentication(string email)
         {
             string code = GeneratePincode();
@@ -107,8 +116,6 @@ namespace P8_API.Services
 
             return updatedUser;
         }
-
-
 
         /// <summary>
         /// Validates that a pincode exisits for that email
