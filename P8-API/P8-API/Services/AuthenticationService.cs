@@ -15,21 +15,19 @@ namespace P8_API.Services
     public class AuthenticationService : IAuthenticationService
     {
         private readonly IAppSettings _appSettings;
-        private readonly IMongoCollection<User> _users;
+        private readonly IUserService _usersService;
+        private readonly IMailService _mailService;
 
         /// <summary>
         /// Class constructor
         /// </summary>
         /// <param name="settings">The database interface</param>
         /// <param name="appsettings">App settings</param>
-        public AuthenticationService(IDatabaseSettings settings, IAppSettings appsettings)
+        public AuthenticationService(IUserService userService, IMailService mailService, IAppSettings appsettings)
         {
-            var client = new MongoClient(settings.ConnectionString);
-            var database = client.GetDatabase(settings.DatabaseName);
-
+            _usersService = userService;
+            _mailService = mailService;
             _appSettings = appsettings;
-
-            _users = database.GetCollection<User>("Users");
         }
 
         /// <summary>
@@ -58,7 +56,7 @@ namespace P8_API.Services
                 string email = principal.Identities.FirstOrDefault().Claims.FirstOrDefault().Value;
 
                 // Matches the email from the token with a user in the system 
-                user = _users.Find(u => u.Email == email).FirstOrDefault();
+                user = _usersService.Get(email);
             }
             catch (Exception) // TODO implment all types of exception of invalid token.
             {
@@ -77,7 +75,7 @@ namespace P8_API.Services
         /// <returns>A user with a valid token</returns>
         public User Authenticate(string email, string pincode)
         {
-            User user = GetPincode(email, pincode);
+            User user = _usersService.ValidatePincode(email, pincode);
             if (user == null)
                 return null;
 
@@ -93,7 +91,6 @@ namespace P8_API.Services
                     new Claim(JwtRegisteredClaimNames.Email, email)
                 },
                 expires: DateTime.UtcNow.AddDays(365));
-
             var handler = new JwtSecurityTokenHandler();
             user.UpdateToken(handler.WriteToken(secToken), DateTime.UtcNow.AddDays(365));
 
@@ -105,32 +102,16 @@ namespace P8_API.Services
         /// </summary>
         /// <param name="email">Email linked to the pincode</param>
         /// <returns>A pincode for that user</returns>
-        public User GeneratePinAuthentication(string email)
+        public bool GeneratePinAuthentication(string email)
         {
             string code = GeneratePincode();
             DateTime expirationDate = DateTime.Now.AddMinutes(15);
-            User updatedUser = _users.Find(u => u.Email == email).FirstOrDefault();
+
+            User updatedUser = _usersService.Get(email);
             updatedUser.UpdatePincode(code, expirationDate);
+            _usersService.Update(updatedUser.Id, updatedUser);
 
-            _users.ReplaceOne(u => u.Id == updatedUser.Id, updatedUser);
-
-            return updatedUser;
-        }
-
-        /// <summary>
-        /// Validates that a pincode exist for that email and pincode
-        /// </summary>
-        /// <param name="email">Email linked to the pincode</param>
-        /// <param name="pincode">Pincode that is valid</param>
-        /// <returns>a user object if valid email and pincode</returns>
-        private User GetPincode(string email, string pincode)
-        {
-            User user = _users.Find(p =>
-                              p.Email == email &&
-                              p.Pincode == pincode &&
-                              p.PinExpirationDate >= DateTime.Now).FirstOrDefault();
-
-            return user;
+            return _mailService.SendMail(updatedUser.Email, updatedUser.Pincode);
         }
 
         /// <summary>

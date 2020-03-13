@@ -13,17 +13,22 @@ namespace P8_API_Tests
     public class UserControllerTests
     {
         private Mock<IUserService> _userService;
-        private Mock<IAuthenticationService> _authenticationService;
+        private Mock<IMailService> _mailService;
+        private IAuthenticationService _authenticationService;
         private UserController _controller;
 
         [SetUp]
         public void Setup()
         {
-            _userService = new Mock<IUserService>();
-            _authenticationService = new Mock<IAuthenticationService>();
-            _controller = new UserController(_userService.Object, _authenticationService.Object);
+            AppSettings appSettings = new AppSettings();
+            appSettings.Secret = "pintusharmaqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqweqwe";
 
-            // Initilizes the database with a user using the email no@gmail.com
+            _userService = new Mock<IUserService>();
+            _mailService = new Mock<IMailService>();
+            _authenticationService = new AuthenticationService(_userService.Object, _mailService.Object, appSettings);
+            _controller = new UserController(_userService.Object, _authenticationService);
+
+            // Initializes the database with a user using the email no@gmail.com
             User mockUser = new User("13439332", "exist@gmail.com", "FG35382");
             mockUser.UpdatePincode("1234", DateTime.Now.AddDays(365));
             _userService.Setup(x => x.Get("exist@gmail.com")).Returns(mockUser);
@@ -33,45 +38,45 @@ namespace P8_API_Tests
         [TestCase("2", ExpectedResult = false)]
         public bool GetUser_UserExists_Success(string id)
         {
-            // Prepare objects
+            // Arrange
             User mockUser = new User("1", "test1@gmail.com", "FG35383");
             _userService.Setup(x => x.Get("1")).Returns(mockUser);
 
-            // Run Get Request
+            // Act
             var result = _controller.Get(id);
 
-            // Do Assertions
+            // Assert
             return result.Value == mockUser;
         }
 
         [Test]
         public void GetAllUsers_Success()
         {
-            // Prepare objects
+            // Arrange
             User mockUser = new User("1", "test1@gmail.com", "asdsssss");
             User mockUser2 = new User("2", "test2@gmail.com", "asd");
             _userService.Setup(x => x.Get()).Returns(new List<User>{ mockUser, mockUser2});
 
-            // Run Get Request
+            // Act
             List<User> result = _controller.Get().Value;
 
-            // Do Assertions
+            // Assert
             Assert.AreEqual(result.Count, 2);
         }
 
         [Test]
         public void UpdateUser_Success()
         {
-            // Prepare objects
+            // Arrange
             User mockUser = new User("1", "test1@gmail.com", "FG35383");
             User UpdatedUser = new User("1", "testnew@gmail.com", "FG35383");
             _userService.Setup(x => x.Get("1")).Returns(mockUser);
             _userService.Setup(x => x.Update("1", UpdatedUser)).Callback((string id, User user) => mockUser = user);
             
-            // Run Post Request
+            // Act
             _controller.Put("1", UpdatedUser);
 
-            // Do Assertions
+            // Assert
             Assert.AreEqual(mockUser.Email, UpdatedUser.Email);
         }
 
@@ -80,14 +85,13 @@ namespace P8_API_Tests
         [TestCase("3", "exist@gmail.com", "1234", "AB34567", ExpectedResult = StatusCodes.Status200OK)]
         public int? PostLogin_Success(string id, string email, string pincode, string licenseplate)
         {
-            // Prepare objects
+            // Arrange
             User mockUser = new User(id, email, licenseplate);
             mockUser.UpdatePincode(pincode, DateTime.Now.AddDays(365));
+            _userService.Setup(x => x.ValidatePincode("exist@gmail.com", "1234")).Returns(mockUser);
 
-            // Run Post Request
-            var res = _controller.PostLogin(mockUser);
 
-            // Do Assertions
+            // Assert
             return ((IStatusCodeActionResult)_controller.PostLogin(mockUser)).StatusCode;
         }
 
@@ -95,7 +99,10 @@ namespace P8_API_Tests
         [TestCase("exist@gmail.com", ExpectedResult = StatusCodes.Status200OK)]
         public int? PostPincode_Success(string email)
         {
-            // Do Assertions
+            // Arrange
+            _mailService.Setup(x => x.SendMail(It.IsAny<string>(), It.IsAny<string>())).Returns(true);
+
+            // Act 
             return ((IStatusCodeActionResult)_controller.PostPincode(email)).StatusCode;
         }
 

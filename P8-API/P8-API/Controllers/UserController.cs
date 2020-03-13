@@ -77,11 +77,11 @@ namespace P8_API.Controllers
             if (_userService.Get(email) == null)
                 return BadRequest();
 
-
             return Ok(_authenticationService.GeneratePinAuthentication(email));
         }
 
         // POST api/<controller>/test
+        // Shows how to valdiate a token
         [HttpPost]
         [Route("test")]
         public IActionResult test([FromBody] string token)

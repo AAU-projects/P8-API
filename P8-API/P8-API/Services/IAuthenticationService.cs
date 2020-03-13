@@ -11,6 +11,6 @@ namespace P8_API.Services
     {
         bool ValidateToken(string authToken);
         User Authenticate(string email, string pincode);
-        User GeneratePinAuthentication(string email);
+        bool GeneratePinAuthentication(string email);
     }
 }

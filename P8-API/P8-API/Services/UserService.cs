@@ -91,5 +91,21 @@ namespace P8_API.Services
         {
             _users.DeleteOne(u => u.Id == id);
         }
+
+        /// <summary>
+        /// Validates that a pincode exist for that email and pincode
+        /// </summary>
+        /// <param name="email">Email linked to the pincode</param>
+        /// <param name="pincode">Pincode that is valid</param>
+        /// <returns>a user object if valid email and pincode</returns>
+        public User ValidatePincode(string email, string pincode)
+        {
+            User user = _users.Find(p =>
+                              p.Email == email &&
+                              p.Pincode == pincode &&
+                              p.PinExpirationDate >= DateTime.Now).FirstOrDefault();
+
+            return user;
+        }
     }
 }

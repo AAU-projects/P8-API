@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using Newtonsoft.Json;
 
 namespace P8_API.Models
 {
@@ -21,6 +22,7 @@ namespace P8_API.Models
         public DateTime PinExpirationDate { get; set; }
         public DateTime TokenExpirationDate { get; set; }
 
+        [JsonConstructor]
         public User(string id, string email, string licenseplate)
         {
             Id = id;
