@@ -2,11 +2,9 @@ name: .NET Core
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, closed]
     branches: 
       - develop
       - master
-      - CI
 
 jobs:
   test-and-build:
