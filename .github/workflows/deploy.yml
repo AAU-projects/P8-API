@@ -1,0 +1,48 @@
+name: Deploy
+on: 
+  pull_request:
+    types: closed
+    branches: 
+      - master
+      - develop
+    
+jobs:
+  Publish:
+    runs-on: [ubuntu-latest]
+    if: github.event.pull_request.merged
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.101
+      
+      - name: Publish
+        working-directory: P8-API
+        run: dotnet publish --configuration Release
+      
+      - name: Upload
+        uses: isthatcentered/dist-to-ftp@v1
+        with:
+          # FTP host
+          host: ${{ secrets.HOST }}
+          # FTP user
+          user: ${{ secrets.USER }}
+          # FTP password
+          password: ${{ secrets.PASSWORD }}
+          # Local directory
+          path: /home/runner/work/P8-API/P8-API/P8-API/P8-API/bin/Release/netcoreapp3.1/publish/
+          # Remote directory
+          into: api/${{ github.ref }}
+          cleanupExisting: true
+        
+      - name: Restart API
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: sudo systemctl restart api-${{ github.ref }}.service  
