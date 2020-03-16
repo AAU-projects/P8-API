@@ -55,13 +55,13 @@ namespace P8_API.Controllers
         [Route("register")]
         public IActionResult PostRegister(User user)
         {
-            if (String.IsNullOrEmpty(user.LicensePlate) || String.IsNullOrEmpty(user.Email))
+            if (String.IsNullOrEmpty(user.Email))
                 return BadRequest();
 
             if (_userService.Get(user.Email) != null)
                 return Conflict();
 
-            if (user.LicensePlate.Length > 7)
+            if (!String.IsNullOrEmpty(user.LicensePlate) && user.LicensePlate.Length > 7)
                 return BadRequest();
 
             return Ok(_userService.Create(user));

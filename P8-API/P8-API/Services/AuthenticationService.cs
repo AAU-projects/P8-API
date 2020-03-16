@@ -75,23 +75,25 @@ namespace P8_API.Services
         /// <returns>A user with a valid token</returns>
         public User Authenticate(string email, string pincode)
         {
+            // Checks if the pincode is valid to the email
             User user = _usersService.ValidatePincode(email, pincode);
             if (user == null)
                 return null;
 
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.Secret));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            // Setup credentials & securitykey
+            SymmetricSecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.Secret));
+            SigningCredentials credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
 
-            var secToken = new JwtSecurityToken(
+            // Create token
+            JwtSecurityToken secToken = new JwtSecurityToken(
                 signingCredentials: credentials,
                 issuer: "RouteAPI",
                 audience: "RouteAPI",
-                claims: new[]
-                {
-                    new Claim(JwtRegisteredClaimNames.Email, email)
-                },
+                claims: new[] { new Claim(JwtRegisteredClaimNames.Email, email) },
                 expires: DateTime.UtcNow.AddDays(365));
-            var handler = new JwtSecurityTokenHandler();
+
+            // Updates user with new token
             user.UpdateToken(handler.WriteToken(secToken), DateTime.UtcNow.AddDays(365));
 
             return user;
@@ -124,9 +126,8 @@ namespace P8_API.Services
             string pincode = "";
 
             for (int i = 0; i < 4; i++)
-            {
                 pincode += random.Next(1, 9);
-            }
+
             return pincode;
         }
     }

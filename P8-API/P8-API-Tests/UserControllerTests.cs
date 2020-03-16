@@ -128,10 +128,10 @@ namespace P8_API_Tests
             return result.StatusCode;
         }
 
-        [TestCase("hello@you.com", "", ExpectedResult = StatusCodes.Status400BadRequest)]
         [TestCase("", "SG43534", ExpectedResult = StatusCodes.Status400BadRequest)]
         [TestCase("exist@gmail.com", "SG43534", ExpectedResult = StatusCodes.Status409Conflict)]
         [TestCase("licenseplate@gmail.com", "SG435346", ExpectedResult = StatusCodes.Status400BadRequest)]
+        [TestCase("hello@you.com", null, ExpectedResult = StatusCodes.Status200OK)]
         [TestCase("newuser@gmail.com", "SG43534", ExpectedResult = StatusCodes.Status200OK)]
         public int? PostRegister_Sucess(string email, string licenseplate)
         {
