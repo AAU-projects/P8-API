@@ -41,8 +41,16 @@ namespace P8_API
             services.AddSingleton<IDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 
+            services.Configure<AppSettings>(
+                Configuration.GetSection(nameof(AppSettings)));
+
+            services.AddSingleton<IAppSettings>(sp =>
+                sp.GetRequiredService<IOptions<AppSettings>>().Value);
+
             services.AddSingleton<IUserService, UserService>();
-            services.AddControllers().AddNewtonsoftJson(options => options.UseMemberCasing()); ;
+            services.AddSingleton<IAuthenticationService, AuthenticationService>();
+            services.AddSingleton<IMailService, MailService>();
+            services.AddControllers().AddNewtonsoftJson(options => options.UseMemberCasing());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

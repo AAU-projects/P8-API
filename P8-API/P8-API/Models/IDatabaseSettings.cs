@@ -7,7 +7,6 @@ namespace P8_API.Models
 {
     public interface IDatabaseSettings
     {
-        //string DBCollectionName { get; set; }
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }
     }

@@ -18,5 +18,7 @@ namespace P8_API.Services
         void Remove(User user);
 
         void Remove(string id);
+
+        User ValidatePincode(string email, string pincode);
     }
 }

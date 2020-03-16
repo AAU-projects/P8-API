@@ -13,60 +13,146 @@ namespace P8_API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IAuthenticationService _authenticationService;
 
-        // Constructor
-        public UserController(IUserService userservice)
+        // Constructor, takes a UserService and an AuthenticationService as parameter
+        public UserController(IUserService _userservice, IAuthenticationService authenticationService)
         {
-            _userService = userservice;
+            _userService = _userservice;
+            _authenticationService = authenticationService;
         }
 
-        // GET: api/<controller>
+        /// <summary>
+        /// GET: api/<controller> 
+        /// Gets all users in the system
+        /// </summary>
+        /// <returns>An ActionResult with all users and statuscode</returns>
         [HttpGet]
         public ActionResult<List<User>> Get()
         {
             return _userService.Get();
         }
 
-        // GET api/<controller>/5
+        /// <summary>
+        /// GET api/<controller>/5
+        /// Gets a specific user in the system
+        /// </summary>
+        /// <param name="id">The unique id of the user</param>
+        /// <returns>An ActionResult with the specific user and statuscode</returns>
         [HttpGet("{id}")]
         public ActionResult<User> Get(string id)
         {
             return _userService.Get(id);
         }
 
-        // POST api/<controller>
+        /// <summary>
+        /// POST api/<controller>/register
+        /// Registers abstract user if email is ok
+        /// </summary>
+        /// <param name="User">The user to register</param>
+        /// <returns>An ActionResult that tells if the user was created or not</returns>
         [HttpPost]
-        public ActionResult<User> Post(User user)
+        [Route("register")]
+        public IActionResult PostRegister(User user)
         {
-            return _userService.Create(user);
+            if (String.IsNullOrEmpty(user.Email))
+                return BadRequest();
+
+            if (_userService.Get(user.Email) != null)
+                return Conflict();
+
+            if (!String.IsNullOrEmpty(user.LicensePlate) && user.LicensePlate.Length > 7)
+                return BadRequest();
+
+            return Ok(_userService.Create(user));
         }
 
-        // PUT api/<controller>/5
+
+        /// <summary>
+        /// POST api/<controller>/login
+        /// Login with a user using email and pincode
+        /// </summary>
+        /// <param name="auth">The user that contains the credentials</param>
+        /// <returns>An ActionResult with the logged in user containg a valid Token and statuscode</returns>
+        [HttpPost]
+        [Route("login")]
+        public IActionResult PostLogin(User auth)
+        {
+            if (_userService.Get(auth.Email) == null)
+                return BadRequest();
+
+            User result = _authenticationService.Authenticate(auth.Email, auth.Pincode);
+
+            if (result == null)
+                return Unauthorized();
+
+            return Ok(result);
+        }
+
+
+        /// <summary>
+        /// POST api/<controller>/pincode
+        /// Generates a pincode that is sent to the specifc email
+        /// </summary>
+        /// <param name="email">The email requesed to generate pincode for</param>
+        /// <returns>An ActionResult with true if the email is succesfully sent and statuscode</returns>
+        [HttpPost]
+        [Route("pincode")]
+        public IActionResult PostPincode([FromBody] string email)
+        {
+            if (_userService.Get(email) == null)
+                return BadRequest();
+
+            return Ok(_authenticationService.GeneratePinAuthentication(email));
+        }
+
+        /// <summary>
+        /// POST api/<controller>/test
+        /// Shows how to valdiate a token
+        /// </summary>
+        /// <param name="token">A string with the token </param>
+        /// <returns>An ActionResult that tells if the token is valid or not</returns>
+        [HttpPost]
+        [Route("test")]
+        public IActionResult test([FromBody] string token)
+        {
+            return Ok(_authenticationService.ValidateToken(token));
+        }
+
+        /// <summary>
+        /// PUT api/<controller>/5
+        /// Updates a user in the system
+        /// </summary>
+        /// <param name="id">The id for the user to be updated</param>
+        /// <param name="inUser">The user data</param>
+        /// <returns>An ActionResult with statuscode</returns>
+
         [HttpPut("{id}")]
         public IActionResult Put(string id, User inUser)
         {
             var user = _userService.Get(id);
 
             if (user == null)
-            {
                 return NotFound();
-            }
 
             _userService.Update(id, inUser);
 
             return NoContent();
         }
 
-        // DELETE api/<controller>/5
+        /// <summary>
+        /// DELETE api/<controller>/5
+        /// Deletes abstract user from the database
+        /// </summary>
+        /// <param name="id">A string with the id of the user to delete</param>
+        /// <returns>An ActionResult that tells if the user was deleted or not</returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(string id)
         {
             var user = _userService.Get(id);
 
             if (user == null)
-            {
                 return NotFound();
-            }
 
             _userService.Remove(user.Id);
 

@@ -37,11 +37,15 @@ namespace P8_API.Services
         /// </summary>
         /// <param name="id">The unique id of the user</param>
         /// <returns>a user</returns>
-        public User Get(string id)
+        public User Get(string input)
         {
             try
             {
-                return _users.Find(u => u.Id == id).FirstOrDefault();
+                User user = _users.Find(u => u.Email == input).FirstOrDefault();
+                if (user != null)
+                    return user;
+
+                return _users.Find(u => u.Id == input).FirstOrDefault();
             }
             catch (FormatException)
             {
@@ -86,6 +90,22 @@ namespace P8_API.Services
         public void Remove(string id)
         {
             _users.DeleteOne(u => u.Id == id);
+        }
+
+        /// <summary>
+        /// Validates that a pincode exist for that email and pincode
+        /// </summary>
+        /// <param name="email">Email linked to the pincode</param>
+        /// <param name="pincode">Pincode that is valid</param>
+        /// <returns>a user object if valid email and pincode</returns>
+        public User ValidatePincode(string email, string pincode)
+        {
+            User user = _users.Find(p =>
+                              p.Email == email &&
+                              p.Pincode == pincode &&
+                              p.PinExpirationDate >= DateTime.Now).FirstOrDefault();
+
+            return user;
         }
     }
 }
