@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Moq;
 using NUnit.Framework;
@@ -90,9 +91,11 @@ namespace P8_API_Tests
             mockUser.UpdatePincode(pincode, DateTime.Now.AddDays(365));
             _userService.Setup(x => x.ValidatePincode("exist@gmail.com", "1234")).Returns(mockUser);
 
+            // Act
+            IStatusCodeActionResult result = (IStatusCodeActionResult) _controller.PostLogin(mockUser);
 
             // Assert
-            return ((IStatusCodeActionResult)_controller.PostLogin(mockUser)).StatusCode;
+            return result.StatusCode;
         }
 
         [TestCase("test@gmail.com", ExpectedResult = StatusCodes.Status400BadRequest)]
@@ -102,21 +105,27 @@ namespace P8_API_Tests
             // Arrange
             _mailService.Setup(x => x.SendMail(It.IsAny<string>(), It.IsAny<string>())).Returns(true);
 
-            // Act 
-            return ((IStatusCodeActionResult)_controller.PostPincode(email)).StatusCode;
+            // Act
+            IStatusCodeActionResult result = (IStatusCodeActionResult) _controller.PostPincode(email);
+
+            // Assert
+            return result.StatusCode;
         }
 
         [TestCase("1", ExpectedResult = StatusCodes.Status204NoContent)]
         [TestCase("2", ExpectedResult = StatusCodes.Status404NotFound)]
         public int? DeleteUser_Success(string id)
         {
-            // Prepare objects
+            // Arrange
             User mockUser = new User("1", "test1@gmail.com", "FG35383");
             _userService.Setup(x => x.Get("1")).Returns(mockUser);
             _userService.Setup(x => x.Remove(id));
 
-            // Run Post Request
-            return ((IStatusCodeActionResult)_controller.Delete(id)).StatusCode;
+            // Act
+            IStatusCodeActionResult result = ((IStatusCodeActionResult) _controller.Delete(id));
+
+            // Assert
+            return result.StatusCode;
         }
 
         [TestCase("hello@you.com", "", ExpectedResult = StatusCodes.Status400BadRequest)]
@@ -126,13 +135,15 @@ namespace P8_API_Tests
         [TestCase("newuser@gmail.com", "SG43534", ExpectedResult = StatusCodes.Status200OK)]
         public int? PostRegister_Sucess(string email, string licenseplate)
         {
-            // Prepare objects
+            // Arrange
             User mockUser = new User(email, licenseplate);
-
             _userService.Setup(x => x.Create(mockUser)).Returns(mockUser);
 
-            // Run Post Request
-            return ((IStatusCodeActionResult)_controller.PostRegister(mockUser)).StatusCode;
+            // Act
+            IStatusCodeActionResult result = (IStatusCodeActionResult) _controller.PostRegister(mockUser);
+
+            // Assert
+            return result.StatusCode;
         }
     }
 }
