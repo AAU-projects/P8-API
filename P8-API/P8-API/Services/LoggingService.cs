@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MongoDB.Bson;
 
 namespace P8_API.Services
 {
@@ -23,10 +24,26 @@ namespace P8_API.Services
             _positions = database.GetCollection<PositionCollection>("Positions");
         }
 
-        public List<Position> Create(string userId, List<Position> positions)
+        public bool Create(string userId, List<Position> positions)
         {
-            PositionCollection postionData = _positions.Find(x => x.Id == userId).FirstOrDefault();
-            return positions;
+            try
+            {
+                PositionCollection posCollection = _positions.Find(doc => doc.UserId == userId).FirstOrDefault();
+
+                if (posCollection != null)
+                {
+                    posCollection.PositionList.AddRange(positions);
+                    //_positions.UpdateOne(posCollection);
+                }
+                else
+                    _positions.InsertOne(new PositionCollection(userId, positions));
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

@@ -103,10 +103,11 @@ namespace P8_API_Tests
         public int? PostPincode_Success(string email)
         {
             // Arrange
+            User mockUser = new User(email, "8");
             _mailService.Setup(x => x.SendMail(It.IsAny<string>(), It.IsAny<string>())).Returns(true);
 
             // Act
-            IStatusCodeActionResult result = (IStatusCodeActionResult) _controller.PostPincode(email);
+            IStatusCodeActionResult result = (IStatusCodeActionResult) _controller.PostPincode(mockUser);
 
             // Assert
             return result.StatusCode;

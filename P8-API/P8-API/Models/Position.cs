@@ -9,18 +9,47 @@ namespace P8_API.Models
 {
     public class Position
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        [BsonElement]
+        private double Latitude { get; set; }
+        [BsonElement]
+        private double Longitude { get; set; }
+        [BsonElement]
+        private DateTime Timestamp { get; set; }
+        private double Altitude { get; set; }
+        [BsonElement]
+        private double Accuracy { get; set; }
+        [BsonElement]
+        private double Heading { get; set; }
+        [BsonElement]
+        private double Speed { get; set; }
+        [BsonElement]
+        private double SpeedAccuracy { get; set; }
 
-        readonly double latitude;
-        readonly double longitude;
-        readonly DateTime timestamp;
-        readonly double altitude;
-        readonly double accuracy;
-        readonly double heading;
-        readonly double speed;
-        readonly double speedAccuracy;
+        public Position(double latitude, double longitude, DateTime timestamp, double altitude, double accuracy, double heading, double speed, double speedAccuracy)
+        {
+            Latitude = latitude;
+            Longitude = longitude;
+            Timestamp = timestamp;
+            Altitude = altitude;
+            Accuracy = accuracy;
+            Heading = heading;
+            Speed = speed;
+            SpeedAccuracy = speedAccuracy;
+        }
 
+        public BsonDocument ConvertToBsonDoc()
+        {
+            return new BsonDocument
+            {
+                {"latitude", Latitude},
+                {"longitude", Longitude},
+                {"timestamp", Timestamp},
+                {"altitude", Altitude},
+                {"accuracy", Accuracy},
+                {"heading", Heading},
+                {"speed", Speed},
+                {"speedAccuracy", SpeedAccuracy},
+            };
+        }
     }
 }

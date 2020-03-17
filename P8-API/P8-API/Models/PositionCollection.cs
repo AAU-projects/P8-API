@@ -10,9 +10,13 @@ namespace P8_API.Models
     public class PositionCollection
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-        public int UserID { get; set; }
+        public string UserId { get; set; }
         public List<Position> PositionList { get; set; }
+
+        public PositionCollection(string userId, List<Position> positionList)
+        {
+            UserId = userId;
+            PositionList = positionList;
+        }
     }
 }

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using P8_API.Models;
 using P8_API.Services;
+using IAuthenticationService = P8_API.Services.IAuthenticationService;
 
 namespace P8_API.Controllers
 {
@@ -98,12 +100,12 @@ namespace P8_API.Controllers
         /// <returns>An ActionResult with true if the email is succesfully sent and statuscode</returns>
         [HttpPost]
         [Route("pincode")]
-        public IActionResult PostPincode([FromBody] string email)
+        public IActionResult PostPincode(User user)
         {
-            if (_userService.Get(email) == null)
+            if (_userService.Get(user.Email) == null)
                 return BadRequest();
 
-            return Ok(_authenticationService.GeneratePinAuthentication(email));
+            return Ok(_authenticationService.GeneratePinAuthentication(user.Email));
         }
 
         /// <summary>
@@ -114,8 +116,9 @@ namespace P8_API.Controllers
         /// <returns>An ActionResult that tells if the token is valid or not</returns>
         [HttpPost]
         [Route("test")]
-        public IActionResult test([FromBody] string token)
+        public IActionResult test()
         {
+            string token = Request.Headers["Authorization"][0].Substring("Bearer ".Length).Trim();
             return Ok(_authenticationService.ValidateToken(token));
         }
 
@@ -126,7 +129,6 @@ namespace P8_API.Controllers
         /// <param name="id">The id for the user to be updated</param>
         /// <param name="inUser">The user data</param>
         /// <returns>An ActionResult with statuscode</returns>
-
         [HttpPut("{id}")]
         public IActionResult Put(string id, User inUser)
         {
