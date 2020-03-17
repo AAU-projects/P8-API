@@ -11,12 +11,13 @@ namespace P8_API.Models
     {
         [BsonId]
         public string UserId { get; set; }
-        public List<Position> PositionList { get; set; }
+        public List<PositionDocument> Documents { get; set; }
 
-        public PositionCollection(string userId, List<Position> positionList)
+        public PositionCollection(string userId, PositionDocument positionDocuments)
         {
+            Documents = new List<PositionDocument>();
             UserId = userId;
-            PositionList = positionList;
+            Documents.Add(positionDocuments);
         }
     }
 }

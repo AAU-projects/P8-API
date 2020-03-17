@@ -28,15 +28,31 @@ namespace P8_API.Services
         {
             try
             {
-                PositionCollection posCollection = _positions.Find(doc => doc.UserId == userId).FirstOrDefault();
+                string now = DateTime.Now.AddDays(1).ToString("dd-MM-yyyy");
 
-                if (posCollection != null)
+                PositionCollection userCollection = _positions.Find(collection => collection.UserId == userId).FirstOrDefault();
+
+                if (userCollection != null) 
                 {
-                    posCollection.PositionList.AddRange(positions);
-                    //_positions.UpdateOne(posCollection);
+                    // If user does exist.
+                    int userDocumentIndex = userCollection.Documents.FindIndex(document => document.DateId == now);
+
+                    if (userDocumentIndex == -1) 
+                    {
+                        // If day does not exist.
+                        AddDayToExistingUser(userId, positions, userCollection, now);
+                    } else
+                    {
+                        // Updates already existing day with positions
+                        UpdateExistingDay(userId, positions, userCollection, userDocumentIndex);
+                    }
                 }
                 else
-                    _positions.InsertOne(new PositionCollection(userId, positions));
+                {
+                    // If the user does not exist
+                    AddPositionDay(userId, positions, now);
+                }
+
             }
             catch (Exception e)
             {
@@ -44,6 +60,35 @@ namespace P8_API.Services
             }
 
             return true;
+        }
+
+        private void AddDayToExistingUser(string userId, List<Position> positions, PositionCollection userCollection, string now)
+        {
+            PositionDocument test = new PositionDocument(now, positions);
+            userCollection.Documents.Add(test);
+
+            FilterDefinition<PositionCollection> filter = Builders<PositionCollection>.Filter.Eq(x => x.UserId, userId);
+            UpdateDefinition<PositionCollection> update = Builders<PositionCollection>.Update.Set(x => x.Documents, userCollection.Documents);
+
+            _positions.UpdateOne(filter, update);
+        }
+
+        private void UpdateExistingDay(string userId, List<Position> positions, PositionCollection userCollection, int userDocumentIndex)
+        {
+            PositionDocument userDocument = userCollection.Documents[userDocumentIndex];
+            userDocument.PositionList.AddRange(positions);
+
+            FilterDefinition<PositionCollection> filter = Builders<PositionCollection>.Filter.Eq(x => x.UserId, userId);
+            UpdateDefinition<PositionCollection> update = Builders<PositionCollection>.Update.Set(x => x.Documents[userDocumentIndex], userDocument);
+
+            _positions.UpdateOne(filter, update);
+        }
+
+        private void AddPositionDay(string userId, List<Position> positions, string now)
+        {
+            PositionDocument test = new PositionDocument(now, positions);
+            PositionCollection col = new PositionCollection(userId, test);
+            _positions.InsertOne(col);
         }
     }
 }
