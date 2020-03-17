@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using P8_API.Models;
 using P8_API.Services;
 using IAuthenticationService = P8_API.Services.IAuthenticationService;
+using P8_API.Utility;
 
 namespace P8_API.Controllers
 {

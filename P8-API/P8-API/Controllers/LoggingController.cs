@@ -12,23 +12,25 @@ namespace P8_API.Controllers
     public class LoggingController : ControllerBase
     {
         private readonly ILoggingService _loggingService;
+        private readonly IAuthenticationService _authenticationService;
 
-        public LoggingController(ILoggingService loggingService)
+        public LoggingController(ILoggingService loggingService, IAuthenticationService authenticationService)
         {
             _loggingService = loggingService;
+            _authenticationService = authenticationService;
         }
 
-        // GET: api/<controller>
-        [HttpGet]
-        public IActionResult Get()
+        // Post: api/<controller>
+        [HttpPost]
+        public IActionResult Post(List<Position> positionList)
         {
-            Position p1 = new Position(1.2, 1.2, DateTime.Now, 1.2, 1.2, 1.2, 1.2, 1.2);
-            Position p2 = new Position(1.3, 1.2, DateTime.Now, 1.2, 1.2, 1.2, 1.2, 1.3);
-            List<Position> possList = new List<Position>();
-            possList.Add(p1);
-            possList.Add(p2);
+            string token = Utility.Utility.GetToken(Request);
+            User user = _authenticationService.ValidateToken(token);
 
-            return Ok(_loggingService.Create("123", possList));
+            if (user == null)
+                return Unauthorized();
+
+            return Ok(_loggingService.Create(user.Id, positionList));
         }
     }
 }

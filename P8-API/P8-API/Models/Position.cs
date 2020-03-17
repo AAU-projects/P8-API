@@ -15,6 +15,7 @@ namespace P8_API.Models
         private double Longitude { get; set; }
         [BsonElement]
         private DateTime Timestamp { get; set; }
+        [BsonElement]
         private double Altitude { get; set; }
         [BsonElement]
         private double Accuracy { get; set; }
