@@ -28,7 +28,7 @@ namespace P8_API.Services
         {
             try
             {
-                string now = DateTime.Now.AddDays(1).ToString("dd-MM-yyyy");
+                string now = DateTime.Now.ToString("dd-MM-yyyy");
 
                 PositionCollection userCollection = _positions.Find(collection => collection.UserId == userId).FirstOrDefault();
 
@@ -41,7 +41,8 @@ namespace P8_API.Services
                     {
                         // If day does not exist.
                         AddDayToExistingUser(userId, positions, userCollection, now);
-                    } else
+                    } 
+                    else
                     {
                         // Updates already existing day with positions
                         UpdateExistingDay(userId, positions, userCollection, userDocumentIndex);
@@ -54,7 +55,7 @@ namespace P8_API.Services
                 }
 
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 return false;
             }

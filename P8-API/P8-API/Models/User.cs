@@ -18,7 +18,6 @@ namespace P8_API.Models
         public string LicensePlate { get; set; }
         public string Pincode { get; set; }
         public string Token { get; set; }
-
         public DateTime PinExpirationDate { get; set; }
         public DateTime TokenExpirationDate { get; set; }
 

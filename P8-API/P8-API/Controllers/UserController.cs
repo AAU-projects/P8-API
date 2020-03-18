@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
@@ -58,14 +59,14 @@ namespace P8_API.Controllers
         [Route("register")]
         public IActionResult PostRegister(User user)
         {
-            if (String.IsNullOrEmpty(user.Email))
-                return BadRequest();
+            if (!Utility.Utility.IsEmailValid(user.Email))
+                return BadRequest("Invalid email");
 
             if (_userService.Get(user.Email) != null)
-                return Conflict();
+                return Conflict("Email already exists");
 
             if (!String.IsNullOrEmpty(user.LicensePlate) && user.LicensePlate.Length > 7)
-                return BadRequest();
+                return BadRequest("Invalid license plate format");
 
             return Ok(_userService.Create(user));
         }
@@ -82,12 +83,12 @@ namespace P8_API.Controllers
         public IActionResult PostLogin(User auth)
         {
             if (_userService.Get(auth.Email) == null)
-                return BadRequest();
+                return BadRequest("Email does not exist");
 
             User result = _authenticationService.Authenticate(auth.Email, auth.Pincode);
 
             if (result == null)
-                return Unauthorized();
+                return Unauthorized("Invalid pin code");
 
             return Ok(result);
         }
@@ -95,7 +96,7 @@ namespace P8_API.Controllers
 
         /// <summary>
         /// POST api/<controller>/pincode
-        /// Generates a pincode that is sent to the specifc email
+        /// Generates a pincode that is sent to the specific email
         /// </summary>
         /// <param name="email">The email requesed to generate pincode for</param>
         /// <returns>An ActionResult with true if the email is succesfully sent and statuscode</returns>
@@ -104,23 +105,9 @@ namespace P8_API.Controllers
         public IActionResult PostPincode(User user)
         {
             if (_userService.Get(user.Email) == null)
-                return BadRequest();
+                return BadRequest("Email does not exist");
 
             return Ok(_authenticationService.GeneratePinAuthentication(user.Email));
-        }
-
-        /// <summary>
-        /// POST api/<controller>/test
-        /// Shows how to valdiate a token
-        /// </summary>
-        /// <param name="token">A string with the token </param>
-        /// <returns>An ActionResult that tells if the token is valid or not</returns>
-        [HttpPost]
-        [Route("test")]
-        public IActionResult test()
-        {
-            string token = Request.Headers["Authorization"][0].Substring("Bearer ".Length).Trim();
-            return Ok(_authenticationService.ValidateToken(token));
         }
 
         /// <summary>
@@ -133,10 +120,8 @@ namespace P8_API.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(string id, User inUser)
         {
-            var user = _userService.Get(id);
-
-            if (user == null)
-                return NotFound();
+            if (_userService.Get(id) == null)
+                return NotFound("User not found");
 
             _userService.Update(id, inUser);
 
@@ -152,7 +137,7 @@ namespace P8_API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(string id)
         {
-            var user = _userService.Get(id);
+            User user = _userService.Get(id);
 
             if (user == null)
                 return NotFound();
