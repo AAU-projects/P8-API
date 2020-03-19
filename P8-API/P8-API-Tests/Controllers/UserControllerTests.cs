@@ -16,7 +16,6 @@ namespace P8_API_Tests.Controllers
     {
         private Mock<IUserService> _userService;
         private Mock<IMailService> _mailService;
-        private Mock<IUtility> _utility;
         private IAuthenticationService _authenticationService;
         private UserController _controller;
 
