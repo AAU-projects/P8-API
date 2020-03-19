@@ -20,10 +20,14 @@ namespace P8_API.Controllers
         private readonly IUserService _userService;
         private readonly IAuthenticationService _authenticationService;
 
-        // Constructor, takes a UserService and an AuthenticationService as parameter
-        public UserController(IUserService _userservice, IAuthenticationService authenticationService)
+        /// <summary>
+        /// Constructor for user controller
+        /// <param name="userservice">The userservice for the controller</param>
+        /// <param name="authenticationService">The authenticationservice for the controller</param>
+        /// </summary>
+        public UserController(IUserService userservice, IAuthenticationService authenticationService)
         {
-            _userService = _userservice;
+            _userService = userservice;
             _authenticationService = authenticationService;
         }
 
