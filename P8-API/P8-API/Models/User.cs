@@ -16,9 +16,13 @@ namespace P8_API.Models
         public string Id { get; set; }
         public string Email { get; set; }
         public string LicensePlate { get; set; }
+        [JsonIgnore]
         public string Pincode { get; set; }
+        [JsonIgnore]
         public string Token { get; set; }
+        [JsonIgnore]
         public DateTime PinExpirationDate { get; set; }
+        [JsonIgnore]
         public DateTime TokenExpirationDate { get; set; }
 
         [JsonConstructor]

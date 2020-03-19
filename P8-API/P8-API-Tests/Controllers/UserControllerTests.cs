@@ -6,15 +6,17 @@ using NUnit.Framework;
 using P8_API.Controllers;
 using P8_API.Models;
 using P8_API.Services;
+using P8_API.Utility;
 using System;
 using System.Collections.Generic;
 
-namespace P8_API_Tests
+namespace P8_API_Tests.Controllers
 {
     public class UserControllerTests
     {
         private Mock<IUserService> _userService;
         private Mock<IMailService> _mailService;
+        private Mock<IUtility> _utility;
         private IAuthenticationService _authenticationService;
         private UserController _controller;
 
@@ -28,6 +30,7 @@ namespace P8_API_Tests
             _mailService = new Mock<IMailService>();
             _authenticationService = new AuthenticationService(_userService.Object, _mailService.Object, appSettings);
             _controller = new UserController(_userService.Object, _authenticationService);
+            Helper.Utility = new Utility();
 
             // Initializes the database with a user using the email no@gmail.com
             User mockUser = new User("13439332", "exist@gmail.com", "FG35382");
@@ -37,7 +40,7 @@ namespace P8_API_Tests
 
         [TestCase("1", ExpectedResult = true)]
         [TestCase("2", ExpectedResult = false)]
-        public bool GetUser_UserExists_Success(string id)
+        public bool GetUser(string id)
         {
             // Arrange
             User mockUser = new User("1", "test1@gmail.com", "FG35383");
@@ -51,7 +54,7 @@ namespace P8_API_Tests
         }
 
         [Test]
-        public void GetAllUsers_Success()
+        public void GetAllUsers()
         {
             // Arrange
             User mockUser = new User("1", "test1@gmail.com", "asdsssss");
@@ -66,7 +69,7 @@ namespace P8_API_Tests
         }
 
         [Test]
-        public void UpdateUser_Success()
+        public void UpdateUser()
         {
             // Arrange
             User mockUser = new User("1", "test1@gmail.com", "FG35383");
@@ -84,7 +87,7 @@ namespace P8_API_Tests
         [TestCase("1", "test@gmail.com", "1234", "AB34567", ExpectedResult = StatusCodes.Status400BadRequest)]
         [TestCase("2", "exist@gmail.com", "1233", "AB34567", ExpectedResult = StatusCodes.Status401Unauthorized)]
         [TestCase("3", "exist@gmail.com", "1234", "AB34567", ExpectedResult = StatusCodes.Status200OK)]
-        public int? PostLogin_Success(string id, string email, string pincode, string licenseplate)
+        public int? PostLogin(string id, string email, string pincode, string licenseplate)
         {
             // Arrange
             User mockUser = new User(id, email, licenseplate);
@@ -100,7 +103,7 @@ namespace P8_API_Tests
 
         [TestCase("test@gmail.com", ExpectedResult = StatusCodes.Status400BadRequest)]
         [TestCase("exist@gmail.com", ExpectedResult = StatusCodes.Status200OK)]
-        public int? PostPincode_Success(string email)
+        public int? PostPincode(string email)
         {
             // Arrange
             User mockUser = new User(email, "8");
@@ -115,7 +118,7 @@ namespace P8_API_Tests
 
         [TestCase("1", ExpectedResult = StatusCodes.Status204NoContent)]
         [TestCase("2", ExpectedResult = StatusCodes.Status404NotFound)]
-        public int? DeleteUser_Success(string id)
+        public int? DeleteUser(string id)
         {
             // Arrange
             User mockUser = new User("1", "test1@gmail.com", "FG35383");
@@ -134,7 +137,7 @@ namespace P8_API_Tests
         [TestCase("licenseplate@gmail.com", "SG435346", ExpectedResult = StatusCodes.Status400BadRequest)]
         [TestCase("hello@you.com", null, ExpectedResult = StatusCodes.Status200OK)]
         [TestCase("newuser@gmail.com", "SG43534", ExpectedResult = StatusCodes.Status200OK)]
-        public int? PostRegister_Sucess(string email, string licenseplate)
+        public int? PostRegister(string email, string licenseplate)
         {
             // Arrange
             User mockUser = new User(email, licenseplate);

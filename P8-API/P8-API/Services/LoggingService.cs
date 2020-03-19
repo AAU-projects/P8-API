@@ -24,6 +24,12 @@ namespace P8_API.Services
             _positions = database.GetCollection<PositionCollection>("Positions");
         }
 
+        /// <summary>
+        /// Creates a document with positions in the database 
+        /// </summary>
+        /// <param name="userId">The id of the user</param>
+        /// <param name="positions">The position listed to be stored</param>
+        /// <returns>True if succeded</returns>
         public bool Create(string userId, List<Position> positions)
         {
             try

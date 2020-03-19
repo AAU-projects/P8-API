@@ -18,5 +18,10 @@ namespace P8_API.Models
         public double Heading { get; set; }
         public double Speed { get; set; }
         public double SpeedAccuracy { get; set; }
+        public Position(double latitude, double longitude)
+        {
+            Latitude = latitude;
+            Longitude = longitude;
+        }
     }
 }

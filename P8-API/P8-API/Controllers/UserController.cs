@@ -9,6 +9,7 @@ using P8_API.Models;
 using P8_API.Services;
 using IAuthenticationService = P8_API.Services.IAuthenticationService;
 using P8_API.Utility;
+using Microsoft.AspNetCore.Authorization;
 
 namespace P8_API.Controllers
 {
@@ -32,6 +33,7 @@ namespace P8_API.Controllers
         /// </summary>
         /// <returns>An ActionResult with all users and statuscode</returns>
         [HttpGet]
+        [Authorize]
         public ActionResult<List<User>> Get()
         {
             return _userService.Get();
@@ -44,6 +46,7 @@ namespace P8_API.Controllers
         /// <param name="id">The unique id of the user</param>
         /// <returns>An ActionResult with the specific user and statuscode</returns>
         [HttpGet("{id}")]
+        [Authorize]
         public ActionResult<User> Get(string id)
         {
             return _userService.Get(id);
@@ -59,7 +62,7 @@ namespace P8_API.Controllers
         [Route("register")]
         public IActionResult PostRegister(User user)
         {
-            if (!Utility.Utility.IsEmailValid(user.Email))
+            if (!Helper.Utility.IsEmailValid(user.Email))
                 return BadRequest("Invalid email");
 
             if (_userService.Get(user.Email) != null)
@@ -118,6 +121,7 @@ namespace P8_API.Controllers
         /// <param name="inUser">The user data</param>
         /// <returns>An ActionResult with statuscode</returns>
         [HttpPut("{id}")]
+        [Authorize]
         public IActionResult Put(string id, User inUser)
         {
             if (_userService.Get(id) == null)
@@ -135,6 +139,7 @@ namespace P8_API.Controllers
         /// <param name="id">A string with the id of the user to delete</param>
         /// <returns>An ActionResult that tells if the user was deleted or not</returns>
         [HttpDelete("{id}")]
+        [Authorize]
         public IActionResult Delete(string id)
         {
             User user = _userService.Get(id);

@@ -8,6 +8,6 @@ namespace P8_API
 {
     public interface ILoggingService
     {
-        public bool Create(string userId, List<Position> positions);
+        bool Create(string userId, List<Position> positions);
     }
 }
