@@ -9,7 +9,7 @@ namespace P8_API.Services
     public interface IUserService
     {
         User Get(string id);
-        List<User> Get();
+        List<UserBase> Get();
 
         User Create(User user);
 

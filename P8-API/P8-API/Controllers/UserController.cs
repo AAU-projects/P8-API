@@ -38,7 +38,7 @@ namespace P8_API.Controllers
         /// <returns>An ActionResult with all users and statuscode</returns>
         [HttpGet]
         [Authorize]
-        public ActionResult<List<User>> Get()
+        public ActionResult<List<UserBase>> Get()
         {
             return _userService.Get();
         }
@@ -51,9 +51,11 @@ namespace P8_API.Controllers
         /// <returns>An ActionResult with the specific user and statuscode</returns>
         [HttpGet("{id}")]
         [Authorize]
-        public ActionResult<User> Get(string id)
+        public ActionResult<UserBase> Get(string id)
         {
-            return _userService.Get(id);
+            User user = _userService.Get(id);
+            UserBase userBase = new UserBase(user?.Id, user?.Email, user?.LicensePlate);
+            return userBase;
         }
 
         /// <summary>
@@ -87,7 +89,7 @@ namespace P8_API.Controllers
         /// <returns>An ActionResult with the logged in user containg a valid Token and statuscode</returns>
         [HttpPost]
         [Route("login")]
-        public IActionResult PostLogin(User auth)
+        public IActionResult PostLogin([FromBody] User auth)
         {
             if (_userService.Get(auth.Email) == null)
                 return BadRequest("Email does not exist");
@@ -146,7 +148,7 @@ namespace P8_API.Controllers
         [Authorize]
         public IActionResult Delete(string id)
         {
-            User user = _userService.Get(id);
+            UserBase user = _userService.Get(id);
 
             if (user == null)
                 return NotFound();

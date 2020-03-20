@@ -49,7 +49,7 @@ namespace P8_API_Tests.Controllers
             var result = _controller.Get(id);
 
             // Assert
-            return result.Value == mockUser;
+            return result.Value.Id == mockUser.Id;
         }
 
         [Test]
@@ -58,10 +58,10 @@ namespace P8_API_Tests.Controllers
             // Arrange
             User mockUser = new User("1", "test1@gmail.com", "asdsssss");
             User mockUser2 = new User("2", "test2@gmail.com", "asd");
-            _userService.Setup(x => x.Get()).Returns(new List<User>{ mockUser, mockUser2});
+            _userService.Setup(x => x.Get()).Returns(new List<UserBase>{ mockUser, mockUser2});
 
             // Act
-            List<User> result = _controller.Get().Value;
+            List<UserBase> result = _controller.Get().Value;
 
             // Assert
             Assert.AreEqual(result.Count, 2);
