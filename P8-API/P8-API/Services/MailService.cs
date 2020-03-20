@@ -16,6 +16,12 @@ namespace P8_API.Services
             _appSettings = appsettings;
         }
 
+        /// <summary>
+        /// Sends a mail with pincode to the user
+        /// </summary>
+        /// <param name="toEmail">Receipent email</param>
+        /// <param name="pincode">The generated pincode</param>
+        /// <returns>True if succeded</returns>
         public bool SendMail(string toEmail, string pincode)
         {
             try
@@ -28,11 +34,11 @@ namespace P8_API.Services
                 smtpClient.EnableSsl = true;
                 MailMessage mail = new MailMessage();
 
-                // Setup the email
+                // Setup mail
                 mail.From = new MailAddress("aaurouteplanner@gmail.com");
                 mail.To.Add(new MailAddress(toEmail));
                 mail.Subject = "RoutePlanner: Your pincode has arrived!";
-                mail.Body = $"You have requested a pincode for routeplanner!\n Here is your pincode: {pincode}";
+                mail.Body = $"You have requested a pincode for routeplanner!\nHere is your pincode: {pincode}";
 
                 // Send mail
                 smtpClient.Send(mail);

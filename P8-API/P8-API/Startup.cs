@@ -15,6 +15,9 @@ using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Options;
 using P8_API.Models;
 using P8_API.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace P8_API
 {
@@ -47,9 +50,30 @@ namespace P8_API
             services.AddSingleton<IAppSettings>(sp =>
                 sp.GetRequiredService<IOptions<AppSettings>>().Value);
 
+            AppSettings authOptions = Configuration.GetSection("AppSettings").Get<AppSettings>();
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    RequireExpirationTime = true,
+                    ValidIssuer = "RouteAPI",
+                    ValidAudience = "RouteAPI",
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authOptions.Secret))
+                };
+            });
+
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<IAuthenticationService, AuthenticationService>();
             services.AddSingleton<IMailService, MailService>();
+            services.AddSingleton<ILoggingService, LoggingService>();
             services.AddControllers().AddNewtonsoftJson(options => options.UseMemberCasing());
         }
 
@@ -71,6 +95,7 @@ namespace P8_API
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

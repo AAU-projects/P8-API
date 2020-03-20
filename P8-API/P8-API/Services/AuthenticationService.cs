@@ -31,12 +31,12 @@ namespace P8_API.Services
         }
 
         /// <summary>
-        /// Validates the authentication token
+        /// Validates the authentication token and returns email
         /// </summary>
         /// <param name="authToken">the authentication token as a string</param>
         /// <param name="appsettings">App settings</param>
-        /// <returns>True if a valid token</returns>
-        public bool ValidateToken(string authToken)
+        /// <returns>the email if token is valid</returns>
+        public User ValidateToken(string authToken)
         {
             User user;
 
@@ -60,11 +60,11 @@ namespace P8_API.Services
             }
             catch (Exception) // TODO implment all types of exception of invalid token.
             {
-                return false;
+                return null;
             }
 
             // Return true if email is found ie. the token is valid 
-            return user != null;
+            return user;
         }
 
         /// <summary>

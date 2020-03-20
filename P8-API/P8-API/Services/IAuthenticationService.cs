@@ -9,7 +9,7 @@ namespace P8_API.Services
 {
     public interface IAuthenticationService
     {
-        bool ValidateToken(string authToken);
+        User ValidateToken(string authToken);
         User Authenticate(string email, string pincode);
         bool GeneratePinAuthentication(string email);
     }
