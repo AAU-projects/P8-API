@@ -27,9 +27,17 @@ namespace P8_API.Services
         /// Gets all users from the database
         /// </summary>
         /// <returns>a user list</returns>
-        public List<User> Get()
+        public List<UserBase> Get()
         {
-            return _users.Find(u => true).ToList();
+            List<User> userList = _users.Find(u => true).ToList();
+            List<UserBase> userBaseList = new List<UserBase>();
+
+            foreach (User user in userList)
+            { 
+                UserBase userBase = new UserBase(user.Id, user.Email, user.LicensePlate);
+                userBaseList.Add(userBase);
+            }
+            return userBaseList;
         }
 
         /// <summary>

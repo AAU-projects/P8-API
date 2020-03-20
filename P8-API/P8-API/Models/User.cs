@@ -9,34 +9,20 @@ using Newtonsoft.Json;
 
 namespace P8_API.Models
 {
-    public class User
+    public class User : UserBase
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-        public string Email { get; set; }
-        public string LicensePlate { get; set; }
-        [JsonIgnore]
         public string Pincode { get; set; }
-        [JsonIgnore]
         public string Token { get; set; }
-        [JsonIgnore]
         public DateTime PinExpirationDate { get; set; }
-        [JsonIgnore]
         public DateTime TokenExpirationDate { get; set; }
 
         [JsonConstructor]
-        public User(string id, string email, string licenseplate)
+        public User(string id, string email, string licenseplate) : base(id, email, licenseplate)
         {
-            Id = id;
-            Email = email;
-            LicensePlate = licenseplate;
         }
 
-        public User(string email, string licenseplate)
+        public User(string email, string licenseplate) : base(email, licenseplate)
         {
-            Email = email;
-            LicensePlate = licenseplate;
         }
 
         public void UpdatePincode(string code, DateTime expirationDate)
