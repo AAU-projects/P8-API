@@ -74,6 +74,7 @@ namespace P8_API
             services.AddSingleton<IAuthenticationService, AuthenticationService>();
             services.AddSingleton<IMailService, MailService>();
             services.AddSingleton<ILoggingService, LoggingService>();
+            services.AddSingleton<IEmissionService, EmissionService>();
             services.AddControllers().AddNewtonsoftJson(options => options.UseMemberCasing());
         }
 
