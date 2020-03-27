@@ -7,6 +7,8 @@ namespace P8_API.Services
 {
     public interface IEmissionService
     {
-        Task<double> retrieveEmission(string licenseplate);
+        double RetrieveEmission(double kml, string fuelType);
+        double RetrieveEmission(string fuelType);
+        double RetrieveEmission();
     }
 }

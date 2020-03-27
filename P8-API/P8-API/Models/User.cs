@@ -17,11 +17,11 @@ namespace P8_API.Models
         public DateTime TokenExpirationDate { get; set; }
 
         [JsonConstructor]
-        public User(string id, string email, string licenseplate) : base(id, email, licenseplate)
+        public User(string id, string email, double carEmission) : base(id, email, carEmission)
         {
         }
 
-        public User(string email, string licenseplate) : base(email, licenseplate)
+        public User(string email, double carEmission) : base(email, carEmission)
         {
         }
 

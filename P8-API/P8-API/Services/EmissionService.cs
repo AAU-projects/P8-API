@@ -3,44 +3,48 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using AngleSharp;
-using AngleSharp.Html.Dom;
-using AngleSharp.Html.Parser;
-
 namespace P8_API.Services
 {
     public class EmissionService : IEmissionService
     {
-        public async Task<double> retrieveEmission(string licenseplate)
+        /// <summary>
+        /// Returns the emission in CO2 g/km.
+        /// </summary>
+        /// <param name="kml">kilometers pr. liter petrol</param>
+        /// <param name="fuelType">Fuel Type of the vehicle</param>
+        /// <returns></returns>
+        public double RetrieveEmission(double kml, string fuelType)
         {
-            string url = "https://www.nummerplade.net/nummerplade/" + licenseplate + ".html";
+            double l_100km = 100 / kml;
+            double result = 0;
 
-            // Load default configuration
-            var config = Configuration.Default.WithDefaultLoader();
-            // Create a new browsing context
-            var context = BrowsingContext.New(config);
-            // This is where the HTTP request happens, returns <IDocument> that // we can query later
-            var document = await context.OpenAsync(url);
+            if (fuelType == "Petrol")
+                result = l_100km * 2392 / 100;
+            else if (fuelType == "Diesel")
+                result = l_100km * 2640 / 100;
 
-            var km_l_string = document.GetElementById("samlet_beregnet_braendstofforbrug").OuterHtml;
-            //var fuelType = document.All.Where(m => m.LocalName == "h6" && m.GetAttribute("InnerHtml").StartsWith("Drivkraft"));
-            //double km_l = Convert.ToDouble(km_l_string.Replace(" km/l", ""));
-            var fuelType = "Benzin";
-
-            Debug.WriteLine(km_l_string);
-            Debug.WriteLine(fuelType);
-
-            double km_l = 10.0;
-            return calculateEmission(100/km_l, fuelType);
+            return result;
         }
 
-        private double calculateEmission(double l_100km, string fuelType)
+        /// <summary>
+        /// Returns the avg emission in CO2 g/km, in case no kml is given.
+        /// </summary>
+        /// <param name="fuelType"></param>
+        /// <returns></returns>
+        public double RetrieveEmission(string fuelType)
         {
-            if (fuelType == "Benzin")
-                return l_100km * 2392 / 100;
-            else if (fuelType == "Diesel")
-                return l_100km * 2640 / 100;
+            double result = 0;
 
+            if (fuelType == "Petrol" || fuelType == "Diesel")
+                result = 127.0;
+            else if (fuelType == "Electric")
+                result = 38.0;
+
+            return result;
+        }
+
+        public double RetrieveEmission()
+        {
             return 127.0;
         }
     }

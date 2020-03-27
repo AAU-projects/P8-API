@@ -10,6 +10,8 @@ using P8_API.Services;
 using IAuthenticationService = P8_API.Services.IAuthenticationService;
 using P8_API.Utility;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace P8_API.Controllers
 {
@@ -19,16 +21,18 @@ namespace P8_API.Controllers
     {
         private readonly IUserService _userService;
         private readonly IAuthenticationService _authenticationService;
+        private readonly IEmissionService _emissionService;
 
         /// <summary>
         /// Constructor for user controller
         /// <param name="userservice">The userservice for the controller</param>
         /// <param name="authenticationService">The authenticationservice for the controller</param>
         /// </summary>
-        public UserController(IUserService userservice, IAuthenticationService authenticationService)
+        public UserController(IUserService userservice, IAuthenticationService authenticationService, IEmissionService emissionService)
         {
             _userService = userservice;
             _authenticationService = authenticationService;
+            _emissionService = emissionService;
         }
 
         /// <summary>
@@ -54,7 +58,7 @@ namespace P8_API.Controllers
         public ActionResult<UserBase> Get(string id)
         {
             User user = _userService.Get(id);
-            UserBase userBase = new UserBase(user?.Id, user?.Email, user?.LicensePlate);
+            UserBase userBase = new UserBase(user.Id, user.Email, user.CarEmission);
             return userBase;
         }
 
@@ -66,16 +70,33 @@ namespace P8_API.Controllers
         /// <returns>An ActionResult that tells if the user was created or not</returns>
         [HttpPost]
         [Route("register")]
-        public IActionResult PostRegister(User user)
+        public IActionResult PostRegister([FromBody] JObject body)
         {
+            User user = JsonConvert.DeserializeObject<User>(body["User"].ToString());
+            double? kml = JsonConvert.DeserializeObject<double>(body["kml"].ToString());
+            string fuelType = JsonConvert.DeserializeObject<string>(body["fuelType"].ToString());
+
             if (!Helper.Utility.IsEmailValid(user.Email))
                 return BadRequest("Invalid email");
 
             if (_userService.Get(user.Email) != null)
                 return Conflict("Email already exists");
 
-            if (!String.IsNullOrEmpty(user.LicensePlate) && user.LicensePlate.Length > 7)
-                return BadRequest("Invalid license plate format");
+            if (fuelType != null)
+            {
+                if (kml != null)
+                {
+                    user.CarEmission = _emissionService.RetrieveEmission(kml.Value, fuelType);
+                }
+                else
+                {
+                    user.CarEmission = _emissionService.RetrieveEmission(fuelType);
+                }
+            }
+            else
+            {
+                user.CarEmission = _emissionService.RetrieveEmission();
+            }
 
             return Ok(_userService.Create(user));
         }

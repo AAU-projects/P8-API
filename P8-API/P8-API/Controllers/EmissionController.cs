@@ -18,10 +18,22 @@ namespace P8_API.Controllers
             _emissionService = emissionService;
         }
 
-        [HttpGet("{licenseplate}")]
-        public ActionResult<double> Get(string licenseplate)
+        [HttpGet]
+        public ActionResult<double> Get()
         {
-            return _emissionService.retrieveEmission(licenseplate).Result; 
+            return _emissionService.RetrieveEmission();
+        }
+
+        [HttpGet("{fuelType}")]
+        public ActionResult<double> Get(string fuelType)
+        {
+            return _emissionService.RetrieveEmission(fuelType);
+        }
+
+        [HttpGet("{fuelType}/{kml}")]
+        public ActionResult<double> Get(double kml, string fuelType)
+        {
+            return _emissionService.RetrieveEmission(kml, fuelType); 
         }
     }
 }

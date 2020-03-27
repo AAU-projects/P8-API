@@ -34,7 +34,7 @@ namespace P8_API.Services
 
             foreach (User user in userList)
             { 
-                UserBase userBase = new UserBase(user.Id, user.Email, user.LicensePlate);
+                UserBase userBase = new UserBase(user.Id, user.Email, user.CarEmission);
                 userBaseList.Add(userBase);
             }
             return userBaseList;
