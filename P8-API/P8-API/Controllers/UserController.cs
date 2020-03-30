@@ -12,6 +12,7 @@ using P8_API.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace P8_API.Controllers
 {
@@ -73,8 +74,11 @@ namespace P8_API.Controllers
         public IActionResult PostRegister([FromBody] JObject body)
         {
             User user = JsonConvert.DeserializeObject<User>(body["User"].ToString());
+            Debug.WriteLine(user.Email);
             double? kml = JsonConvert.DeserializeObject<double>(body["kml"].ToString());
-            string fuelType = JsonConvert.DeserializeObject<string>(body["fuelType"].ToString());
+            Debug.WriteLine(kml);
+            string fuelType = body["fuelType"].ToString();
+            Debug.WriteLine(fuelType);
 
             if (!Helper.Utility.IsEmailValid(user.Email))
                 return BadRequest("Invalid email");
@@ -98,6 +102,8 @@ namespace P8_API.Controllers
                 user.CarEmission = _emissionService.RetrieveEmission();
             }
 
+            Debug.WriteLine(user.CarEmission);
+           
             return Ok(_userService.Create(user));
         }
 
