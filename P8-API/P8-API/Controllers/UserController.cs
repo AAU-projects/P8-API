@@ -71,40 +71,31 @@ namespace P8_API.Controllers
         /// <returns>An ActionResult that tells if the user was created or not</returns>
         [HttpPost]
         [Route("register")]
-        public IActionResult PostRegister([FromBody] JObject body)
+        public IActionResult PostRegister(RegisterInput input)
         {
-            User user = JsonConvert.DeserializeObject<User>(body["User"].ToString());
-            Debug.WriteLine(user.Email);
-            double? kml = JsonConvert.DeserializeObject<double>(body["kml"].ToString());
-            Debug.WriteLine(kml);
-            string fuelType = body["fuelType"].ToString();
-            Debug.WriteLine(fuelType);
-
-            if (!Helper.Utility.IsEmailValid(user.Email))
+            if (!Helper.Utility.IsEmailValid(input.User.Email))
                 return BadRequest("Invalid email");
 
-            if (_userService.Get(user.Email) != null)
+            if (_userService.Get(input.User.Email) != null)
                 return Conflict("Email already exists");
 
-            if (fuelType != null)
+            if (input.FuelType != null)
             {
-                if (kml != null)
+                if (input.Kml != 0)
                 {
-                    user.CarEmission = _emissionService.RetrieveEmission(kml.Value, fuelType);
+                    input.User.CarEmission = _emissionService.RetrieveEmission(input.Kml, input.FuelType);
                 }
                 else
                 {
-                    user.CarEmission = _emissionService.RetrieveEmission(fuelType);
+                    input.User.CarEmission = _emissionService.RetrieveEmission(input.FuelType);
                 }
             }
             else
             {
-                user.CarEmission = _emissionService.RetrieveEmission();
+                input.User.CarEmission = _emissionService.RetrieveEmission();
             }
-
-            Debug.WriteLine(user.CarEmission);
            
-            return Ok(_userService.Create(user));
+            return Ok(_userService.Create(input.User));
         }
 
 
