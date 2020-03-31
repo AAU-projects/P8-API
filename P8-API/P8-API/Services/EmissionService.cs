@@ -12,7 +12,7 @@ namespace P8_API.Services
         /// </summary>
         /// <param name="kml">kilometers pr. liter petrol</param>
         /// <param name="fuelType">Fuel Type of the vehicle</param>
-        /// <returns></returns>
+        /// <returns>Returns the emission in CO2 g/km</returns>
         public double RetrieveEmission(double kml, string fuelType)
         {
             double l_100km = 100 / kml;
@@ -30,7 +30,7 @@ namespace P8_API.Services
         /// Returns the avg emission in CO2 g/km, in case no kml is given.
         /// </summary>
         /// <param name="fuelType"></param>
-        /// <returns></returns>
+        /// <returns>Returns the avg emission in CO2 g/km</returns>
         public double RetrieveEmission(string fuelType)
         {
             double result = 0;
@@ -43,6 +43,10 @@ namespace P8_API.Services
             return result;
         }
 
+        /// <summary>
+        /// Returns the avg emission in CO2 g/km, in case no kml and fuel type is given.
+        /// </summary>
+        /// <returns>Returns the avg emission in CO2 g/km</returns>
         public double RetrieveEmission()
         {
             return 127.0;

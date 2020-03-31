@@ -67,7 +67,7 @@ namespace P8_API.Controllers
         /// POST api/<controller>/register
         /// Registers abstract user if email is ok
         /// </summary>
-        /// <param name="User">The user to register</param>
+        /// <param name="input">An object containing the user, kml and fueltype</param>
         /// <returns>An ActionResult that tells if the user was created or not</returns>
         [HttpPost]
         [Route("register")]
