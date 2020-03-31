@@ -58,8 +58,17 @@ namespace P8_API.Controllers
         [Authorize]
         public ActionResult<UserBase> Get(string id)
         {
-            User user = _userService.Get(id);
-            UserBase userBase = new UserBase(user.Id, user.Email, user.CarEmission);
+            UserBase userBase;
+            try
+            {
+                User user = _userService.Get(id);
+                userBase = new UserBase(user?.Id, user?.Email, user.CarEmission);
+            }
+            catch (NullReferenceException)
+            {
+                userBase = new UserBase(null, null, 0);
+            }
+           
             return userBase;
         }
 

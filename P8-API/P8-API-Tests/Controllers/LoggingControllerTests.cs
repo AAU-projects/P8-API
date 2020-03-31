@@ -39,7 +39,7 @@ namespace P8_API_Tests.Controllers
             _controller = new LoggingController(_loggingService.Object, _authenticationService);
 
             // Initializes the database with a valid user with pincode
-            User mockUser = new User("13439332", "exist@gmail.com", "FG35382");
+            User mockUser = new User("13439332", "exist@gmail.com", 24.0);
             mockUser.UpdatePincode("1234", DateTime.Now.AddDays(365));
             _userService.Setup(x => x.ValidatePincode(mockUser.Email, "1234")).Returns(mockUser);
             _userService.Setup(x => x.Get(mockUser.Email)).Returns(mockUser);

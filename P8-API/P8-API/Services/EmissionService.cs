@@ -15,6 +15,11 @@ namespace P8_API.Services
         /// <returns>Returns the emission in CO2 g/km</returns>
         public double RetrieveEmission(double kml, string fuelType)
         {
+            if (kml == 0.0 || fuelType == "Electric")
+            {
+                return RetrieveEmission(fuelType);
+            }
+
             double l_100km = 100 / kml;
             double result = 0;
 

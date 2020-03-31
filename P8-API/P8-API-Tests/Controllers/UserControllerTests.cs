@@ -16,6 +16,7 @@ namespace P8_API_Tests.Controllers
     {
         private Mock<IUserService> _userService;
         private Mock<IMailService> _mailService;
+        private Mock<IEmissionService> _emissionService;
         private IAuthenticationService _authenticationService;
         private UserController _controller;
 
@@ -27,12 +28,13 @@ namespace P8_API_Tests.Controllers
 
             _userService = new Mock<IUserService>();
             _mailService = new Mock<IMailService>();
+            _emissionService = new Mock<IEmissionService>();
             _authenticationService = new AuthenticationService(_userService.Object, _mailService.Object, appSettings);
-            _controller = new UserController(_userService.Object, _authenticationService);
+            _controller = new UserController(_userService.Object, _authenticationService, _emissionService.Object);
             Helper.Utility = new Utility();
 
             // Initializes the database with a user using the email no@gmail.com
-            User mockUser = new User("13439332", "exist@gmail.com", "FG35382");
+            User mockUser = new User("13439332", "exist@gmail.com", 24.0);
             mockUser.UpdatePincode("1234", DateTime.Now.AddDays(365));
             _userService.Setup(x => x.Get("exist@gmail.com")).Returns(mockUser);
         }
@@ -42,7 +44,7 @@ namespace P8_API_Tests.Controllers
         public bool GetUser(string id)
         {
             // Arrange
-            User mockUser = new User("1", "test1@gmail.com", "FG35383");
+            User mockUser = new User("1", "test1@gmail.com", 24.0);
             _userService.Setup(x => x.Get("1")).Returns(mockUser);
 
             // Act
@@ -56,8 +58,8 @@ namespace P8_API_Tests.Controllers
         public void GetAllUsers()
         {
             // Arrange
-            User mockUser = new User("1", "test1@gmail.com", "asdsssss");
-            User mockUser2 = new User("2", "test2@gmail.com", "asd");
+            User mockUser = new User("1", "test1@gmail.com", 24.0);
+            User mockUser2 = new User("2", "test2@gmail.com", 24.0);
             _userService.Setup(x => x.Get()).Returns(new List<UserBase>{ mockUser, mockUser2});
 
             // Act
@@ -71,8 +73,8 @@ namespace P8_API_Tests.Controllers
         public void UpdateUser()
         {
             // Arrange
-            User mockUser = new User("1", "test1@gmail.com", "FG35383");
-            User UpdatedUser = new User("1", "testnew@gmail.com", "FG35383");
+            User mockUser = new User("1", "test1@gmail.com", 24.0);
+            User UpdatedUser = new User("1", "testnew@gmail.com", 24.0);
             _userService.Setup(x => x.Get("1")).Returns(mockUser);
             _userService.Setup(x => x.Update("1", UpdatedUser)).Callback((string id, User user) => mockUser = user);
             
@@ -83,13 +85,13 @@ namespace P8_API_Tests.Controllers
             Assert.AreEqual(mockUser.Email, UpdatedUser.Email);
         }
 
-        [TestCase("1", "test@gmail.com", "1234", "AB34567", ExpectedResult = StatusCodes.Status400BadRequest)]
-        [TestCase("2", "exist@gmail.com", "1233", "AB34567", ExpectedResult = StatusCodes.Status401Unauthorized)]
-        [TestCase("3", "exist@gmail.com", "1234", "AB34567", ExpectedResult = StatusCodes.Status200OK)]
-        public int? PostLogin(string id, string email, string pincode, string licenseplate)
+        [TestCase("1", "test@gmail.com", "1234", 24, ExpectedResult = StatusCodes.Status400BadRequest)]
+        [TestCase("2", "exist@gmail.com", "1233", 24, ExpectedResult = StatusCodes.Status401Unauthorized)]
+        [TestCase("3", "exist@gmail.com", "1234", 24, ExpectedResult = StatusCodes.Status200OK)]
+        public int? PostLogin(string id, string email, string pincode, double carEmission)
         {
             // Arrange
-            User mockUser = new User(id, email, licenseplate);
+            User mockUser = new User(id, email, carEmission);
             mockUser.UpdatePincode(pincode, DateTime.Now.AddDays(365));
             _userService.Setup(x => x.ValidatePincode("exist@gmail.com", "1234")).Returns(mockUser);
 
@@ -105,7 +107,7 @@ namespace P8_API_Tests.Controllers
         public int? PostPincode(string email)
         {
             // Arrange
-            User mockUser = new User(email, "8");
+            User mockUser = new User(email, 24.0);
             _mailService.Setup(x => x.SendMail(It.IsAny<string>(), It.IsAny<string>())).Returns(true);
 
             // Act
@@ -120,7 +122,7 @@ namespace P8_API_Tests.Controllers
         public int? DeleteUser(string id)
         {
             // Arrange
-            User mockUser = new User("1", "test1@gmail.com", "FG35383");
+            User mockUser = new User("1", "test1@gmail.com", 24.0);
             _userService.Setup(x => x.Get("1")).Returns(mockUser);
             _userService.Setup(x => x.Remove(id));
 
@@ -131,19 +133,18 @@ namespace P8_API_Tests.Controllers
             return result.StatusCode;
         }
 
-        [TestCase("", "SG43534", ExpectedResult = StatusCodes.Status400BadRequest)]
-        [TestCase("exist@gmail.com", "SG43534", ExpectedResult = StatusCodes.Status409Conflict)]
-        [TestCase("licenseplate@gmail.com", "SG435346", ExpectedResult = StatusCodes.Status400BadRequest)]
-        [TestCase("hello@you.com", null, ExpectedResult = StatusCodes.Status200OK)]
-        [TestCase("newuser@gmail.com", "SG43534", ExpectedResult = StatusCodes.Status200OK)]
-        public int? PostRegister(string email, string licenseplate)
+        [TestCase("", 10, "Petrol", ExpectedResult = StatusCodes.Status400BadRequest)]
+        [TestCase("exist@gmail.com", 10, "Petrol", ExpectedResult = StatusCodes.Status409Conflict)]
+        [TestCase("newuser@gmail.com", 10, "Petrol", ExpectedResult = StatusCodes.Status200OK)]
+        public int? PostRegister(string email, double kml, string fuelType)
         {
             // Arrange
-            User mockUser = new User(email, licenseplate);
+            User mockUser = new User(email, 24);
+            RegisterInput mockInput = new RegisterInput(mockUser, kml, fuelType);
             _userService.Setup(x => x.Create(mockUser)).Returns(mockUser);
 
             // Act
-            IStatusCodeActionResult result = (IStatusCodeActionResult) _controller.PostRegister(mockUser);
+            IStatusCodeActionResult result = (IStatusCodeActionResult) _controller.PostRegister(mockInput);
 
             // Assert
             return result.StatusCode;
