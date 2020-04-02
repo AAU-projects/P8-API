@@ -88,21 +88,7 @@ namespace P8_API.Controllers
             if (_userService.Get(input.User.Email) != null)
                 return Conflict("Email already exists");
 
-            if (input.FuelType != null)
-            {
-                if (input.Kml != 0)
-                {
-                    input.User.CarEmission = _emissionService.RetrieveEmission(input.Kml, input.FuelType);
-                }
-                else
-                {
-                    input.User.CarEmission = _emissionService.RetrieveEmission(input.FuelType);
-                }
-            }
-            else
-            {
-                input.User.CarEmission = _emissionService.RetrieveEmission();
-            }
+            input.User.CarEmission = _emissionService.RegisterRetrieveEmission(input);
            
             return Ok(_userService.Create(input.User));
         }

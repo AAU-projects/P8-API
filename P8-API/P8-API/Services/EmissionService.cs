@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P8_API.Models;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -7,6 +8,25 @@ namespace P8_API.Services
 {
     public class EmissionService : IEmissionService
     {
+        public double RegisterRetrieveEmission(RegisterInput input)
+        {
+            if (input.FuelType != null)
+            {
+                if (input.Kml != 0)
+                {
+                    return RetrieveEmission(input.Kml, input.FuelType);
+                }
+                else
+                {
+                    return RetrieveEmission(input.FuelType);
+                }
+            }
+            else
+            {
+                return RetrieveEmission();
+            }
+        }
+
         /// <summary>
         /// Returns the emission in CO2 g/km.
         /// </summary>
