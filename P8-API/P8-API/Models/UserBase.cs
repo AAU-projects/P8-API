@@ -14,21 +14,20 @@ namespace P8_API.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         public string Email { get; set; }
-        public string LicensePlate { get; set; }
+        public double CarEmission { get; set; }
 
         [JsonConstructor]
-        public UserBase(string id, string email, string licensePlate)
+        public UserBase(string id, string email, double carEmission)
         {
             Id = id;
             Email = email;
-            LicensePlate = licensePlate;
+            CarEmission = carEmission;
         }
 
-        public UserBase(string email, string licensePlate)
+        public UserBase(string email, double carEmission)
         {
             Email = email;
-            LicensePlate = licensePlate;
+            CarEmission = carEmission;
         }
-
     }
 }

@@ -10,6 +10,9 @@ using P8_API.Services;
 using IAuthenticationService = P8_API.Services.IAuthenticationService;
 using P8_API.Utility;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace P8_API.Controllers
 {
@@ -19,16 +22,18 @@ namespace P8_API.Controllers
     {
         private readonly IUserService _userService;
         private readonly IAuthenticationService _authenticationService;
+        private readonly IEmissionService _emissionService;
 
         /// <summary>
         /// Constructor for user controller
         /// <param name="userservice">The userservice for the controller</param>
         /// <param name="authenticationService">The authenticationservice for the controller</param>
         /// </summary>
-        public UserController(IUserService userservice, IAuthenticationService authenticationService)
+        public UserController(IUserService userservice, IAuthenticationService authenticationService, IEmissionService emissionService)
         {
             _userService = userservice;
             _authenticationService = authenticationService;
+            _emissionService = emissionService;
         }
 
         /// <summary>
@@ -53,8 +58,17 @@ namespace P8_API.Controllers
         [Authorize]
         public ActionResult<UserBase> Get(string id)
         {
-            User user = _userService.Get(id);
-            UserBase userBase = new UserBase(user?.Id, user?.Email, user?.LicensePlate);
+            UserBase userBase;
+            try
+            {
+                User user = _userService.Get(id);
+                userBase = new UserBase(user?.Id, user?.Email, user.CarEmission);
+            }
+            catch (NullReferenceException)
+            {
+                userBase = new UserBase(null, null, 0);
+            }
+           
             return userBase;
         }
 
@@ -62,22 +76,21 @@ namespace P8_API.Controllers
         /// POST api/<controller>/register
         /// Registers abstract user if email is ok
         /// </summary>
-        /// <param name="User">The user to register</param>
+        /// <param name="input">An object containing the user, kml and fueltype</param>
         /// <returns>An ActionResult that tells if the user was created or not</returns>
         [HttpPost]
         [Route("register")]
-        public IActionResult PostRegister(User user)
+        public IActionResult PostRegister(RegisterInput input)
         {
-            if (!Helper.Utility.IsEmailValid(user.Email))
+            if (!Helper.Utility.IsEmailValid(input.User.Email))
                 return BadRequest("Invalid email");
 
-            if (_userService.Get(user.Email) != null)
+            if (_userService.Get(input.User.Email) != null)
                 return Conflict("Email already exists");
 
-            if (!String.IsNullOrEmpty(user.LicensePlate) && user.LicensePlate.Length > 7)
-                return BadRequest("Invalid license plate format");
-
-            return Ok(_userService.Create(user));
+            input.User.CarEmission = _emissionService.RegisterRetrieveEmission(input);
+           
+            return Ok(_userService.Create(input.User));
         }
 
 
