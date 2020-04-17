@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using MongoDB.Driver;
+using Moq;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
@@ -15,12 +17,15 @@ namespace P8_API_Tests.Services
     class ExtractionServiceTests
     {
         private List<Position> _testPositions = new List<Position>(JsonConvert.DeserializeObject<Position[]>(File.ReadAllText(@"../../../Assets/routeData.json")));
-        private ExtractionService _extractService = new ExtractionService();
+        private Mock<IMongoDatabase> _mockDB;
+        private ExtractionService _extractService;
 
         [SetUp]
         public void Setup()
         {
-
+            _mockDB = new Mock<IMongoDatabase>();
+            _extractService = new ExtractionService(_mockDB.Object);
+            //TODO: mockDB.Setup(x => x.GetCollection<>)
         }
 
         [Test]
@@ -28,7 +33,7 @@ namespace P8_API_Tests.Services
         {
             List<Trip> result = _extractService.ExtractTrips(_testPositions);
 
-            Assert.IsTrue(result.Count == 3);
+            Assert.AreEqual(3, result.Count);
         }
     }
 }

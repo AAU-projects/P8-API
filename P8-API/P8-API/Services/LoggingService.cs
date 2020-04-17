@@ -16,11 +16,8 @@ namespace P8_API.Services
         /// Class constructor
         /// </summary>
         /// <param name="settings">The database interface</param>
-        public LoggingService(IDatabaseSettings settings)
+        public LoggingService(IMongoDatabase database)
         {
-            var client = new MongoClient(settings.ConnectionString);
-            var database = client.GetDatabase(settings.DatabaseName);
-
             _positions = database.GetCollection<PositionCollection>("Positions");
         }
 

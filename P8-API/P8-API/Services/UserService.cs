@@ -15,11 +15,8 @@ namespace P8_API.Services
         /// Class constructor
         /// </summary>
         /// <param name="settings">The database interface</param>
-        public UserService(IDatabaseSettings settings)
+        public UserService(IMongoDatabase database)
         {
-            var client = new MongoClient(settings.ConnectionString);
-            var database = client.GetDatabase(settings.DatabaseName);
-
             _users = database.GetCollection<User>("Users");
         }
 
