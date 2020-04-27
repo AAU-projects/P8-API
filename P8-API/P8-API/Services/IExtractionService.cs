@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P8_API.Services
 {
-    interface IExtractionService
+    public interface IExtractionService
     {
         /// <summary>
         /// Extracts trips from a list of positions
