@@ -8,7 +8,9 @@ namespace P8_API.Services
 {
     public interface ITripService
     {
-        void Predict_Transport(Trip trip);
-        List<Trip> Get_Recent_Trips(User user);
+        void PredictTransport(Trip trip);
+        List<Trip> GetRecentTrips(User user);
+
+
     }
 }

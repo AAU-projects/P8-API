@@ -9,8 +9,16 @@ using System.Threading.Tasks;
 
 namespace P8_API.Services
 {
-    public class TripService
+    public class TripService : ITripService
     {
+
+        private readonly IGoogleService _googleService;
+
+        public TripService(IGoogleService googleService)
+        {
+            _googleService = googleService;
+        }
+
         public void Test()
         {
 
@@ -19,12 +27,12 @@ namespace P8_API.Services
                 string json = r.ReadToEnd();
                 List<Trip> items = JsonConvert.DeserializeObject<List<Trip>>(json);
 
-                Predict_Transport(items[0]);
+                PredictTransport(items[0]);
             }
 
         }
 
-        public List<Trip> Get_Recent_Trips(User user)
+        public List<Trip> GetRecentTrips(User user)
         {
             using (StreamReader r = new StreamReader("tripData.json"))
             {
@@ -34,7 +42,7 @@ namespace P8_API.Services
             }
         }
 
-        public void Predict_Transport(Trip trip)
+        public void PredictTransport(Trip trip)
         {
             trip.CaculateSpeed();
             if (IsWithin(trip.AverageSpeed, 0, 3) && trip.MaxSpeed > 12)
@@ -51,12 +59,38 @@ namespace P8_API.Services
                 trip.Transport = Transport.Bike;
             } else if (IsWithin(trip.AverageSpeed, 0, 36))
             {
-                trip.Transport = Transport.Car;
-                trip.Transport = Transport.Public;
+                int percentageTransitStops = DetectTransitStops(trip);
+                if (percentageTransitStops >= 0.1)
+                    trip.Transport = Transport.Public;
+                else
+                    trip.Transport = Transport.Car;
             }
         }
 
-        public bool IsWithin(double value, int minimum, int maximum)
+        private int DetectTransitStops(Trip trip)
+        {
+            int stops = 0;
+            int transit_stops = 0;
+
+            foreach (Position pos in trip.TripPositions)
+            {
+                if (pos.Speed == 0 && pos.Accuracy <= 30)
+                {
+                    stops++;
+
+                    if (_googleService.NearbyTransit(Convert.ToInt32(pos.Accuracy), pos.Latitude, pos.Longitude))
+                        transit_stops++;
+                }
+            }
+
+            if (stops == 0)
+                return 0;
+
+            return transit_stops / stops;
+            //int transitStopsPrMinite = percentageOfTransitStop / trip.TripDuration;
+        }
+
+        private bool IsWithin(double value, int minimum, int maximum)
         {
             return value >= minimum && value <= maximum;
         }

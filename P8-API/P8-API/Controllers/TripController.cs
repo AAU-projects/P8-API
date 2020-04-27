@@ -36,7 +36,7 @@ namespace P8_API.Controllers
             if (user == null)
                 return Unauthorized("Invalid token");
 
-            return Ok(_tripService.Get_Recent_Trips(user));
+            return Ok(_tripService.GetRecentTrips(user));
         }
 
 
