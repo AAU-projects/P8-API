@@ -1,4 +1,6 @@
-﻿﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,13 +17,17 @@ namespace P8_API.Models
 
     public class Trip
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
         public List<Position> TripPositions { get; set; }
         public int TripDuration { get; set; }
         public Transport Transport { get; set; }
-
         public double MaxSpeed { get; set; } = double.MinValue;
         public double MinSpeed { get; set; } = double.MaxValue;
         public double AverageSpeed { get; set; } = 0;
+
+        public Trip() {}
 
         public Trip(List<Position> inputPositions)
         {

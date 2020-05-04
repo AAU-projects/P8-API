@@ -39,6 +39,16 @@ namespace P8_API.Controllers
             return Ok(_tripService.GetRecentTrips(user));
         }
 
+        [HttpPatch]
+        [Authorize]
+        public ActionResult<List<UserBase>> Patch()
+        {
+            string token = Helper.Utility.GetToken(Request);
+            User user = _authenticationService.ValidateToken(token);
+            if (user == null)
+                return Unauthorized("Invalid token");
 
+            return Ok(_tripService.GetRecentTrips(user));
+        }
     }
 }

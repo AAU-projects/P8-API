@@ -10,7 +10,6 @@ namespace P8_API.Services
     {
         void PredictTransport(Trip trip);
         List<Trip> GetRecentTrips(User user);
-
-
+        void UpdateTrip(string tripId, Transport transport, string userId, string dateId);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MongoDB.Driver;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using P8_API.Models;
 using System;
@@ -13,10 +14,12 @@ namespace P8_API.Services
     {
 
         private readonly IGoogleService _googleService;
+        private readonly IMongoCollection<TripsCollection> _trips;
 
-        public TripService(IGoogleService googleService)
+        public TripService(IGoogleService googleService, IMongoDatabase database)
         {
             _googleService = googleService;
+            _trips = database.GetCollection<TripsCollection>("Trips");
         }
 
         public void Test()
@@ -45,13 +48,13 @@ namespace P8_API.Services
         public void PredictTransport(Trip trip)
         {
             trip.CaculateSpeed();
-            if (IsWithin(trip.AverageSpeed, 0, 3) && trip.MaxSpeed > 12)
+            if (IsWithin(trip.AverageSpeed, 0, 3) && trip.MaxSpeed < 12)
             {
                 // Humans walk averagly 1 meter pr. second
                 // Humans are not able to run faster than 12 meters pr. second
                 // https://www.healthline.com/health/exercise-fitness/average-walking-speed#average-speed-by-age
                 trip.Transport = Transport.Walk;
-            } else if (IsWithin(trip.AverageSpeed, 0, 11) && trip.MaxSpeed > 13.8)
+            } else if (IsWithin(trip.AverageSpeed, 0, 11) && trip.MaxSpeed < 13.8)
             {
                 // Humans cycles between 0 and 11 meters pr. second
                 // Humans will probably not cycle faster than 13.8 meter pr. second
@@ -59,7 +62,7 @@ namespace P8_API.Services
                 trip.Transport = Transport.Bike;
             } else if (IsWithin(trip.AverageSpeed, 0, 36))
             {
-                int percentageTransitStops = DetectTransitStops(trip);
+                double percentageTransitStops = DetectTransitStops(trip);
                 if (percentageTransitStops >= 0.1)
                     trip.Transport = Transport.Public;
                 else
@@ -67,10 +70,10 @@ namespace P8_API.Services
             }
         }
 
-        private int DetectTransitStops(Trip trip)
+        private double DetectTransitStops(Trip trip)
         {
-            int stops = 0;
-            int transit_stops = 0;
+            double stops = 0;
+            double transit_stops = 0;
 
             foreach (Position pos in trip.TripPositions)
             {
@@ -87,7 +90,28 @@ namespace P8_API.Services
                 return 0;
 
             return transit_stops / stops;
-            //int transitStopsPrMinite = percentageOfTransitStop / trip.TripDuration;
+        }
+
+        public void UpdateTrip(string tripId, Transport transport, string userId, string dateId)
+        {
+            TripsCollection tripsCollection = _trips.Find(collection => collection.UserId == userId).FirstOrDefault();
+            TripDocument tripsOnDate;
+
+            if (tripsCollection != null)
+            {
+                tripsOnDate = tripsCollection.TripDocuments.FirstOrDefault(x => x.DateId == dateId);
+                
+                if(tripsOnDate != null)
+                {
+                    Trip trip = tripsOnDate.TripList.FirstOrDefault(x => x.Id == tripId);
+                    trip.Transport = transport;
+
+                    FilterDefinition<TripsCollection> filter = Builders<TripsCollection>.Filter.Eq(x => x.UserId, userId);
+                    UpdateDefinition<TripsCollection> update = Builders<TripsCollection>.Update.Set(x => x.TripDocuments, tripsCollection.TripDocuments);
+
+                    _trips.UpdateOne(filter, update);
+                }
+            }
         }
 
         private bool IsWithin(double value, int minimum, int maximum)
