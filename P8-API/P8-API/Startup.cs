@@ -18,6 +18,7 @@ using P8_API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using MongoDB.Driver;
 
 namespace P8_API
 {
@@ -38,11 +39,15 @@ namespace P8_API
                 options.KnownProxies.Add(IPAddress.Parse("10.0.0.100"));
             });
 
+            var dbSettings = Configuration.GetSection(nameof(DatabaseSettings)).Get<DatabaseSettings>();
+
+            var client = new MongoClient(dbSettings.ConnectionString);
+            var database = client.GetDatabase(dbSettings.DatabaseName);
+
             services.Configure<DatabaseSettings>(
                 Configuration.GetSection(nameof(DatabaseSettings)));
 
-            services.AddSingleton<IDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
+            services.AddSingleton(sp => database);
 
             services.Configure<AppSettings>(
                 Configuration.GetSection(nameof(AppSettings)));
@@ -77,6 +82,7 @@ namespace P8_API
             services.AddSingleton<IEmissionService, EmissionService>();
             services.AddSingleton<ITripService, TripService>();
             services.AddSingleton<IGoogleService, GoogleService>();
+            services.AddSingleton<IExtractionService, ExtractionService>();
             services.AddControllers().AddNewtonsoftJson(options => options.UseMemberCasing());
         }
 

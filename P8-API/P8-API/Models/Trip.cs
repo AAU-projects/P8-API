@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -25,8 +25,8 @@ namespace P8_API.Models
 
         public Trip(List<Position> inputPositions)
         {
-            //TripPositions = inputPositions;
-            //TripDuration = CalculateDuration();
+            TripPositions = inputPositions;
+            TripDuration = CalculateDuration();
         }
 
         private int CalculateDuration()
