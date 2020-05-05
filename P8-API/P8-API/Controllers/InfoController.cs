@@ -25,8 +25,7 @@ namespace P8_API.Controllers
         [HttpGet]
         public string Get()
         {
-            _tripService.ExtractUserTrips(null);
-            return "ok";
+            return Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
         }
     }
 }
