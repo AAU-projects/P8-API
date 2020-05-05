@@ -11,14 +11,15 @@ namespace P8_API.Services
 {
     public class GoogleService : IGoogleService
     {
-        private readonly string _GoogleApiKey;
+        private readonly IAppSettings _appSettings;
+
         /// <summary>
         /// Class constructor
         /// </summary>
         /// <param name="settings">AppSettings</param>
-        public GoogleService()
+        public GoogleService(IAppSettings appsettings)
         {
-            _GoogleApiKey = "AIzaSyDPVbZkJPURllC7bFlR44iZhoLfwNSS5JI";
+            _appSettings = appsettings;
         }
 
         public bool NearbyTransit(int range, double lattitude, double longitude)
@@ -26,7 +27,7 @@ namespace P8_API.Services
             string latString = lattitude.ToString("0.000000", System.Globalization.CultureInfo.InvariantCulture);
             string longString = longitude.ToString("0.000000", System.Globalization.CultureInfo.InvariantCulture);
 
-            string url = $"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={latString},{longString}&radius={range+5}&type=transit_station&key={_GoogleApiKey}";
+            string url = $"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={latString},{longString}&radius={range+5}&type=transit_station&key={_appSettings.GoogleAPIKey}";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "GET";
             request.ContentType = "application/json";
