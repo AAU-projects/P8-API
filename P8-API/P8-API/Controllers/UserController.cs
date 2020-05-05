@@ -158,7 +158,7 @@ namespace P8_API.Controllers
         /// <param name="id">A string with the id of the user to delete</param>
         /// <returns>An ActionResult that tells if the user was deleted or not</returns>
         [HttpDelete("{id}")]
-        //[Authorize]
+        [Authorize]
         public IActionResult Delete(string id)
         {
             UserBase user = _userService.Get(id);
