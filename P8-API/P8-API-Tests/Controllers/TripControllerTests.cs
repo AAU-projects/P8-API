@@ -32,8 +32,6 @@ namespace P8_API_Tests.Controllers
             _utility = new Mock<IUtility>();
             Helper.Utility = _utility.Object;
 
-
-
             _controller = new TripController(_tripService.Object, _extractionService.Object, _authenticationService.Object);
         }
 
@@ -47,7 +45,6 @@ namespace P8_API_Tests.Controllers
                 _utility.Setup(x => x.GetToken(It.IsAny<HttpRequest>())).Returns("test");
                 _authenticationService.Setup(x => x.ValidateToken("test")).Returns(new User("1", 1));
             }
-
 
             // Act
             IStatusCodeActionResult result = (IStatusCodeActionResult)_controller.Get();
@@ -66,7 +63,6 @@ namespace P8_API_Tests.Controllers
                 _utility.Setup(x => x.GetToken(It.IsAny<HttpRequest>())).Returns("test");
                 _authenticationService.Setup(x => x.ValidateToken("test")).Returns(new User("1", 1));
             }
-
 
             // Act
             IStatusCodeActionResult result = (IStatusCodeActionResult)_controller.Patch(date, tripId, transport);
