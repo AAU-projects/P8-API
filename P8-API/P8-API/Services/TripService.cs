@@ -12,7 +12,6 @@ namespace P8_API.Services
 {
     public class TripService : ITripService
     {
-
         private readonly IGoogleService _googleService;
         private readonly IExtractionService _extractionService;
 
@@ -35,7 +34,6 @@ namespace P8_API.Services
 
             _extractionService.SaveTrips(_testTrips, "test");
         }
-
 
         public Transport PredictTransport(Trip trip)
         {
@@ -85,8 +83,6 @@ namespace P8_API.Services
 
             return transit_stops / stops;
         }
-
-
 
         private bool IsWithin(double value, int minimum, int maximum)
         {

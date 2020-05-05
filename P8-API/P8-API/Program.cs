@@ -8,7 +8,6 @@ namespace P8_API
     {
         public static void Main(string[] args)
         {
-   
             CreateHostBuilder(args).Build().Run();
         }
 
