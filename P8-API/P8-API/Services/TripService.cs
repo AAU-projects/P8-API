@@ -14,60 +14,54 @@ namespace P8_API.Services
     {
 
         private readonly IGoogleService _googleService;
-        private readonly IMongoCollection<TripsCollection> _trips;
+        private readonly IExtractionService _extractionService;
 
-        public TripService(IGoogleService googleService, IMongoDatabase database)
+        public TripService(IGoogleService googleService, IExtractionService extractionService)
         {
             _googleService = googleService;
-            _trips = database.GetCollection<TripsCollection>("Trips");
+            _extractionService = extractionService;
         }
 
-        public void Test()
+        public void ExtractUserTrips(User user)
         {
+            // TODO extract user positions and remove them when they are included in a trip
+            List<Position> _testPositions = new List<Position>(JsonConvert.DeserializeObject<Position[]>(System.IO.File.ReadAllText(@"Controllers/routeData.json")));
+            List<Trip> _testTrips = _extractionService.ExtractTrips(_testPositions);
 
-            using (StreamReader r = new StreamReader("tripData.json"))
+            foreach (Trip trip in _testTrips)
             {
-                string json = r.ReadToEnd();
-                List<Trip> items = JsonConvert.DeserializeObject<List<Trip>>(json);
-
-                PredictTransport(items[0]);
+                trip.Transport = PredictTransport(trip);
             }
 
+            _extractionService.SaveTrips(_testTrips, "test");
         }
 
-        public List<Trip> GetRecentTrips(User user)
-        {
-            using (StreamReader r = new StreamReader("tripData.json"))
-            {
-                string json = r.ReadToEnd();
-                List<Trip> items = JsonConvert.DeserializeObject<List<Trip>>(json);
-                return items;
-            }
-        }
 
-        public void PredictTransport(Trip trip)
+        public Transport PredictTransport(Trip trip)
         {
-            trip.CaculateSpeed();
+            Transport prediction = Transport.Unknown;
+
             if (IsWithin(trip.AverageSpeed, 0, 3) && trip.MaxSpeed < 12)
             {
                 // Humans walk averagly 1 meter pr. second
                 // Humans are not able to run faster than 12 meters pr. second
                 // https://www.healthline.com/health/exercise-fitness/average-walking-speed#average-speed-by-age
-                trip.Transport = Transport.Walk;
+                prediction = Transport.Walk;
             } else if (IsWithin(trip.AverageSpeed, 0, 11) && trip.MaxSpeed < 13.8)
             {
                 // Humans cycles between 0 and 11 meters pr. second
                 // Humans will probably not cycle faster than 13.8 meter pr. second
                 // https://www.quora.com/What-is-the-average-bike-speed
-                trip.Transport = Transport.Bike;
+                prediction = Transport.Bike;
             } else if (IsWithin(trip.AverageSpeed, 0, 36))
             {
                 double percentageTransitStops = DetectTransitStops(trip);
                 if (percentageTransitStops >= 0.1)
-                    trip.Transport = Transport.Public;
+                    prediction = Transport.Public;
                 else
-                    trip.Transport = Transport.Car;
+                    prediction = Transport.Car;
             }
+            return prediction;
         }
 
         private double DetectTransitStops(Trip trip)
@@ -92,27 +86,7 @@ namespace P8_API.Services
             return transit_stops / stops;
         }
 
-        public void UpdateTrip(string tripId, Transport transport, string userId, string dateId)
-        {
-            TripsCollection tripsCollection = _trips.Find(collection => collection.UserId == userId).FirstOrDefault();
-            TripDocument tripsOnDate;
 
-            if (tripsCollection != null)
-            {
-                tripsOnDate = tripsCollection.TripDocuments.FirstOrDefault(x => x.DateId == dateId);
-                
-                if(tripsOnDate != null)
-                {
-                    Trip trip = tripsOnDate.TripList.FirstOrDefault(x => x.Id == tripId);
-                    trip.Transport = transport;
-
-                    FilterDefinition<TripsCollection> filter = Builders<TripsCollection>.Filter.Eq(x => x.UserId, userId);
-                    UpdateDefinition<TripsCollection> update = Builders<TripsCollection>.Update.Set(x => x.TripDocuments, tripsCollection.TripDocuments);
-
-                    _trips.UpdateOne(filter, update);
-                }
-            }
-        }
 
         private bool IsWithin(double value, int minimum, int maximum)
         {

@@ -29,5 +29,10 @@ namespace P8_API.Services
         /// <param name="date">The date to retrieve from</param>
         /// <returns>A TripDocument containing date and trips</returns>
         public TripDocument GetTripsOfUserAndDate(string userId, string date);
+
+        bool UpdateTrip(string date, string tripId, string userId, Transport transport);
+
+        List<TripDocument> GetTrips(string userId);
+
     }
 }

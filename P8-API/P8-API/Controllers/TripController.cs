@@ -14,6 +14,7 @@ namespace P8_API.Controllers
     public class TripController : ControllerBase
     {
         private readonly ITripService _tripService;
+        private readonly IExtractionService _extractionService;
         private readonly IAuthenticationService _authenticationService;
 
         /// <summary>
@@ -21,34 +22,37 @@ namespace P8_API.Controllers
         /// <param name="userservice">The userservice for the controller</param>
         /// <param name="authenticationService">The authenticationservice for the controller</param>
         /// </summary>
-        public TripController(ITripService tripService, IAuthenticationService authenticationService)
+        public TripController(ITripService tripService, IExtractionService extractionService, IAuthenticationService authenticationService)
         {
             _authenticationService = authenticationService;
+            _extractionService = extractionService;
             _tripService = tripService;
         }
 
         [HttpGet]
         [Authorize]
-        public ActionResult<List<UserBase>> Get()
+        public IActionResult Get()
         {
             string token = Helper.Utility.GetToken(Request);
             User user = _authenticationService.ValidateToken(token);
             if (user == null)
                 return Unauthorized("Invalid token");
 
-            return Ok(_tripService.GetRecentTrips(user));
+            return Ok(_extractionService.GetTrips(user.Id));
         }
 
         [HttpPatch]
         [Authorize]
-        public ActionResult<List<UserBase>> Patch()
+        public IActionResult Patch(string date, string tripId, Transport transport)
         {
             string token = Helper.Utility.GetToken(Request);
             User user = _authenticationService.ValidateToken(token);
             if (user == null)
                 return Unauthorized("Invalid token");
 
-            return Ok(_tripService.GetRecentTrips(user));
+            _extractionService.UpdateTrip(date, tripId, user.Id, transport);
+
+            return NoContent();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,17 +10,17 @@ namespace P8_API.Models
 {
     public enum Transport
     {
+        Unknown = -1,
         Walk,
         Bike,
         Car,
-        Public
+        Public,
     }
 
     public class Trip
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public List<Position> TripPositions { get; set; }
         public int TripDuration { get; set; }
         public Transport Transport { get; set; }
@@ -31,8 +32,12 @@ namespace P8_API.Models
 
         public Trip(List<Position> inputPositions)
         {
+            Guid guid = Guid.NewGuid();
+            Id = guid.ToString();
+
             TripPositions = inputPositions;
             TripDuration = CalculateDuration();
+            CaculateSpeed();
         }
 
         private int CalculateDuration()
