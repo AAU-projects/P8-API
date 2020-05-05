@@ -61,7 +61,48 @@ namespace P8_API.Services
                 }
             }
 
-            return tripsResultList;
+            return tripsResultList;       
+        }
+
+        public List<TripDocument> GetTrips(string userId)
+        {
+            TripsCollection tripsCollection = _trips.Find(collection => collection.UserId == userId).FirstOrDefault();
+
+            if (tripsCollection == null)
+                return null;
+
+            // This step is done to avoid sending the list of positions from a trip
+            foreach (TripDocument document in tripsCollection.TripDocuments)
+            {
+                foreach (Trip trip in document.TripList)
+                {
+                    trip.TripPositions = null;
+                }
+            }
+            return tripsCollection.TripDocuments;
+        }
+
+        public bool UpdateTrip(string date, string tripId, string userId, Transport transport)
+        {
+            TripsCollection tripsCollection = _trips.Find(collection => collection.UserId == userId).FirstOrDefault();
+            TripDocument tripsOnDate;
+
+            if (tripsCollection != null)
+            {
+                tripsOnDate = tripsCollection.TripDocuments.FirstOrDefault(x => x.DateId == date);
+
+                if (tripsOnDate != null)
+                {
+                    Trip trip = tripsOnDate.TripList.FirstOrDefault(x => x.Id == tripId);
+                    trip.Transport = transport;
+
+                    FilterDefinition<TripsCollection> filter = Builders<TripsCollection>.Filter.Eq(x => x.UserId, userId);
+                    UpdateDefinition<TripsCollection> update = Builders<TripsCollection>.Update.Set(x => x.TripDocuments, tripsCollection.TripDocuments);
+
+                    _trips.UpdateOne(filter, update);
+                }
+            }
+            return true;
         }
 
         /// <summary>

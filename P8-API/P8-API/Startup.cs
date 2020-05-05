@@ -80,6 +80,8 @@ namespace P8_API
             services.AddSingleton<IMailService, MailService>();
             services.AddSingleton<ILoggingService, LoggingService>();
             services.AddSingleton<IEmissionService, EmissionService>();
+            services.AddSingleton<ITripService, TripService>();
+            services.AddSingleton<IGoogleService, GoogleService>();
             services.AddSingleton<IExtractionService, ExtractionService>();
             services.AddControllers().AddNewtonsoftJson(options => options.UseMemberCasing());
         }

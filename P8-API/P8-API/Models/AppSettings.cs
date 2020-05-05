@@ -10,5 +10,6 @@ namespace P8_API.Models
         public string Secret { get; set; }
         public string EmailAddress { get; set; }
         public string EmailPassword { get; set; }
+        public string GoogleAPIKey { get; set; }
     }
 }
