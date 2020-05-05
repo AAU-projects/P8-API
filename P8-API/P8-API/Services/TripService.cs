@@ -32,7 +32,7 @@ namespace P8_API.Services
                 trip.Transport = PredictTransport(trip);
             }
 
-            _extractionService.SaveTrips(_testTrips, "test");
+            _extractionService.SaveTrips(_testTrips, user.Id);
         }
 
         public Transport PredictTransport(Trip trip)
