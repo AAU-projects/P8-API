@@ -76,10 +76,10 @@ namespace P8_API_Tests.Controllers
             User mockUser = new User("1", "test1@gmail.com", 24.0);
             User UpdatedUser = new User("1", "testnew@gmail.com", 24.0);
             _userService.Setup(x => x.Get("1")).Returns(mockUser);
-            _userService.Setup(x => x.Update("1", UpdatedUser)).Callback((string id, User user) => mockUser = user);
+            _userService.Setup(x => x.UpdateEmail("1", UpdatedUser.Email)).Callback((string id, string email) => mockUser.Email = email);
             
             // Act
-            _controller.Put("1", UpdatedUser);
+            _controller.Put(UpdatedUser);
 
             // Assert
             Assert.AreEqual(mockUser.Email, UpdatedUser.Email);
