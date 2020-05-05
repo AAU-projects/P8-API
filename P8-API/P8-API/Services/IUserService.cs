@@ -15,6 +15,8 @@ namespace P8_API.Services
 
         void Update(string id, User user);
 
+        void UpdateEmail(string id, string email);
+
         void Remove(User user);
 
         void Remove(string id);

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MongoDB.Bson;
 
 namespace P8_API.Services
 {
@@ -77,6 +78,17 @@ namespace P8_API.Services
         public void Update(string id, User user)
         {
             _users.ReplaceOne(u => u.Id == id, user);
+        }
+
+        /// <summary>
+        /// Updates a user's email in the DB
+        /// </summary>
+        /// <param name="id">The unique id of the user</param>
+        /// <param name="email">The new email</param>
+        public void UpdateEmail(string id, string email)
+        {
+            var update = new BsonDocument("$set", new BsonDocument("Email", email));
+            _users.UpdateOne(u => u.Id == id, update);
         }
 
         /// <summary>

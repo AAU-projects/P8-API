@@ -141,14 +141,14 @@ namespace P8_API.Controllers
         /// <returns>An ActionResult with statuscode</returns>
         [HttpPut("{id}")]
         [Authorize]
-        public IActionResult Put(string id, User inUser)
+        public IActionResult Put(User inUser)
         {
-            if (_userService.Get(id) == null)
+            if (_userService.Get(inUser.Id) == null)
                 return NotFound("User not found");
 
-            _userService.Update(id, inUser);
+            _userService.UpdateEmail(inUser.Id, inUser.Email);
 
-            return NoContent();
+            return Ok(_userService.Get(inUser.Id));
         }
 
         /// <summary>
@@ -158,7 +158,7 @@ namespace P8_API.Controllers
         /// <param name="id">A string with the id of the user to delete</param>
         /// <returns>An ActionResult that tells if the user was deleted or not</returns>
         [HttpDelete("{id}")]
-        [Authorize]
+        //[Authorize]
         public IActionResult Delete(string id)
         {
             UserBase user = _userService.Get(id);
