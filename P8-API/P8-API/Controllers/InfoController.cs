@@ -15,12 +15,10 @@ namespace P8_API.Controllers
     [Route("api/v1/[controller]")]
     public class InfoController : Controller
     {
-        private readonly ITripService _tripService;
-
-        public InfoController(ITripService tripService)
+        public InfoController()
         {
-            _tripService = tripService;
         }
+        
         // GET: api/<controller>
         [HttpGet]
         public string Get()
