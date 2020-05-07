@@ -59,7 +59,7 @@ namespace P8_API.Services
                     AddPositionDay(userId, positions, now);
                 }
 
-                // extract trips from position list and saves them on the user id
+                // Extract trips from position list and saves them on the user id
                 ExtractionService extractionService = new ExtractionService(_db);
                 List<Trip> tripsResultList = extractionService.ExtractTrips(positions);
                 extractionService.SaveTrips(tripsResultList, userId);
