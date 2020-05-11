@@ -50,7 +50,8 @@ namespace P8_API.Controllers
             if (user == null)
                 return Unauthorized("Invalid token");
 
-            _extractionService.UpdateTrip(date, tripId, user.Id, transport);
+            if (!_extractionService.UpdateTrip(date, tripId, user.Id, transport))
+                return BadRequest();
 
             return NoContent();
         }
