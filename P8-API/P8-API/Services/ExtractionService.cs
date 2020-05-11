@@ -100,9 +100,11 @@ namespace P8_API.Services
                     UpdateDefinition<TripsCollection> update = Builders<TripsCollection>.Update.Set(x => x.TripDocuments, tripsCollection.TripDocuments);
 
                     _trips.UpdateOne(filter, update);
+                    return true;
+
                 }
             }
-            return true;
+            return false;
         }
 
         /// <summary>

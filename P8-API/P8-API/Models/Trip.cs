@@ -23,6 +23,7 @@ namespace P8_API.Models
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public List<Position> TripPositions { get; set; }
         public int TripDuration { get; set; }
+        public DateTime TripDate { get; set; }
         public Transport Transport { get; set; }
         public double MaxSpeed { get; set; } = double.MinValue;
         public double MinSpeed { get; set; } = double.MaxValue;
@@ -34,6 +35,8 @@ namespace P8_API.Models
         {
             Guid guid = Guid.NewGuid();
             Id = guid.ToString();
+
+            TripDate = inputPositions.First().Timestamp;
 
             TripPositions = inputPositions;
             TripDuration = CalculateDuration();
