@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Moq;
+using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using P8_API.Controllers;
 using P8_API.Models;
@@ -54,7 +55,8 @@ namespace P8_API_Tests.Controllers
         }
 
         [TestCase("bad@token.com", "1", "1", Transport.Walk, ExpectedResult = StatusCodes.Status401Unauthorized)]
-        [TestCase("exist@token.com", "1", "1", Transport.Walk, ExpectedResult = StatusCodes.Status204NoContent)]
+        [TestCase("exist@token.com", "1", "1", Transport.Walk, ExpectedResult = StatusCodes.Status400BadRequest)]
+        [TestCase("exist@token.com", "2", "1", Transport.Walk, ExpectedResult = StatusCodes.Status204NoContent)]
         public int? Patch(string email, string date, string tripId, Transport transport)
         {
             // Arrange
@@ -62,10 +64,16 @@ namespace P8_API_Tests.Controllers
             {
                 _utility.Setup(x => x.GetToken(It.IsAny<HttpRequest>())).Returns("test");
                 _authenticationService.Setup(x => x.ValidateToken("test")).Returns(new User("1", 1));
+                _extractionService.Setup(x => x.UpdateTrip("2", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<Transport>())).Returns(true);
             }
 
+            JObject obj = new JObject();
+            obj["date"] = date;
+            obj["tripId"] = tripId;
+            obj["transport"] = (int) transport;
+
             // Act
-            IStatusCodeActionResult result = (IStatusCodeActionResult)_controller.Patch(date, tripId, transport);
+            IStatusCodeActionResult result = (IStatusCodeActionResult)_controller.Patch(obj);
 
             // Assert
             return result.StatusCode;
