@@ -11,6 +11,7 @@ namespace P8_API.Services
     public class LoggingService : ILoggingService
     {
         private readonly IMongoCollection<PositionCollection> _positions;
+        private readonly IMongoDatabase _db;
 
         /// <summary>
         /// Class constructor
@@ -19,6 +20,7 @@ namespace P8_API.Services
         public LoggingService(IMongoDatabase database)
         {
             _positions = database.GetCollection<PositionCollection>("Positions");
+            _db = database;
         }
 
         /// <summary>
@@ -57,6 +59,10 @@ namespace P8_API.Services
                     AddPositionDay(userId, positions, now);
                 }
 
+                // Extract trips from position list and saves them on the user id
+                ExtractionService extractionService = new ExtractionService(_db);
+                List<Trip> tripsResultList = extractionService.ExtractTrips(positions);
+                extractionService.SaveTrips(tripsResultList, userId);
             }
             catch (Exception )
             {
