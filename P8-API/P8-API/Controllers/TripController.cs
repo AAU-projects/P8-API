@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using P8_API.Models;
 using P8_API.Services;
 using P8_API.Utility;
@@ -43,8 +44,12 @@ namespace P8_API.Controllers
 
         [HttpPatch]
         [Authorize]
-        public IActionResult Patch(string date, string tripId, Transport transport)
+        public IActionResult Patch([FromBody] JObject data)
         {
+            string date = data["date"].ToString();
+            string tripId = data["tripId"].ToString();
+            Transport transport = data["transport"].ToObject<Transport>();
+
             string token = Helper.Utility.GetToken(Request);
             User user = _authenticationService.ValidateToken(token);
             if (user == null)
