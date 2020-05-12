@@ -40,17 +40,17 @@ namespace P8_API.Models
 
             TripPositions = inputPositions;
             TripDuration = CalculateDuration();
-            CaculateSpeed();
+            CalculateSpeed();
         }
 
         private int CalculateDuration()
         {
             Position start = GetStart();
             Position end = GetEnd();
-            return (end.Timestamp - start.Timestamp).Seconds;
+            return (int)(end.Timestamp - start.Timestamp).TotalSeconds;
         }
 
-        public void CaculateSpeed()
+        public void CalculateSpeed()
         {
             foreach (Position position in TripPositions)
             {
@@ -59,7 +59,7 @@ namespace P8_API.Models
                 AverageSpeed += position.Speed;
             }
 
-            AverageSpeed = AverageSpeed / TripPositions.Count;
+            AverageSpeed /= TripPositions.Count;
         }
 
         public Position GetStart()
