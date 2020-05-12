@@ -53,12 +53,9 @@ namespace P8_API.Services
                 }
             }
 
-            if(currentPositions.Count > 0)
+            if (currentPositions.Count > MinPositions)
             {
-                if (currentPositions.Count > MinPositions)
-                {
-                    tripsResultList.Add(new Trip(currentPositions));
-                }
+                tripsResultList.Add(new Trip(currentPositions));
             }
 
             return tripsResultList;       
