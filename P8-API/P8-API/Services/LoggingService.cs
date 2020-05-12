@@ -23,7 +23,6 @@ namespace P8_API.Services
             _positions = database.GetCollection<PositionCollection>("Positions");
             _extractionService = extractionService;
             _tripService = tripService;
-
         }
 
         /// <summary>
