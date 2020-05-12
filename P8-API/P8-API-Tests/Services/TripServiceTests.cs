@@ -43,8 +43,8 @@ namespace P8_API_Tests.Services
 
             Assert.AreEqual(predictions[0], Transport.Car);
             Assert.AreEqual(predictions[1], Transport.Public);
-            Assert.AreEqual(predictions[2], Transport.Bike); // SHOULD PROB BE WALK
-            Assert.AreEqual(predictions[3], Transport.Bike);
+            Assert.AreEqual(predictions[2], Transport.Walk);
+            Assert.AreEqual(predictions[3], Transport.Walk); // SHOULD PROB BE BIKE
         }
     }
 }
