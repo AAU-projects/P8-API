@@ -70,7 +70,7 @@ namespace P8_API.Services
 
                 _extractionService.SaveTrips(tripsResultList, userId);
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
             }

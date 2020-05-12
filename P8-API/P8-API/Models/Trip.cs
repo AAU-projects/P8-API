@@ -26,6 +26,7 @@ namespace P8_API.Models
         public DateTime TripDate { get; set; }
         public Transport Transport { get; set; }
         public double MaxSpeed { get; set; } = double.MinValue;
+        public double TopMedian { get; set; } = double.MinValue;
         public double MinSpeed { get; set; } = double.MaxValue;
         public double AverageSpeed { get; set; } = 0;
 
@@ -52,14 +53,34 @@ namespace P8_API.Models
 
         public void CaculateSpeed()
         {
+            List<double> speeds = new List<double>();
+
             foreach (Position position in TripPositions)
             {
+                speeds.Add(position.Speed);
                 if (position.Speed > MaxSpeed) MaxSpeed = position.Speed;
                 if (position.Speed < MinSpeed) MinSpeed = position.Speed;
                 AverageSpeed += position.Speed;
             }
 
+            TopMedian = FindTopMedian(speeds);
+
             AverageSpeed = AverageSpeed / TripPositions.Count;
+        }
+
+        private double FindTopMedian(List<double> speeds)
+        {
+            speeds.Sort();
+            int minIndex = (int)(speeds.Count * 0.75);
+            List<double> speedsTop = speeds.GetRange(minIndex, speeds.Count - minIndex);
+
+            if (speedsTop.Count % 2 == 0)
+            {
+                return (speedsTop[(int)speedsTop.Count / 2] + speedsTop[(int)speedsTop.Count / 2 + 1]) / 2;
+            } else
+            {
+                return speedsTop[(int)speedsTop.Count / 2];
+            }
         }
 
         public Position GetStart()
