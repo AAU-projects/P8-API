@@ -8,7 +8,6 @@ namespace P8_API.Services
 {
     public interface ITripService
     {
-        void ExtractUserTrips(User user);
         Transport PredictTransport(Trip trip);
     }
 }

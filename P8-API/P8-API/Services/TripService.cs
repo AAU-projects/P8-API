@@ -21,20 +21,6 @@ namespace P8_API.Services
             _extractionService = extractionService;
         }
 
-        public void ExtractUserTrips(User user)
-        {
-            // TODO extract user positions and remove them when they are included in a trip
-            List<Position> _testPositions = new List<Position>(JsonConvert.DeserializeObject<Position[]>(System.IO.File.ReadAllText(@"../../../Assets/routeData.json")));
-            List<Trip> _testTrips = _extractionService.ExtractTrips(_testPositions);
-
-            foreach (Trip trip in _testTrips)
-            {
-                trip.Transport = PredictTransport(trip);
-            }
-
-            _extractionService.SaveTrips(_testTrips, user.Id);
-        }
-
         public Transport PredictTransport(Trip trip)
         {
             Transport prediction = Transport.Unknown;
