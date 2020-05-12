@@ -37,7 +37,7 @@ namespace P8_API_Tests.Services
             List<Transport> predictions = new List<Transport>();
             foreach (var trip in _testTrips)
             {
-                trip.CaculateSpeed();
+                trip.CalculateSpeed();
                 predictions.Add(_tripService.PredictTransport(trip));
             }
 
