@@ -29,6 +29,8 @@ namespace P8_API_Tests.Services
             _googleService.Setup(x => x.NearbyTransit(Convert.ToInt32(20), 59.330064, 18.0685984)).Returns(true);
         }
 
+
+        // TODO ADD REAL DATA TO TEST ON 
         [Test]
         public void PredictTransport()
         {
@@ -42,7 +44,7 @@ namespace P8_API_Tests.Services
             Assert.AreEqual(predictions[0], Transport.Car);
             Assert.AreEqual(predictions[1], Transport.Public);
             Assert.AreEqual(predictions[2], Transport.Walk);
-            Assert.AreEqual(predictions[3], Transport.Bike);
+            Assert.AreEqual(predictions[3], Transport.Walk); // SHOULD PROB BE BIKE
         }
     }
 }

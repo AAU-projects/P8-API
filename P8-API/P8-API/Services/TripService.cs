@@ -21,40 +21,26 @@ namespace P8_API.Services
             _extractionService = extractionService;
         }
 
-        public void ExtractUserTrips(User user)
-        {
-            // TODO extract user positions and remove them when they are included in a trip
-            List<Position> _testPositions = new List<Position>(JsonConvert.DeserializeObject<Position[]>(System.IO.File.ReadAllText(@"../../../Assets/routeData.json")));
-            List<Trip> _testTrips = _extractionService.ExtractTrips(_testPositions);
-
-            foreach (Trip trip in _testTrips)
-            {
-                trip.Transport = PredictTransport(trip);
-            }
-
-            _extractionService.SaveTrips(_testTrips, user.Id);
-        }
-
         public Transport PredictTransport(Trip trip)
         {
             Transport prediction = Transport.Unknown;
 
-            if (IsWithin(trip.AverageSpeed, 0, 3) && trip.MaxSpeed < 12)
+            if (IsWithin(trip.AverageSpeed, 0, 3) && trip.TopMedian < 6)
             {
                 // Humans walk averagly 1 meter pr. second
                 // Humans are not able to run faster than 12 meters pr. second
                 // https://www.healthline.com/health/exercise-fitness/average-walking-speed#average-speed-by-age
                 prediction = Transport.Walk;
-            } else if (IsWithin(trip.AverageSpeed, 0, 11) && trip.MaxSpeed < 13.8)
+            } else if (IsWithin(trip.AverageSpeed, 0, 11) && trip.TopMedian < 8)
             {
                 // Humans cycles between 0 and 11 meters pr. second
                 // Humans will probably not cycle faster than 13.8 meter pr. second
                 // https://www.quora.com/What-is-the-average-bike-speed
                 prediction = Transport.Bike;
-            } else if (IsWithin(trip.AverageSpeed, 0, 36))
+            } else
             {
                 double percentageTransitStops = DetectTransitStops(trip);
-                if (percentageTransitStops >= 0.1)
+                if (IsWithin(trip.AverageSpeed, 0, 30) && percentageTransitStops >= 0.1)
                     prediction = Transport.Public;
                 else
                     prediction = Transport.Car;

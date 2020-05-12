@@ -11,16 +11,18 @@ namespace P8_API.Services
     public class LoggingService : ILoggingService
     {
         private readonly IMongoCollection<PositionCollection> _positions;
-        private readonly IMongoDatabase _db;
+        private readonly IExtractionService _extractionService;
+        private readonly ITripService _tripService;
 
         /// <summary>
         /// Class constructor
         /// </summary>
         /// <param name="settings">The database interface</param>
-        public LoggingService(IMongoDatabase database)
+        public LoggingService(IMongoDatabase database, IExtractionService extractionService, ITripService tripService)
         {
             _positions = database.GetCollection<PositionCollection>("Positions");
-            _db = database;
+            _extractionService = extractionService;
+            _tripService = tripService;
         }
 
         /// <summary>
@@ -59,12 +61,16 @@ namespace P8_API.Services
                     AddPositionDay(userId, positions, now);
                 }
 
-                // Extract trips from position list and saves them on the user id
-                ExtractionService extractionService = new ExtractionService(_db);
-                List<Trip> tripsResultList = extractionService.ExtractTrips(positions);
-                extractionService.SaveTrips(tripsResultList, userId);
+                List<Trip> tripsResultList = _extractionService.ExtractTrips(positions);
+
+                foreach (Trip trip in tripsResultList)
+                {
+                    trip.Transport = _tripService.PredictTransport(trip);
+                }
+
+                _extractionService.SaveTrips(tripsResultList, userId);
             }
-            catch (Exception )
+            catch (Exception)
             {
                 return false;
             }
