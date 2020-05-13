@@ -19,6 +19,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using MongoDB.Driver;
+using Newtonsoft.Json;
+using System.Globalization;
+using System.Threading;
+using Microsoft.AspNetCore.Localization;
 
 namespace P8_API
 {
@@ -34,6 +38,12 @@ namespace P8_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddMvc().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.Culture = new CultureInfo("fr-FR");
+            });
+
             services.Configure<ForwardedHeadersOptions>(options =>
             {
                 options.KnownProxies.Add(IPAddress.Parse("10.0.0.100"));
@@ -82,7 +92,7 @@ namespace P8_API
             services.AddSingleton<IEmissionService, EmissionService>();
             services.AddSingleton<ITripService, TripService>();
             services.AddSingleton<IGoogleService, GoogleService>();
-            services.AddSingleton<IExtractionService, ExtractionService>();
+            services.AddSingleton<IExtractionService, ExtractionClusterService>();
             services.AddControllers().AddNewtonsoftJson(options => options.UseMemberCasing());
         }
 
