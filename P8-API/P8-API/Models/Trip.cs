@@ -41,7 +41,6 @@ namespace P8_API.Models
 
             TripPositions = inputPositions;
             TripDuration = CalculateDuration();
-            CalculateSpeed();
         }
 
         private int CalculateDuration()
