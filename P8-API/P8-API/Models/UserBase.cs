@@ -1,13 +1,11 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 
 namespace P8_API.Models
 {
+    [ExcludeFromCodeCoverage]
     public class UserBase
     {
         [BsonId]
