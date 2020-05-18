@@ -31,7 +31,6 @@ namespace P8_API_Tests.Services
             // mock specific locations to be a busstation
             _googleService.Setup(x => x.NearbyTransit(Convert.ToInt32(20), 59.330064, 18.0685984)).Returns(true);
 
-
             // Mock transit stops
             string transitStops = File.ReadAllText(@"../../../Assets/transitStops.json");
             _transitStops = new List<TransitStop>(JsonConvert.DeserializeObject<TransitStop[]>(transitStops));
@@ -51,46 +50,28 @@ namespace P8_API_Tests.Services
             return false;
         }
 
-        [Test]
-        public void PredictBikeTransport()
+        [TestCase("tripBike",   0, ExpectedResult = Transport.Bike)]
+
+        [TestCase("tripCar",    0, ExpectedResult = Transport.Car)]
+        [TestCase("tripCar",    1, ExpectedResult = Transport.Car)]
+        [TestCase("tripCar",    2, ExpectedResult = Transport.Car)]
+        [TestCase("tripCar",    3, ExpectedResult = Transport.Car)]
+
+        [TestCase("tripBus",    0, ExpectedResult = Transport.Walk)]
+        [TestCase("tripBus",    1, ExpectedResult = Transport.Public)]
+        [TestCase("tripBus",    2, ExpectedResult = Transport.Public)]
+        public Transport PredictTransport(string filename, int tripIndex)
         {
-            string busTrips = File.ReadAllText(@"../../../Assets/tripBike.json");
-            List<Trip> _testTrips = new List<Trip>(JsonConvert.DeserializeObject<Trip[]>(busTrips, _settings));
+            // Arange
+            string bikeTrips = File.ReadAllText(@$"../../../Assets/{filename}.json");
+            List<Trip> _testTrips = new List<Trip>(JsonConvert.DeserializeObject<Trip[]>(bikeTrips, _settings));
+            Trip selectedTrip = _testTrips[tripIndex];
 
-            foreach (var trip in _testTrips)
-            {
-                Transport expectedTrasnport = trip.Transport;
-                Transport predictedTransport = _tripService.PredictTransport(trip);
-                Assert.AreEqual(expectedTrasnport, predictedTransport);
-            }
-        }
+            // Act
+            Transport predictedTransport = _tripService.PredictTransport(selectedTrip);
 
-        [Test]
-        public void PredictCarTransport()
-        {
-            string busTrips = File.ReadAllText(@"../../../Assets/tripCar.json");
-            List<Trip> _testTrips = new List<Trip>(JsonConvert.DeserializeObject<Trip[]>(busTrips, _settings));
-
-            foreach (var trip in _testTrips)
-            {
-                Transport expectedTrasnport = trip.Transport;
-                Transport predictedTransport = _tripService.PredictTransport(trip);
-                Assert.AreEqual(expectedTrasnport, predictedTransport);
-            }
-        }
-
-        [Test]
-        public void PredictBusTransport()
-        {
-            string busTrips = File.ReadAllText(@"../../../Assets/tripBus.json");
-            List<Trip> _testTrips = new List<Trip>(JsonConvert.DeserializeObject<Trip[]>(busTrips, _settings));
-
-            foreach (var trip in _testTrips)
-            {
-                Transport expectedTrasnport = trip.Transport;
-                Transport predictedTransport =  _tripService.PredictTransport(trip);
-                Assert.AreEqual(expectedTrasnport, predictedTransport);
-            }
+            // Assert
+            return predictedTransport;
         }
     }
 }
