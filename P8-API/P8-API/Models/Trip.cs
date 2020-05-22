@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,11 +20,15 @@ namespace P8_API.Models
 
     public class Trip
     {
+        [ExcludeFromCodeCoverage]
         public string Id { get; set; }
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public List<Position> TripPositions { get; set; }
+        [ExcludeFromCodeCoverage]
         public int TripDuration { get; set; }
+        [ExcludeFromCodeCoverage]
         public DateTime TripDate { get; set; }
+        [ExcludeFromCodeCoverage]
         public Transport Transport { get; set; }
         public double MaxSpeed { get; set; } = double.MinValue;
         public double TopMedian { get; set; } = double.MinValue;
@@ -75,7 +80,7 @@ namespace P8_API.Models
 
             if (speedsTop.Count % 2 == 0)
             {
-                return (speedsTop[(int)speedsTop.Count / 2] + speedsTop[(int)speedsTop.Count / 2 + 1]) / 2;
+                return (speedsTop[(int)speedsTop.Count / 2 - 1] + speedsTop[(int)speedsTop.Count / 2]) / 2;
             } else
             {
                 return speedsTop[(int)speedsTop.Count / 2];

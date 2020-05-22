@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+using System.Diagnostics.CodeAnalysis;
 using Newtonsoft.Json;
 
 namespace P8_API.Models
@@ -13,7 +8,9 @@ namespace P8_API.Models
     {
         public string Pincode { get; set; }
         public string Token { get; set; }
+        [ExcludeFromCodeCoverage]
         public DateTime PinExpirationDate { get; set; }
+        [ExcludeFromCodeCoverage]
         public DateTime TokenExpirationDate { get; set; }
 
         [JsonConstructor]
