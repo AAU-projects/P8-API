@@ -7,7 +7,7 @@ using P8_API.Services;
 using System.Collections.Generic;
 using System.IO;
 
-namespace P8_API_Tests.Services
+namespace P8_API_Tests_Evaluation.Services
 {
     class ExtractionServiceTests
     {

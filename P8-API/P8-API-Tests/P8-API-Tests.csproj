@@ -22,4 +22,8 @@
     <ProjectReference Include="..\P8-API\P8-API.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>

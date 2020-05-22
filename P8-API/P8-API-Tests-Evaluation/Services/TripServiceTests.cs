@@ -1,14 +1,11 @@
-﻿using MongoDB.Driver;
-using Moq;
+﻿using Moq;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using NUnit.Framework;
 using P8_API.Models;
 using P8_API.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading;
 
 namespace P8_API_Tests.Services
 {
