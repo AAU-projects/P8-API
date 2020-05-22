@@ -22,12 +22,4 @@
     <ProjectReference Include="..\P8-API\P8-API.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="Assets\tripData.json">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>
