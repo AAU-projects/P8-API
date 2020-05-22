@@ -26,7 +26,7 @@ namespace P8_API_Tests_Evaluation.Services
             _settings = new JsonSerializerSettings() { Culture = new System.Globalization.CultureInfo("fr-FR") };
         }
 
-        [TestCase("routeBike", ExpectedResult = 3)]
+        [TestCase("routeBike", ExpectedResult = 2)]
         [TestCase("routeCar", ExpectedResult = 4)]
         [TestCase("routeBus", ExpectedResult = 2)]
         public int ExtractTrip(string filename)
@@ -42,7 +42,7 @@ namespace P8_API_Tests_Evaluation.Services
             return result.Count;
         }
 
-        [TestCase("routeBike", ExpectedResult = 3)]
+        [TestCase("routeBike", ExpectedResult = 2)]
         [TestCase("routeCar", ExpectedResult = 4)]
         [TestCase("routeBus", ExpectedResult = 2)]
         public int ExtractTripCluster(string filename)
