@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using P8_API.Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace P8_API.Services
     public class GoogleService : IGoogleService
     {
         private readonly IAppSettings _appSettings;
-
+        private List<TransitStop> _data = new List<TransitStop>();
         /// <summary>
         /// Class constructor
         /// </summary>
@@ -41,7 +42,24 @@ namespace P8_API.Services
                 responseJson = JObject.Parse(webContent);
             }
 
+            save_json(responseJson["status"].ToString() == "OK", lattitude, longitude);
+
             return responseJson["status"].ToString() == "OK";
+        }
+
+        private void save_json(bool result, double lattitude, double longitude)
+        {
+            _data.Add(new TransitStop()
+            {
+                Result = result,
+                Lattitude = lattitude,
+                Longitude = longitude
+            });
+
+            string json = JsonConvert.SerializeObject(_data.ToArray());
+
+            // Write string to file
+            File.WriteAllText(@"test.json", json);
         }
     }
 }

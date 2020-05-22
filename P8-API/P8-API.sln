@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P8-API", "P8-API\P8-API.csproj", "{773E4517-36B9-469F-B50D-FB2391BBB122}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P8-API", "P8-API\P8-API.csproj", "{773E4517-36B9-469F-B50D-FB2391BBB122}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P8-API-Tests", "P8-API-Tests\P8-API-Tests.csproj", "{6869BD65-9722-4032-9A25-91B26DF20CC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P8-API-Tests", "P8-API-Tests\P8-API-Tests.csproj", "{6869BD65-9722-4032-9A25-91B26DF20CC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P8-API-Tests-Evaluation", "P8-API-Tests-Evaluation\P8-API-Tests-Evaluation.csproj", "{AF854F5B-3599-44A3-BD77-C6A83FAE07D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6869BD65-9722-4032-9A25-91B26DF20CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6869BD65-9722-4032-9A25-91B26DF20CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6869BD65-9722-4032-9A25-91B26DF20CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF854F5B-3599-44A3-BD77-C6A83FAE07D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF854F5B-3599-44A3-BD77-C6A83FAE07D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF854F5B-3599-44A3-BD77-C6A83FAE07D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF854F5B-3599-44A3-BD77-C6A83FAE07D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

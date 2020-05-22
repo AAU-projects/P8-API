@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using P8_API.Models;
-using P8_API.Services;
-using SharpCompress.Archives.SevenZip;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace P8_API.Controllers
 {
+    [ExcludeFromCodeCoverage]
     [Route("api/v1/[controller]")]
     public class InfoController : Controller
     {

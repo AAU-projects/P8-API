@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Net.Mail;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
 namespace P8_API.Utility
@@ -23,8 +19,7 @@ namespace P8_API.Utility
         {
             try
             {
-                return request.Headers["Authorization"][0].Substring("Bearer ".Length).Trim();
-
+                return request.Headers["Authorization"][0].Split("Bearer ")[1].Trim();
             }
             catch (Exception )
             {

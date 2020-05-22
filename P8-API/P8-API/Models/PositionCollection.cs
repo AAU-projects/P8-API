@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MongoDB.Bson;
+﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace P8_API.Models
 {
+    [ExcludeFromCodeCoverage]
     public class PositionCollection
     {
         [BsonId]

@@ -1,0 +1,5536 @@
+﻿[
+  {
+    "_id": "23d0fcca-7f88-4528-88a8-e00a9929c601",
+    "TripPositions": [
+      {
+        "Latitude": 56.4862364,
+        "Longitude": 9.6284933,
+        "Timestamp": "12/5/2020 08:26:33.031",
+        "Altitude": 94.7,
+        "Accuracy": 16.9,
+        "Heading": 4.02,
+        "Speed": 0.01,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4861071,
+        "Longitude": 9.6285144,
+        "Timestamp": "12/5/2020 08:27:31.267",
+        "Altitude": 94.7,
+        "Accuracy": 25,
+        "Heading": 174.72,
+        "Speed": 1.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4862295,
+        "Longitude": 9.6284923,
+        "Timestamp": "12/5/2020 08:27:41.276",
+        "Altitude": 94.7,
+        "Accuracy": 23.1,
+        "Heading": 355.67,
+        "Speed": 0.81,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4862367,
+        "Longitude": 9.6284886,
+        "Timestamp": "12/5/2020 08:29:25.566",
+        "Altitude": 94.7,
+        "Accuracy": 25.2,
+        "Heading": 349.72,
+        "Speed": 0.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4861182,
+        "Longitude": 9.6285214,
+        "Timestamp": "12/5/2020 08:30:01.385",
+        "Altitude": 94.7,
+        "Accuracy": 29.7,
+        "Heading": 171.89,
+        "Speed": 1.56,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4860182,
+        "Longitude": 9.6285423,
+        "Timestamp": "12/5/2020 08:30:05",
+        "Altitude": 94.7,
+        "Accuracy": 49.2,
+        "Heading": 172.86,
+        "Speed": 2.47,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4862359,
+        "Longitude": 9.6284933,
+        "Timestamp": "12/5/2020 08:30:38.406",
+        "Altitude": 94.7,
+        "Accuracy": 16.5,
+        "Heading": 356.93,
+        "Speed": 1.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4860755,
+        "Longitude": 9.6285268,
+        "Timestamp": "12/5/2020 08:32:00.375",
+        "Altitude": 93.9,
+        "Accuracy": 25.1,
+        "Heading": 173.5,
+        "Speed": 2.18,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4862356,
+        "Longitude": 9.628493,
+        "Timestamp": "12/5/2020 08:32:21.291",
+        "Altitude": 94.7,
+        "Accuracy": 14.9,
+        "Heading": -1,
+        "Speed": -1,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4862359,
+        "Longitude": 9.6284925,
+        "Timestamp": "12/5/2020 08:34:26.172",
+        "Altitude": 94.7,
+        "Accuracy": 17.2,
+        "Heading": 208,
+        "Speed": 0.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4860479,
+        "Longitude": 9.6285397,
+        "Timestamp": "12/5/2020 08:39:23.718",
+        "Altitude": 94.7,
+        "Accuracy": 25.3,
+        "Heading": -1,
+        "Speed": -1,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4862328,
+        "Longitude": 9.6284894,
+        "Timestamp": "12/5/2020 08:39:26.584",
+        "Altitude": 94.7,
+        "Accuracy": 25.4,
+        "Heading": 351.46,
+        "Speed": 0.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4862337,
+        "Longitude": 9.6284891,
+        "Timestamp": "12/5/2020 08:39:32",
+        "Altitude": 94.7,
+        "Accuracy": 26.7,
+        "Heading": 350.42,
+        "Speed": 0.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4862328,
+        "Longitude": 9.6284894,
+        "Timestamp": "12/5/2020 08:39:26.584",
+        "Altitude": 94.7,
+        "Accuracy": 25.4,
+        "Heading": 351.46,
+        "Speed": 0.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4859395,
+        "Longitude": 9.6285611,
+        "Timestamp": "12/5/2020 08:39:40.611",
+        "Altitude": 93.9,
+        "Accuracy": 26.4,
+        "Heading": 160.53,
+        "Speed": 1.65,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4859541,
+        "Longitude": 9.6285628,
+        "Timestamp": "12/5/2020 08:39:43",
+        "Altitude": 93.9,
+        "Accuracy": 21.3,
+        "Heading": 149.5,
+        "Speed": 0.73,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4860454,
+        "Longitude": 9.6285362,
+        "Timestamp": "12/5/2020 08:39:47",
+        "Altitude": 93.9,
+        "Accuracy": 13.2,
+        "Heading": 358.23,
+        "Speed": 0.92,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4859782,
+        "Longitude": 9.6285454,
+        "Timestamp": "12/5/2020 08:40:33.913",
+        "Altitude": 93.9,
+        "Accuracy": 27.3,
+        "Heading": 195.61,
+        "Speed": 0.06,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4859023,
+        "Longitude": 9.6284058,
+        "Timestamp": "12/5/2020 08:41:04",
+        "Altitude": 93.9,
+        "Accuracy": 8.6,
+        "Heading": 228,
+        "Speed": 4.61,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4857248,
+        "Longitude": 9.6281967,
+        "Timestamp": "12/5/2020 08:41:08",
+        "Altitude": 92.6,
+        "Accuracy": 10,
+        "Heading": 229.92,
+        "Speed": 7.22,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4855316,
+        "Longitude": 9.6278739,
+        "Timestamp": "12/5/2020 08:41:11",
+        "Altitude": 92.6,
+        "Accuracy": 10.5,
+        "Heading": 229.79,
+        "Speed": 10.29,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4852883,
+        "Longitude": 9.6274337,
+        "Timestamp": "12/5/2020 08:41:14",
+        "Altitude": 92.6,
+        "Accuracy": 10.7,
+        "Heading": 229.08,
+        "Speed": 11.7,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4850373,
+        "Longitude": 9.6270917,
+        "Timestamp": "12/5/2020 08:41:17",
+        "Altitude": 92.6,
+        "Accuracy": 11.4,
+        "Heading": 216.02,
+        "Speed": 10.59,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4847733,
+        "Longitude": 9.626836,
+        "Timestamp": "12/5/2020 08:41:20",
+        "Altitude": 92.6,
+        "Accuracy": 12.9,
+        "Heading": 210.18,
+        "Speed": 10.93,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4845178,
+        "Longitude": 9.6266422,
+        "Timestamp": "12/5/2020 08:41:23",
+        "Altitude": 92.6,
+        "Accuracy": 12.5,
+        "Heading": 210,
+        "Speed": 10.78,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.484176,
+        "Longitude": 9.6264083,
+        "Timestamp": "12/5/2020 08:41:27",
+        "Altitude": 92.6,
+        "Accuracy": 9.9,
+        "Heading": 201.44,
+        "Speed": 10,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4838633,
+        "Longitude": 9.6262908,
+        "Timestamp": "12/5/2020 08:41:30",
+        "Altitude": 92.6,
+        "Accuracy": 11.1,
+        "Heading": 190.96,
+        "Speed": 10.54,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4836335,
+        "Longitude": 9.6267132,
+        "Timestamp": "12/5/2020 08:41:33",
+        "Altitude": 92.6,
+        "Accuracy": 10.7,
+        "Heading": 135.68,
+        "Speed": 9.43,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4835097,
+        "Longitude": 9.627261,
+        "Timestamp": "12/5/2020 08:41:37",
+        "Altitude": 92.6,
+        "Accuracy": 6.2,
+        "Heading": 126.05,
+        "Speed": 7.9,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4832471,
+        "Longitude": 9.627454,
+        "Timestamp": "12/5/2020 08:41:41",
+        "Altitude": 92.6,
+        "Accuracy": 9.6,
+        "Heading": 171.33,
+        "Speed": 8.41,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4829032,
+        "Longitude": 9.6274152,
+        "Timestamp": "12/5/2020 08:41:45",
+        "Altitude": 92.6,
+        "Accuracy": 10.9,
+        "Heading": 178.01,
+        "Speed": 8.83,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4825916,
+        "Longitude": 9.6274303,
+        "Timestamp": "12/5/2020 08:41:49",
+        "Altitude": 92.6,
+        "Accuracy": 9.9,
+        "Heading": 175.01,
+        "Speed": 7.5,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.482315,
+        "Longitude": 9.6275466,
+        "Timestamp": "12/5/2020 08:41:53",
+        "Altitude": 92.6,
+        "Accuracy": 9.6,
+        "Heading": 164,
+        "Speed": 7.6,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4820358,
+        "Longitude": 9.6276074,
+        "Timestamp": "12/5/2020 08:42:02",
+        "Altitude": 92.6,
+        "Accuracy": 9.6,
+        "Heading": 211.31,
+        "Speed": 2.32,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4819921,
+        "Longitude": 9.6274559,
+        "Timestamp": "12/5/2020 08:42:05",
+        "Altitude": 98.2,
+        "Accuracy": 9.6,
+        "Heading": 255.89,
+        "Speed": 4.1,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4819626,
+        "Longitude": 9.6270373,
+        "Timestamp": "12/5/2020 08:42:09",
+        "Altitude": 94,
+        "Accuracy": 9.9,
+        "Heading": 255.89,
+        "Speed": 9.13,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4818821,
+        "Longitude": 9.6264333,
+        "Timestamp": "12/5/2020 08:42:12",
+        "Altitude": 95.2,
+        "Accuracy": 9.9,
+        "Heading": 256.96,
+        "Speed": 13.13,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4818075,
+        "Longitude": 9.625757,
+        "Timestamp": "12/5/2020 08:42:15",
+        "Altitude": 96.7,
+        "Accuracy": 9.9,
+        "Heading": 259.06,
+        "Speed": 13.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4817431,
+        "Longitude": 9.6251016,
+        "Timestamp": "12/5/2020 08:42:18",
+        "Altitude": 97.2,
+        "Accuracy": 10.2,
+        "Heading": 261.87,
+        "Speed": 12.92,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4816534,
+        "Longitude": 9.6242767,
+        "Timestamp": "12/5/2020 08:42:22",
+        "Altitude": 99.3,
+        "Accuracy": 10.7,
+        "Heading": 257.87,
+        "Speed": 13.49,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4815774,
+        "Longitude": 9.6235939,
+        "Timestamp": "12/5/2020 08:42:25",
+        "Altitude": 95.2,
+        "Accuracy": 10.7,
+        "Heading": 258.98,
+        "Speed": 14.4,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4814976,
+        "Longitude": 9.6228609,
+        "Timestamp": "12/5/2020 08:42:28",
+        "Altitude": 92,
+        "Accuracy": 10.9,
+        "Heading": 258.99,
+        "Speed": 14.61,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4814104,
+        "Longitude": 9.6221251,
+        "Timestamp": "12/5/2020 08:42:31",
+        "Altitude": 93.1,
+        "Accuracy": 11.4,
+        "Heading": 258,
+        "Speed": 14.67,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4813214,
+        "Longitude": 9.6214045,
+        "Timestamp": "12/5/2020 08:42:34",
+        "Altitude": 90.9,
+        "Accuracy": 11.3,
+        "Heading": 258.96,
+        "Speed": 14.07,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4812605,
+        "Longitude": 9.6207603,
+        "Timestamp": "12/5/2020 08:42:37",
+        "Altitude": 91.4,
+        "Accuracy": 10.9,
+        "Heading": 261.94,
+        "Speed": 13.28,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.481184,
+        "Longitude": 9.6199013,
+        "Timestamp": "12/5/2020 08:42:41",
+        "Altitude": 89.2,
+        "Accuracy": 10.7,
+        "Heading": 256.09,
+        "Speed": 14.09,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4810908,
+        "Longitude": 9.6192256,
+        "Timestamp": "12/5/2020 08:42:44",
+        "Altitude": 91.3,
+        "Accuracy": 10.7,
+        "Heading": 257.98,
+        "Speed": 14.58,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4810272,
+        "Longitude": 9.6185502,
+        "Timestamp": "12/5/2020 08:42:47",
+        "Altitude": 92.6,
+        "Accuracy": 11.3,
+        "Heading": 259.98,
+        "Speed": 14.98,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4810004,
+        "Longitude": 9.617851,
+        "Timestamp": "12/5/2020 08:42:50",
+        "Altitude": 94.8,
+        "Accuracy": 12.1,
+        "Heading": 265.1,
+        "Speed": 13.88,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4809321,
+        "Longitude": 9.6171844,
+        "Timestamp": "12/5/2020 08:42:53",
+        "Altitude": 97,
+        "Accuracy": 12.4,
+        "Heading": 257.85,
+        "Speed": 14.59,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4808497,
+        "Longitude": 9.6164704,
+        "Timestamp": "12/5/2020 08:42:56",
+        "Altitude": 94.9,
+        "Accuracy": 11.4,
+        "Heading": 258.9,
+        "Speed": 14.42,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4807768,
+        "Longitude": 9.6157909,
+        "Timestamp": "12/5/2020 08:42:59",
+        "Altitude": 97.6,
+        "Accuracy": 10.9,
+        "Heading": 258.04,
+        "Speed": 14.76,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4807012,
+        "Longitude": 9.6150536,
+        "Timestamp": "12/5/2020 08:43:02",
+        "Altitude": 96.5,
+        "Accuracy": 10.7,
+        "Heading": 258.08,
+        "Speed": 16.71,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4805961,
+        "Longitude": 9.614175,
+        "Timestamp": "12/5/2020 08:43:05",
+        "Altitude": 96.6,
+        "Accuracy": 10.7,
+        "Heading": 258.99,
+        "Speed": 18.04,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4804885,
+        "Longitude": 9.6132508,
+        "Timestamp": "12/5/2020 08:43:08",
+        "Altitude": 94.4,
+        "Accuracy": 10.7,
+        "Heading": 258.01,
+        "Speed": 19.47,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4803752,
+        "Longitude": 9.6122607,
+        "Timestamp": "12/5/2020 08:43:11",
+        "Altitude": 92.8,
+        "Accuracy": 10.7,
+        "Heading": 259,
+        "Speed": 20.92,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4802732,
+        "Longitude": 9.6112546,
+        "Timestamp": "12/5/2020 08:43:14",
+        "Altitude": 94.7,
+        "Accuracy": 11.1,
+        "Heading": 259.01,
+        "Speed": 20.4,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4801654,
+        "Longitude": 9.6102571,
+        "Timestamp": "12/5/2020 08:43:17",
+        "Altitude": 91.8,
+        "Accuracy": 11.6,
+        "Heading": 259,
+        "Speed": 21.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4800543,
+        "Longitude": 9.6092161,
+        "Timestamp": "12/5/2020 08:43:20",
+        "Altitude": 90.7,
+        "Accuracy": 11.6,
+        "Heading": 259,
+        "Speed": 21.59,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4799759,
+        "Longitude": 9.6081844,
+        "Timestamp": "12/5/2020 08:43:23",
+        "Altitude": 90.9,
+        "Accuracy": 12,
+        "Heading": 261.89,
+        "Speed": 20.83,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4798928,
+        "Longitude": 9.6071035,
+        "Timestamp": "12/5/2020 08:43:26",
+        "Altitude": 89.8,
+        "Accuracy": 12.9,
+        "Heading": 258.11,
+        "Speed": 22.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4797507,
+        "Longitude": 9.6060001,
+        "Timestamp": "12/5/2020 08:43:29",
+        "Altitude": 90.6,
+        "Accuracy": 12.5,
+        "Heading": 257.99,
+        "Speed": 22.19,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4796172,
+        "Longitude": 9.6049015,
+        "Timestamp": "12/5/2020 08:43:32",
+        "Altitude": 90.3,
+        "Accuracy": 11.8,
+        "Heading": 258.9,
+        "Speed": 22.01,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4794903,
+        "Longitude": 9.6038228,
+        "Timestamp": "12/5/2020 08:43:35",
+        "Altitude": 88.5,
+        "Accuracy": 11.8,
+        "Heading": 257.09,
+        "Speed": 22.29,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4793551,
+        "Longitude": 9.6027371,
+        "Timestamp": "12/5/2020 08:43:38",
+        "Altitude": 89.8,
+        "Accuracy": 11.8,
+        "Heading": 256.92,
+        "Speed": 22.48,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4792095,
+        "Longitude": 9.6016244,
+        "Timestamp": "12/5/2020 08:43:41",
+        "Altitude": 85.8,
+        "Accuracy": 11.4,
+        "Heading": 256,
+        "Speed": 23.49,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.479058,
+        "Longitude": 9.6005152,
+        "Timestamp": "12/5/2020 08:43:44",
+        "Altitude": 88,
+        "Accuracy": 10.9,
+        "Heading": 256,
+        "Speed": 24.21,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4788921,
+        "Longitude": 9.5993274,
+        "Timestamp": "12/5/2020 08:43:47",
+        "Altitude": 86.5,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 24.27,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4787209,
+        "Longitude": 9.5981585,
+        "Timestamp": "12/5/2020 08:43:50",
+        "Altitude": 84.5,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 23.69,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4785755,
+        "Longitude": 9.5970499,
+        "Timestamp": "12/5/2020 08:43:53",
+        "Altitude": 86,
+        "Accuracy": 11.3,
+        "Heading": 256.9,
+        "Speed": 23.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4784036,
+        "Longitude": 9.595949,
+        "Timestamp": "12/5/2020 08:43:56",
+        "Altitude": 88.4,
+        "Accuracy": 11.6,
+        "Heading": 255.98,
+        "Speed": 23.95,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4782388,
+        "Longitude": 9.5947985,
+        "Timestamp": "12/5/2020 08:43:59",
+        "Altitude": 88.5,
+        "Accuracy": 11.1,
+        "Heading": 256,
+        "Speed": 24.37,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4780738,
+        "Longitude": 9.5936361,
+        "Timestamp": "12/5/2020 08:44:02",
+        "Altitude": 88.3,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 24.53,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4779122,
+        "Longitude": 9.5924457,
+        "Timestamp": "12/5/2020 08:44:05",
+        "Altitude": 89.6,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 24.74,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4777563,
+        "Longitude": 9.5912831,
+        "Timestamp": "12/5/2020 08:44:08",
+        "Altitude": 89.7,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 24.76,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4776021,
+        "Longitude": 9.5901102,
+        "Timestamp": "12/5/2020 08:44:11",
+        "Altitude": 90,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 24.69,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.477445,
+        "Longitude": 9.5889313,
+        "Timestamp": "12/5/2020 08:44:14",
+        "Altitude": 92.4,
+        "Accuracy": 10.4,
+        "Heading": 256,
+        "Speed": 24.49,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4772997,
+        "Longitude": 9.5878096,
+        "Timestamp": "12/5/2020 08:44:17",
+        "Altitude": 94.1,
+        "Accuracy": 10.2,
+        "Heading": 255.06,
+        "Speed": 24.1,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4771541,
+        "Longitude": 9.5866663,
+        "Timestamp": "12/5/2020 08:44:20",
+        "Altitude": 94.6,
+        "Accuracy": 10.5,
+        "Heading": 256.1,
+        "Speed": 24.03,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4770103,
+        "Longitude": 9.5855187,
+        "Timestamp": "12/5/2020 08:44:23",
+        "Altitude": 95.2,
+        "Accuracy": 10.7,
+        "Heading": 256.08,
+        "Speed": 24.14,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4768573,
+        "Longitude": 9.5843601,
+        "Timestamp": "12/5/2020 08:44:26",
+        "Altitude": 96.3,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 24.29,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4766991,
+        "Longitude": 9.5832058,
+        "Timestamp": "12/5/2020 08:44:29",
+        "Altitude": 97.2,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 24.32,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4765398,
+        "Longitude": 9.5820741,
+        "Timestamp": "12/5/2020 08:44:32",
+        "Altitude": 97.1,
+        "Accuracy": 10.9,
+        "Heading": 256,
+        "Speed": 23.52,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4763785,
+        "Longitude": 9.5809458,
+        "Timestamp": "12/5/2020 08:44:35",
+        "Altitude": 97.2,
+        "Accuracy": 12.3,
+        "Heading": 253.45,
+        "Speed": 25.05,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4762181,
+        "Longitude": 9.579736,
+        "Timestamp": "12/5/2020 08:44:38",
+        "Altitude": 94.3,
+        "Accuracy": 12.9,
+        "Heading": 256,
+        "Speed": 24.23,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4760641,
+        "Longitude": 9.5785947,
+        "Timestamp": "12/5/2020 08:44:41",
+        "Altitude": 92.9,
+        "Accuracy": 11.6,
+        "Heading": 256,
+        "Speed": 24.05,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4759139,
+        "Longitude": 9.5774416,
+        "Timestamp": "12/5/2020 08:44:44",
+        "Altitude": 91.6,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 23.79,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4757662,
+        "Longitude": 9.5763335,
+        "Timestamp": "12/5/2020 08:44:47",
+        "Altitude": 90.4,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 23.08,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.475623,
+        "Longitude": 9.57526,
+        "Timestamp": "12/5/2020 08:44:50",
+        "Altitude": 88.2,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 23.22,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4754814,
+        "Longitude": 9.5741768,
+        "Timestamp": "12/5/2020 08:44:53",
+        "Altitude": 89.2,
+        "Accuracy": 11.3,
+        "Heading": 256.92,
+        "Speed": 23.29,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4753434,
+        "Longitude": 9.5731218,
+        "Timestamp": "12/5/2020 08:44:56",
+        "Altitude": 89,
+        "Accuracy": 11.1,
+        "Heading": 256.92,
+        "Speed": 22.55,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4752022,
+        "Longitude": 9.5720606,
+        "Timestamp": "12/5/2020 08:44:59",
+        "Altitude": 89.3,
+        "Accuracy": 10.9,
+        "Heading": 256,
+        "Speed": 22.8,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4750524,
+        "Longitude": 9.5709701,
+        "Timestamp": "12/5/2020 08:45:02",
+        "Altitude": 87.4,
+        "Accuracy": 11.1,
+        "Heading": 256,
+        "Speed": 22.88,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4749048,
+        "Longitude": 9.5698637,
+        "Timestamp": "12/5/2020 08:45:05",
+        "Altitude": 85.1,
+        "Accuracy": 11.4,
+        "Heading": 256,
+        "Speed": 23.65,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.474753,
+        "Longitude": 9.5687015,
+        "Timestamp": "12/5/2020 08:45:08",
+        "Altitude": 85.5,
+        "Accuracy": 11.4,
+        "Heading": 256,
+        "Speed": 23.45,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4745999,
+        "Longitude": 9.5675695,
+        "Timestamp": "12/5/2020 08:45:11",
+        "Altitude": 85.1,
+        "Accuracy": 11.1,
+        "Heading": 256,
+        "Speed": 23.36,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4744396,
+        "Longitude": 9.5664504,
+        "Timestamp": "12/5/2020 08:45:14",
+        "Altitude": 84.3,
+        "Accuracy": 10.7,
+        "Heading": 255.05,
+        "Speed": 23.82,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.474288,
+        "Longitude": 9.5653587,
+        "Timestamp": "12/5/2020 08:45:17",
+        "Altitude": 87.4,
+        "Accuracy": 10.7,
+        "Heading": 256,
+        "Speed": 23.42,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4741498,
+        "Longitude": 9.5642723,
+        "Timestamp": "12/5/2020 08:45:20",
+        "Altitude": 87,
+        "Accuracy": 10.7,
+        "Heading": 256.05,
+        "Speed": 23.2,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4740106,
+        "Longitude": 9.5631596,
+        "Timestamp": "12/5/2020 08:45:23",
+        "Altitude": 87.1,
+        "Accuracy": 10.7,
+        "Heading": 256.01,
+        "Speed": 23.29,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4738754,
+        "Longitude": 9.5620853,
+        "Timestamp": "12/5/2020 08:45:26",
+        "Altitude": 86.5,
+        "Accuracy": 10.7,
+        "Heading": 255.06,
+        "Speed": 23.4,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4737275,
+        "Longitude": 9.5609929,
+        "Timestamp": "12/5/2020 08:45:29",
+        "Altitude": 87.5,
+        "Accuracy": 11.1,
+        "Heading": 255.09,
+        "Speed": 23.04,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4735695,
+        "Longitude": 9.5599017,
+        "Timestamp": "12/5/2020 08:45:32",
+        "Altitude": 84.8,
+        "Accuracy": 11.8,
+        "Heading": 255,
+        "Speed": 22.62,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4734256,
+        "Longitude": 9.5588421,
+        "Timestamp": "12/5/2020 08:45:35",
+        "Altitude": 86.7,
+        "Accuracy": 11.8,
+        "Heading": 256,
+        "Speed": 22.59,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.473299,
+        "Longitude": 9.5578433,
+        "Timestamp": "12/5/2020 08:45:38",
+        "Altitude": 86.7,
+        "Accuracy": 11.4,
+        "Heading": 256.99,
+        "Speed": 21.55,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4731855,
+        "Longitude": 9.5568541,
+        "Timestamp": "12/5/2020 08:45:41",
+        "Altitude": 91.6,
+        "Accuracy": 11.8,
+        "Heading": 258.01,
+        "Speed": 20.58,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4730803,
+        "Longitude": 9.5559428,
+        "Timestamp": "12/5/2020 08:45:44",
+        "Altitude": 91.9,
+        "Accuracy": 12,
+        "Heading": 255.11,
+        "Speed": 19.15,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4729579,
+        "Longitude": 9.5550065,
+        "Timestamp": "12/5/2020 08:45:48",
+        "Altitude": 89,
+        "Accuracy": 11.3,
+        "Heading": 263.5,
+        "Speed": 10.49,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4730174,
+        "Longitude": 9.5545106,
+        "Timestamp": "12/5/2020 08:45:53",
+        "Altitude": 89.8,
+        "Accuracy": 10.2,
+        "Heading": 240.72,
+        "Speed": 7.15,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4728779,
+        "Longitude": 9.5542443,
+        "Timestamp": "12/5/2020 08:45:56",
+        "Altitude": 90.5,
+        "Accuracy": 9.6,
+        "Heading": 242.61,
+        "Speed": 9.49,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.472792,
+        "Longitude": 9.5537346,
+        "Timestamp": "12/5/2020 08:45:59",
+        "Altitude": 91.6,
+        "Accuracy": 9.6,
+        "Heading": 256.92,
+        "Speed": 12.64,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4727011,
+        "Longitude": 9.5530237,
+        "Timestamp": "12/5/2020 08:46:02",
+        "Altitude": 92.7,
+        "Accuracy": 9.6,
+        "Heading": 255.99,
+        "Speed": 15.8,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4725814,
+        "Longitude": 9.5521489,
+        "Timestamp": "12/5/2020 08:46:05",
+        "Altitude": 92.2,
+        "Accuracy": 9.6,
+        "Heading": 255.04,
+        "Speed": 19.48,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4724412,
+        "Longitude": 9.5512244,
+        "Timestamp": "12/5/2020 08:46:08",
+        "Altitude": 92.7,
+        "Accuracy": 9.6,
+        "Heading": 254,
+        "Speed": 19.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4723023,
+        "Longitude": 9.5502729,
+        "Timestamp": "12/5/2020 08:46:11",
+        "Altitude": 93.7,
+        "Accuracy": 9.6,
+        "Heading": 255,
+        "Speed": 20.91,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4721641,
+        "Longitude": 9.5492336,
+        "Timestamp": "12/5/2020 08:46:14",
+        "Altitude": 94.1,
+        "Accuracy": 9.6,
+        "Heading": 255.05,
+        "Speed": 22.42,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4720276,
+        "Longitude": 9.5481928,
+        "Timestamp": "12/5/2020 08:46:17",
+        "Altitude": 95.2,
+        "Accuracy": 9.6,
+        "Heading": 256,
+        "Speed": 21.71,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4718949,
+        "Longitude": 9.547143,
+        "Timestamp": "12/5/2020 08:46:20",
+        "Altitude": 95.1,
+        "Accuracy": 9.6,
+        "Heading": 255.11,
+        "Speed": 22.18,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.471737,
+        "Longitude": 9.5460985,
+        "Timestamp": "12/5/2020 08:46:23",
+        "Altitude": 94.9,
+        "Accuracy": 9.6,
+        "Heading": 253.07,
+        "Speed": 22.77,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4715578,
+        "Longitude": 9.5450161,
+        "Timestamp": "12/5/2020 08:46:26",
+        "Altitude": 93.1,
+        "Accuracy": 9.9,
+        "Heading": 253,
+        "Speed": 23.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4713824,
+        "Longitude": 9.5439348,
+        "Timestamp": "12/5/2020 08:46:29",
+        "Altitude": 95.6,
+        "Accuracy": 10,
+        "Heading": 253,
+        "Speed": 23.29,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4712045,
+        "Longitude": 9.5428425,
+        "Timestamp": "12/5/2020 08:46:32",
+        "Altitude": 92.1,
+        "Accuracy": 10.5,
+        "Heading": 253,
+        "Speed": 23.5,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4710293,
+        "Longitude": 9.5417464,
+        "Timestamp": "12/5/2020 08:46:35",
+        "Altitude": 92.9,
+        "Accuracy": 10.7,
+        "Heading": 253.06,
+        "Speed": 23.86,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4708387,
+        "Longitude": 9.5406192,
+        "Timestamp": "12/5/2020 08:46:38",
+        "Altitude": 93.4,
+        "Accuracy": 10.7,
+        "Heading": 253,
+        "Speed": 24.07,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4706549,
+        "Longitude": 9.5395,
+        "Timestamp": "12/5/2020 08:46:41",
+        "Altitude": 92.8,
+        "Accuracy": 10.5,
+        "Heading": 253.96,
+        "Speed": 23.35,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4704893,
+        "Longitude": 9.5384375,
+        "Timestamp": "12/5/2020 08:46:44",
+        "Altitude": 92.6,
+        "Accuracy": 9.9,
+        "Heading": 253,
+        "Speed": 22.66,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.470316,
+        "Longitude": 9.5373991,
+        "Timestamp": "12/5/2020 08:46:47",
+        "Altitude": 91.4,
+        "Accuracy": 10.1,
+        "Heading": 253,
+        "Speed": 22.18,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4701328,
+        "Longitude": 9.5363643,
+        "Timestamp": "12/5/2020 08:46:50",
+        "Altitude": 90.5,
+        "Accuracy": 10.7,
+        "Heading": 252.99,
+        "Speed": 22.18,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4699548,
+        "Longitude": 9.5353422,
+        "Timestamp": "12/5/2020 08:46:53",
+        "Altitude": 88.4,
+        "Accuracy": 10.7,
+        "Heading": 253.93,
+        "Speed": 21.82,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4697809,
+        "Longitude": 9.5343214,
+        "Timestamp": "12/5/2020 08:46:56",
+        "Altitude": 88.6,
+        "Accuracy": 10.7,
+        "Heading": 253,
+        "Speed": 21.92,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4696204,
+        "Longitude": 9.5333098,
+        "Timestamp": "12/5/2020 08:46:59",
+        "Altitude": 91.6,
+        "Accuracy": 10.7,
+        "Heading": 253,
+        "Speed": 21.96,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4694341,
+        "Longitude": 9.5322651,
+        "Timestamp": "12/5/2020 08:47:02",
+        "Altitude": 90.9,
+        "Accuracy": 10.7,
+        "Heading": 252.93,
+        "Speed": 22.57,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4692687,
+        "Longitude": 9.5311971,
+        "Timestamp": "12/5/2020 08:47:05",
+        "Altitude": 88.7,
+        "Accuracy": 10.7,
+        "Heading": 253.07,
+        "Speed": 22.76,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4691041,
+        "Longitude": 9.530121,
+        "Timestamp": "12/5/2020 08:47:08",
+        "Altitude": 87.4,
+        "Accuracy": 10.5,
+        "Heading": 253.07,
+        "Speed": 23.03,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4689432,
+        "Longitude": 9.5290401,
+        "Timestamp": "12/5/2020 08:47:11",
+        "Altitude": 90.2,
+        "Accuracy": 10.5,
+        "Heading": 253.94,
+        "Speed": 22.91,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.468773,
+        "Longitude": 9.5279442,
+        "Timestamp": "12/5/2020 08:47:14",
+        "Altitude": 86.5,
+        "Accuracy": 10.7,
+        "Heading": 253,
+        "Speed": 22.9,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4686035,
+        "Longitude": 9.5268527,
+        "Timestamp": "12/5/2020 08:47:17",
+        "Altitude": 87,
+        "Accuracy": 10.4,
+        "Heading": 253.01,
+        "Speed": 23.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4684401,
+        "Longitude": 9.5257737,
+        "Timestamp": "12/5/2020 08:47:20",
+        "Altitude": 86.2,
+        "Accuracy": 10.2,
+        "Heading": 253,
+        "Speed": 23.57,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4682503,
+        "Longitude": 9.5246606,
+        "Timestamp": "12/5/2020 08:47:23",
+        "Altitude": 85.1,
+        "Accuracy": 10.7,
+        "Heading": 252.93,
+        "Speed": 23.98,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4680639,
+        "Longitude": 9.5235477,
+        "Timestamp": "12/5/2020 08:47:26",
+        "Altitude": 85.3,
+        "Accuracy": 10.7,
+        "Heading": 253.07,
+        "Speed": 23.99,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4678758,
+        "Longitude": 9.5224266,
+        "Timestamp": "12/5/2020 08:47:29",
+        "Altitude": 85.1,
+        "Accuracy": 10.7,
+        "Heading": 253.06,
+        "Speed": 23.91,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4676704,
+        "Longitude": 9.5213185,
+        "Timestamp": "12/5/2020 08:47:32",
+        "Altitude": 85.1,
+        "Accuracy": 10.7,
+        "Heading": 252.07,
+        "Speed": 23.38,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4674777,
+        "Longitude": 9.5202333,
+        "Timestamp": "12/5/2020 08:47:35",
+        "Altitude": 86.4,
+        "Accuracy": 10.7,
+        "Heading": 253,
+        "Speed": 22.73,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4673016,
+        "Longitude": 9.5191588,
+        "Timestamp": "12/5/2020 08:47:38",
+        "Altitude": 86.1,
+        "Accuracy": 10.7,
+        "Heading": 252.07,
+        "Speed": 23.23,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4671083,
+        "Longitude": 9.5180532,
+        "Timestamp": "12/5/2020 08:47:41",
+        "Altitude": 84.4,
+        "Accuracy": 10.7,
+        "Heading": 253,
+        "Speed": 23.35,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4669598,
+        "Longitude": 9.5169584,
+        "Timestamp": "12/5/2020 08:47:44",
+        "Altitude": 84.1,
+        "Accuracy": 10.7,
+        "Heading": 254.07,
+        "Speed": 23.51,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4667735,
+        "Longitude": 9.5158444,
+        "Timestamp": "12/5/2020 08:47:47",
+        "Altitude": 86.5,
+        "Accuracy": 10.7,
+        "Heading": 252.93,
+        "Speed": 23.88,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4666089,
+        "Longitude": 9.5147353,
+        "Timestamp": "12/5/2020 08:47:50",
+        "Altitude": 83.9,
+        "Accuracy": 10.7,
+        "Heading": 254,
+        "Speed": 23.35,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4664345,
+        "Longitude": 9.5136603,
+        "Timestamp": "12/5/2020 08:47:53",
+        "Altitude": 85.7,
+        "Accuracy": 10.7,
+        "Heading": 252.01,
+        "Speed": 23.27,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4662493,
+        "Longitude": 9.5125868,
+        "Timestamp": "12/5/2020 08:47:56",
+        "Altitude": 85.2,
+        "Accuracy": 10.7,
+        "Heading": 253,
+        "Speed": 23.06,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4660554,
+        "Longitude": 9.511524,
+        "Timestamp": "12/5/2020 08:47:59",
+        "Altitude": 85.1,
+        "Accuracy": 10.7,
+        "Heading": 252.93,
+        "Speed": 22.4,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4658851,
+        "Longitude": 9.5105034,
+        "Timestamp": "12/5/2020 08:48:02",
+        "Altitude": 79.7,
+        "Accuracy": 10.7,
+        "Heading": 253,
+        "Speed": 21.73,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4657238,
+        "Longitude": 9.5095171,
+        "Timestamp": "12/5/2020 08:48:05",
+        "Altitude": 80.9,
+        "Accuracy": 10.5,
+        "Heading": 253,
+        "Speed": 21.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4655745,
+        "Longitude": 9.5085556,
+        "Timestamp": "12/5/2020 08:48:08",
+        "Altitude": 78,
+        "Accuracy": 10.5,
+        "Heading": 253,
+        "Speed": 20.94,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4654241,
+        "Longitude": 9.507589,
+        "Timestamp": "12/5/2020 08:48:11",
+        "Altitude": 78,
+        "Accuracy": 10.7,
+        "Heading": 253.01,
+        "Speed": 20.86,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4652629,
+        "Longitude": 9.5066588,
+        "Timestamp": "12/5/2020 08:48:14",
+        "Altitude": 81.7,
+        "Accuracy": 10.4,
+        "Heading": 253,
+        "Speed": 19.76,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4651176,
+        "Longitude": 9.5057785,
+        "Timestamp": "12/5/2020 08:48:17",
+        "Altitude": 81.8,
+        "Accuracy": 10.1,
+        "Heading": 253.96,
+        "Speed": 18.73,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.465016,
+        "Longitude": 9.5049199,
+        "Timestamp": "12/5/2020 08:48:20",
+        "Altitude": 81.9,
+        "Accuracy": 10.4,
+        "Heading": 259.87,
+        "Speed": 18.22,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4649481,
+        "Longitude": 9.5040612,
+        "Timestamp": "12/5/2020 08:48:23",
+        "Altitude": 82.5,
+        "Accuracy": 10.7,
+        "Heading": 260.94,
+        "Speed": 18,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4649057,
+        "Longitude": 9.5032257,
+        "Timestamp": "12/5/2020 08:48:26",
+        "Altitude": 86.5,
+        "Accuracy": 10.7,
+        "Heading": 264.99,
+        "Speed": 18.15,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4648905,
+        "Longitude": 9.5023575,
+        "Timestamp": "12/5/2020 08:48:29",
+        "Altitude": 86.5,
+        "Accuracy": 10.2,
+        "Heading": 267,
+        "Speed": 18.29,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4648856,
+        "Longitude": 9.5014583,
+        "Timestamp": "12/5/2020 08:48:32",
+        "Altitude": 87,
+        "Accuracy": 9.9,
+        "Heading": 270.84,
+        "Speed": 18.74,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4649528,
+        "Longitude": 9.5005493,
+        "Timestamp": "12/5/2020 08:48:35",
+        "Altitude": 85.4,
+        "Accuracy": 9.8,
+        "Heading": 275.05,
+        "Speed": 19.65,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4650215,
+        "Longitude": 9.4995668,
+        "Timestamp": "12/5/2020 08:48:38",
+        "Altitude": 83.3,
+        "Accuracy": 9.6,
+        "Heading": 276,
+        "Speed": 20.65,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4650952,
+        "Longitude": 9.4985187,
+        "Timestamp": "12/5/2020 08:48:41",
+        "Altitude": 78.4,
+        "Accuracy": 9.6,
+        "Heading": 276,
+        "Speed": 21.37,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4651837,
+        "Longitude": 9.497462,
+        "Timestamp": "12/5/2020 08:48:44",
+        "Altitude": 77.1,
+        "Accuracy": 9.6,
+        "Heading": 278,
+        "Speed": 21.48,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4652684,
+        "Longitude": 9.4964248,
+        "Timestamp": "12/5/2020 08:48:47",
+        "Altitude": 77.7,
+        "Accuracy": 9.6,
+        "Heading": 278,
+        "Speed": 21.22,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4653518,
+        "Longitude": 9.4953888,
+        "Timestamp": "12/5/2020 08:48:50",
+        "Altitude": 76.9,
+        "Accuracy": 9.6,
+        "Heading": 278.04,
+        "Speed": 21.59,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4654293,
+        "Longitude": 9.4943539,
+        "Timestamp": "12/5/2020 08:48:53",
+        "Altitude": 77.1,
+        "Accuracy": 10,
+        "Heading": 278,
+        "Speed": 21.7,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4655224,
+        "Longitude": 9.4932918,
+        "Timestamp": "12/5/2020 08:48:56",
+        "Altitude": 77.4,
+        "Accuracy": 10.2,
+        "Heading": 278,
+        "Speed": 22.56,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4656185,
+        "Longitude": 9.4921587,
+        "Timestamp": "12/5/2020 08:48:59",
+        "Altitude": 76,
+        "Accuracy": 10.4,
+        "Heading": 278,
+        "Speed": 23.44,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4657049,
+        "Longitude": 9.4910096,
+        "Timestamp": "12/5/2020 08:49:02",
+        "Altitude": 76.7,
+        "Accuracy": 10.4,
+        "Heading": 277.08,
+        "Speed": 23.91,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4658118,
+        "Longitude": 9.4898247,
+        "Timestamp": "12/5/2020 08:49:05",
+        "Altitude": 77.5,
+        "Accuracy": 10.3,
+        "Heading": 279,
+        "Speed": 24.27,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4659303,
+        "Longitude": 9.4886538,
+        "Timestamp": "12/5/2020 08:49:08",
+        "Altitude": 76.9,
+        "Accuracy": 10.5,
+        "Heading": 279.01,
+        "Speed": 23.75,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4660433,
+        "Longitude": 9.4875379,
+        "Timestamp": "12/5/2020 08:49:11",
+        "Altitude": 78.3,
+        "Accuracy": 11.1,
+        "Heading": 278.05,
+        "Speed": 23.57,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4661256,
+        "Longitude": 9.4864269,
+        "Timestamp": "12/5/2020 08:49:14",
+        "Altitude": 78.5,
+        "Accuracy": 11.1,
+        "Heading": 277.93,
+        "Speed": 23.58,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4662148,
+        "Longitude": 9.485302,
+        "Timestamp": "12/5/2020 08:49:17",
+        "Altitude": 80.3,
+        "Accuracy": 10.7,
+        "Heading": 278,
+        "Speed": 23.3,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4663127,
+        "Longitude": 9.4842026,
+        "Timestamp": "12/5/2020 08:49:20",
+        "Altitude": 79.7,
+        "Accuracy": 10.7,
+        "Heading": 278.06,
+        "Speed": 23.38,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4663898,
+        "Longitude": 9.4830859,
+        "Timestamp": "12/5/2020 08:49:23",
+        "Altitude": 81.2,
+        "Accuracy": 10.7,
+        "Heading": 276.18,
+        "Speed": 23.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4664847,
+        "Longitude": 9.4819374,
+        "Timestamp": "12/5/2020 08:49:26",
+        "Altitude": 77.5,
+        "Accuracy": 11.3,
+        "Heading": 278.99,
+        "Speed": 23.46,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4665921,
+        "Longitude": 9.480829,
+        "Timestamp": "12/5/2020 08:49:29",
+        "Altitude": 80.6,
+        "Accuracy": 11.3,
+        "Heading": 279,
+        "Speed": 22.83,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4667079,
+        "Longitude": 9.4797278,
+        "Timestamp": "12/5/2020 08:49:32",
+        "Altitude": 82.4,
+        "Accuracy": 10.5,
+        "Heading": 280,
+        "Speed": 22.7,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4668293,
+        "Longitude": 9.4786205,
+        "Timestamp": "12/5/2020 08:49:35",
+        "Altitude": 82,
+        "Accuracy": 9.9,
+        "Heading": 280,
+        "Speed": 23.16,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4669502,
+        "Longitude": 9.4774945,
+        "Timestamp": "12/5/2020 08:49:38",
+        "Altitude": 80.1,
+        "Accuracy": 9.6,
+        "Heading": 281,
+        "Speed": 23.44,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4670725,
+        "Longitude": 9.4763599,
+        "Timestamp": "12/5/2020 08:49:41",
+        "Altitude": 80.8,
+        "Accuracy": 9.6,
+        "Heading": 281,
+        "Speed": 23.74,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4672207,
+        "Longitude": 9.475225,
+        "Timestamp": "12/5/2020 08:49:44",
+        "Altitude": 78.9,
+        "Accuracy": 9.6,
+        "Heading": 283,
+        "Speed": 23.86,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4673771,
+        "Longitude": 9.4740923,
+        "Timestamp": "12/5/2020 08:49:47",
+        "Altitude": 80.4,
+        "Accuracy": 9.6,
+        "Heading": 283.96,
+        "Speed": 23.88,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4675378,
+        "Longitude": 9.472953,
+        "Timestamp": "12/5/2020 08:49:50",
+        "Altitude": 78.6,
+        "Accuracy": 9.6,
+        "Heading": 284,
+        "Speed": 23.99,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4677136,
+        "Longitude": 9.4718413,
+        "Timestamp": "12/5/2020 08:49:53",
+        "Altitude": 78,
+        "Accuracy": 9.6,
+        "Heading": 284.05,
+        "Speed": 23.72,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.467886,
+        "Longitude": 9.470739,
+        "Timestamp": "12/5/2020 08:49:56",
+        "Altitude": 77.6,
+        "Accuracy": 9.6,
+        "Heading": 285.96,
+        "Speed": 23.38,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4680765,
+        "Longitude": 9.4696627,
+        "Timestamp": "12/5/2020 08:49:59",
+        "Altitude": 77.4,
+        "Accuracy": 9.6,
+        "Heading": 287,
+        "Speed": 23.05,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4682689,
+        "Longitude": 9.4685989,
+        "Timestamp": "12/5/2020 08:50:02",
+        "Altitude": 77.1,
+        "Accuracy": 10.2,
+        "Heading": 287,
+        "Speed": 23.52,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4684757,
+        "Longitude": 9.4675221,
+        "Timestamp": "12/5/2020 08:50:05",
+        "Altitude": 78.2,
+        "Accuracy": 10.7,
+        "Heading": 287.08,
+        "Speed": 23.55,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4686799,
+        "Longitude": 9.4664306,
+        "Timestamp": "12/5/2020 08:50:08",
+        "Altitude": 78.4,
+        "Accuracy": 10.7,
+        "Heading": 288,
+        "Speed": 23.63,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.468888,
+        "Longitude": 9.4653286,
+        "Timestamp": "12/5/2020 08:50:11",
+        "Altitude": 78.7,
+        "Accuracy": 10.7,
+        "Heading": 288.09,
+        "Speed": 23.93,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4691098,
+        "Longitude": 9.4642432,
+        "Timestamp": "12/5/2020 08:50:14",
+        "Altitude": 79.3,
+        "Accuracy": 11.1,
+        "Heading": 290,
+        "Speed": 23.36,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.469327,
+        "Longitude": 9.4631852,
+        "Timestamp": "12/5/2020 08:50:17",
+        "Altitude": 80.6,
+        "Accuracy": 10.9,
+        "Heading": 290,
+        "Speed": 22.47,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4695474,
+        "Longitude": 9.4622009,
+        "Timestamp": "12/5/2020 08:50:20",
+        "Altitude": 79.8,
+        "Accuracy": 10.7,
+        "Heading": 293.8,
+        "Speed": 21.24,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4697795,
+        "Longitude": 9.4612708,
+        "Timestamp": "12/5/2020 08:50:23",
+        "Altitude": 80.6,
+        "Accuracy": 10.7,
+        "Heading": 293.01,
+        "Speed": 21.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4700224,
+        "Longitude": 9.460352,
+        "Timestamp": "12/5/2020 08:50:26",
+        "Altitude": 83.2,
+        "Accuracy": 11.1,
+        "Heading": 293.02,
+        "Speed": 21.62,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4702565,
+        "Longitude": 9.4593856,
+        "Timestamp": "12/5/2020 08:50:29",
+        "Altitude": 85.1,
+        "Accuracy": 11.8,
+        "Heading": 293.9,
+        "Speed": 21.96,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.470537,
+        "Longitude": 9.4584109,
+        "Timestamp": "12/5/2020 08:50:32",
+        "Altitude": 88.4,
+        "Accuracy": 12.9,
+        "Heading": 294.39,
+        "Speed": 21.77,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4708473,
+        "Longitude": 9.4575331,
+        "Timestamp": "12/5/2020 08:50:35",
+        "Altitude": 89.9,
+        "Accuracy": 14.6,
+        "Heading": 303.02,
+        "Speed": 21.06,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4711447,
+        "Longitude": 9.4566152,
+        "Timestamp": "12/5/2020 08:50:38",
+        "Altitude": 87.4,
+        "Accuracy": 17.2,
+        "Heading": 292.87,
+        "Speed": 22.65,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4713027,
+        "Longitude": 9.4554691,
+        "Timestamp": "12/5/2020 08:50:41",
+        "Altitude": 79.6,
+        "Accuracy": 15.7,
+        "Heading": 288.04,
+        "Speed": 22.67,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4714527,
+        "Longitude": 9.4543686,
+        "Timestamp": "12/5/2020 08:50:44",
+        "Altitude": 78.3,
+        "Accuracy": 13.3,
+        "Heading": 285.04,
+        "Speed": 22.19,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4715611,
+        "Longitude": 9.4533076,
+        "Timestamp": "12/5/2020 08:50:47",
+        "Altitude": 76.8,
+        "Accuracy": 12.1,
+        "Heading": 282.04,
+        "Speed": 20.93,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4716543,
+        "Longitude": 9.4523062,
+        "Timestamp": "12/5/2020 08:50:50",
+        "Altitude": 72.2,
+        "Accuracy": 11.1,
+        "Heading": 281,
+        "Speed": 20.65,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4717197,
+        "Longitude": 9.4513435,
+        "Timestamp": "12/5/2020 08:50:53",
+        "Altitude": 72.7,
+        "Accuracy": 11.4,
+        "Heading": 278.91,
+        "Speed": 20.14,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4717924,
+        "Longitude": 9.4503468,
+        "Timestamp": "12/5/2020 08:50:56",
+        "Altitude": 70.5,
+        "Accuracy": 11.8,
+        "Heading": 276.1,
+        "Speed": 19.7,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4718498,
+        "Longitude": 9.4493772,
+        "Timestamp": "12/5/2020 08:50:59",
+        "Altitude": 67.9,
+        "Accuracy": 11.8,
+        "Heading": 277.9,
+        "Speed": 19.83,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4719241,
+        "Longitude": 9.4484216,
+        "Timestamp": "12/5/2020 08:51:02",
+        "Altitude": 67.2,
+        "Accuracy": 12,
+        "Heading": 278.08,
+        "Speed": 19.18,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4719722,
+        "Longitude": 9.4475239,
+        "Timestamp": "12/5/2020 08:51:05",
+        "Altitude": 68.9,
+        "Accuracy": 12.5,
+        "Heading": 275.1,
+        "Speed": 18.33,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4719636,
+        "Longitude": 9.4466856,
+        "Timestamp": "12/5/2020 08:51:08",
+        "Altitude": 67.6,
+        "Accuracy": 12.7,
+        "Heading": 274.77,
+        "Speed": 17.06,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4720217,
+        "Longitude": 9.4459133,
+        "Timestamp": "12/5/2020 08:51:11",
+        "Altitude": 67.6,
+        "Accuracy": 12.6,
+        "Heading": 280.86,
+        "Speed": 14.45,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4721127,
+        "Longitude": 9.4452519,
+        "Timestamp": "12/5/2020 08:51:16",
+        "Altitude": 65.5,
+        "Accuracy": 11.8,
+        "Heading": 279.25,
+        "Speed": 4.65,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4722027,
+        "Longitude": 9.4449693,
+        "Timestamp": "12/5/2020 08:51:24",
+        "Altitude": 66.5,
+        "Accuracy": 11.8,
+        "Heading": 305.76,
+        "Speed": 5.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4722296,
+        "Longitude": 9.4445483,
+        "Timestamp": "12/5/2020 08:51:28",
+        "Altitude": 64.5,
+        "Accuracy": 12,
+        "Heading": 253.44,
+        "Speed": 8.08,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4721476,
+        "Longitude": 9.4439358,
+        "Timestamp": "12/5/2020 08:51:32",
+        "Altitude": 61.7,
+        "Accuracy": 11.8,
+        "Heading": 263.44,
+        "Speed": 10.32,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4721945,
+        "Longitude": 9.4433131,
+        "Timestamp": "12/5/2020 08:51:35",
+        "Altitude": 63.9,
+        "Accuracy": 12.6,
+        "Heading": 277.96,
+        "Speed": 14.52,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4722977,
+        "Longitude": 9.4424473,
+        "Timestamp": "12/5/2020 08:51:38",
+        "Altitude": 63.7,
+        "Accuracy": 12.7,
+        "Heading": 278.06,
+        "Speed": 18.41,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4723954,
+        "Longitude": 9.4415268,
+        "Timestamp": "12/5/2020 08:51:41",
+        "Altitude": 62.4,
+        "Accuracy": 12,
+        "Heading": 279.01,
+        "Speed": 18.08,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4724817,
+        "Longitude": 9.4406424,
+        "Timestamp": "12/5/2020 08:51:44",
+        "Altitude": 61.6,
+        "Accuracy": 12,
+        "Heading": 278.11,
+        "Speed": 18.32,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4725651,
+        "Longitude": 9.4397648,
+        "Timestamp": "12/5/2020 08:51:47",
+        "Altitude": 61.9,
+        "Accuracy": 12.6,
+        "Heading": 279.9,
+        "Speed": 18.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4726031,
+        "Longitude": 9.4388684,
+        "Timestamp": "12/5/2020 08:51:50",
+        "Altitude": 60,
+        "Accuracy": 13.4,
+        "Heading": 275.99,
+        "Speed": 18.21,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4726448,
+        "Longitude": 9.4379776,
+        "Timestamp": "12/5/2020 08:51:53",
+        "Altitude": 58.2,
+        "Accuracy": 13.5,
+        "Heading": 275.99,
+        "Speed": 18.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4727065,
+        "Longitude": 9.4371145,
+        "Timestamp": "12/5/2020 08:51:56",
+        "Altitude": 59.5,
+        "Accuracy": 12.7,
+        "Heading": 278.93,
+        "Speed": 18.08,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4728059,
+        "Longitude": 9.4362799,
+        "Timestamp": "12/5/2020 08:51:59",
+        "Altitude": 54.6,
+        "Accuracy": 11.8,
+        "Heading": 280.92,
+        "Speed": 18.23,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.472916,
+        "Longitude": 9.4354177,
+        "Timestamp": "12/5/2020 08:52:02",
+        "Altitude": 56.2,
+        "Accuracy": 11.1,
+        "Heading": 280.06,
+        "Speed": 19.16,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.473026,
+        "Longitude": 9.4344434,
+        "Timestamp": "12/5/2020 08:52:05",
+        "Altitude": 56.1,
+        "Accuracy": 10.7,
+        "Heading": 280.91,
+        "Speed": 22.01,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4732112,
+        "Longitude": 9.4333893,
+        "Timestamp": "12/5/2020 08:52:08",
+        "Altitude": 53.1,
+        "Accuracy": 10.9,
+        "Heading": 286.95,
+        "Speed": 22.85,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4733986,
+        "Longitude": 9.4323163,
+        "Timestamp": "12/5/2020 08:52:11",
+        "Altitude": 56.1,
+        "Accuracy": 11.1,
+        "Heading": 285.1,
+        "Speed": 22.89,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4735446,
+        "Longitude": 9.4312227,
+        "Timestamp": "12/5/2020 08:52:14",
+        "Altitude": 57.7,
+        "Accuracy": 11.6,
+        "Heading": 282.08,
+        "Speed": 22.5,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4736665,
+        "Longitude": 9.430178,
+        "Timestamp": "12/5/2020 08:52:17",
+        "Altitude": 56.7,
+        "Accuracy": 11.8,
+        "Heading": 280.1,
+        "Speed": 21.72,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4737671,
+        "Longitude": 9.4291259,
+        "Timestamp": "12/5/2020 08:52:20",
+        "Altitude": 57.9,
+        "Accuracy": 13.1,
+        "Heading": 279.86,
+        "Speed": 22,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4737963,
+        "Longitude": 9.428081,
+        "Timestamp": "12/5/2020 08:52:23",
+        "Altitude": 54.2,
+        "Accuracy": 13.5,
+        "Heading": 271.16,
+        "Speed": 21.93,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4737543,
+        "Longitude": 9.4269748,
+        "Timestamp": "12/5/2020 08:52:26",
+        "Altitude": 56.7,
+        "Accuracy": 12,
+        "Heading": 269.99,
+        "Speed": 22.47,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4737316,
+        "Longitude": 9.425846,
+        "Timestamp": "12/5/2020 08:52:29",
+        "Altitude": 60.3,
+        "Accuracy": 10.9,
+        "Heading": 269.94,
+        "Speed": 22.47,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4737444,
+        "Longitude": 9.4247491,
+        "Timestamp": "12/5/2020 08:52:32",
+        "Altitude": 60.9,
+        "Accuracy": 10.5,
+        "Heading": 271.05,
+        "Speed": 22.24,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4737859,
+        "Longitude": 9.4236743,
+        "Timestamp": "12/5/2020 08:52:35",
+        "Altitude": 62.3,
+        "Accuracy": 9.9,
+        "Heading": 274.94,
+        "Speed": 21.62,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4738668,
+        "Longitude": 9.4226543,
+        "Timestamp": "12/5/2020 08:52:38",
+        "Altitude": 64.1,
+        "Accuracy": 9.6,
+        "Heading": 279.95,
+        "Speed": 21.34,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4739878,
+        "Longitude": 9.421656,
+        "Timestamp": "12/5/2020 08:52:41",
+        "Altitude": 64.9,
+        "Accuracy": 9.6,
+        "Heading": 283,
+        "Speed": 21.08,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4741479,
+        "Longitude": 9.4207184,
+        "Timestamp": "12/5/2020 08:52:44",
+        "Altitude": 66.3,
+        "Accuracy": 9.6,
+        "Heading": 286,
+        "Speed": 20.08,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4743069,
+        "Longitude": 9.4198067,
+        "Timestamp": "12/5/2020 08:52:47",
+        "Altitude": 65.9,
+        "Accuracy": 9.6,
+        "Heading": 286,
+        "Speed": 19.56,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4744457,
+        "Longitude": 9.4189097,
+        "Timestamp": "12/5/2020 08:52:50",
+        "Altitude": 67.8,
+        "Accuracy": 9.6,
+        "Heading": 286,
+        "Speed": 18.98,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4745799,
+        "Longitude": 9.4180812,
+        "Timestamp": "12/5/2020 08:52:53",
+        "Altitude": 69.2,
+        "Accuracy": 9.6,
+        "Heading": 286.95,
+        "Speed": 16.55,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4746907,
+        "Longitude": 9.4174193,
+        "Timestamp": "12/5/2020 08:52:56",
+        "Altitude": 69.7,
+        "Accuracy": 9.6,
+        "Heading": 288.82,
+        "Speed": 11.58,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4748285,
+        "Longitude": 9.416958,
+        "Timestamp": "12/5/2020 08:53:09",
+        "Altitude": 67.7,
+        "Accuracy": 10.4,
+        "Heading": 327.75,
+        "Speed": 5.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4749279,
+        "Longitude": 9.4166311,
+        "Timestamp": "12/5/2020 08:53:13",
+        "Altitude": 68.5,
+        "Accuracy": 10.1,
+        "Heading": 280.26,
+        "Speed": 6.58,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4748001,
+        "Longitude": 9.4163241,
+        "Timestamp": "12/5/2020 08:53:16",
+        "Altitude": 69.3,
+        "Accuracy": 10,
+        "Heading": 197.83,
+        "Speed": 7.74,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4744654,
+        "Longitude": 9.416325,
+        "Timestamp": "12/5/2020 08:53:20",
+        "Altitude": 70.1,
+        "Accuracy": 10.9,
+        "Heading": 180.88,
+        "Speed": 11.32,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.474130100000007,
+        "Longitude": 9.4162545,
+        "Timestamp": "12/5/2020 08:53:23",
+        "Altitude": 67.7,
+        "Accuracy": 12,
+        "Heading": 192.82,
+        "Speed": 12.62,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4737681,
+        "Longitude": 9.4160635,
+        "Timestamp": "12/5/2020 08:53:26",
+        "Altitude": 67.8,
+        "Accuracy": 12.1,
+        "Heading": 194.03,
+        "Speed": 13.47,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4733102,
+        "Longitude": 9.4158757,
+        "Timestamp": "12/5/2020 08:53:29",
+        "Altitude": 72.9,
+        "Accuracy": 12.3,
+        "Heading": 189.1,
+        "Speed": 18.3,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4727319,
+        "Longitude": 9.4157518,
+        "Timestamp": "12/5/2020 08:53:32",
+        "Altitude": 76.3,
+        "Accuracy": 12,
+        "Heading": 187.99,
+        "Speed": 20.62,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4721562,
+        "Longitude": 9.4156529,
+        "Timestamp": "12/5/2020 08:53:35",
+        "Altitude": 76.9,
+        "Accuracy": 11.8,
+        "Heading": 186.99,
+        "Speed": 20.96,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.471557,
+        "Longitude": 9.4155135,
+        "Timestamp": "12/5/2020 08:53:38",
+        "Altitude": 77.3,
+        "Accuracy": 12.4,
+        "Heading": 189.8,
+        "Speed": 22.33,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4709748,
+        "Longitude": 9.4152503,
+        "Timestamp": "12/5/2020 08:53:41",
+        "Altitude": 77.5,
+        "Accuracy": 12.9,
+        "Heading": 190.04,
+        "Speed": 21.62,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4704261,
+        "Longitude": 9.4150065,
+        "Timestamp": "12/5/2020 08:53:44",
+        "Altitude": 77.4,
+        "Accuracy": 12.9,
+        "Heading": 194.78,
+        "Speed": 21.2,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4698753,
+        "Longitude": 9.4146642,
+        "Timestamp": "12/5/2020 08:53:47",
+        "Altitude": 77.8,
+        "Accuracy": 12.3,
+        "Heading": 197.99,
+        "Speed": 22.19,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.46935,
+        "Longitude": 9.4142411,
+        "Timestamp": "12/5/2020 08:53:50",
+        "Altitude": 76.3,
+        "Accuracy": 11.8,
+        "Heading": 202.01,
+        "Speed": 21.23,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4688395,
+        "Longitude": 9.4138538,
+        "Timestamp": "12/5/2020 08:53:53",
+        "Altitude": 79.5,
+        "Accuracy": 11.8,
+        "Heading": 202.89,
+        "Speed": 21.1,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4683258,
+        "Longitude": 9.4133782,
+        "Timestamp": "12/5/2020 08:53:56",
+        "Altitude": 82.6,
+        "Accuracy": 11.4,
+        "Heading": 207.94,
+        "Speed": 21.69,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4678248,
+        "Longitude": 9.4128134,
+        "Timestamp": "12/5/2020 08:53:59",
+        "Altitude": 83.6,
+        "Accuracy": 10.7,
+        "Heading": 210.06,
+        "Speed": 21.48,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4673715,
+        "Longitude": 9.4122424,
+        "Timestamp": "12/5/2020 08:54:02",
+        "Altitude": 85,
+        "Accuracy": 10.7,
+        "Heading": 214.94,
+        "Speed": 21.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4669187,
+        "Longitude": 9.411586,
+        "Timestamp": "12/5/2020 08:54:05",
+        "Altitude": 84.7,
+        "Accuracy": 10.5,
+        "Heading": 218.95,
+        "Speed": 22.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.466457,
+        "Longitude": 9.4108676,
+        "Timestamp": "12/5/2020 08:54:08",
+        "Altitude": 83,
+        "Accuracy": 10,
+        "Heading": 220.95,
+        "Speed": 22.64,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4659818,
+        "Longitude": 9.4101012,
+        "Timestamp": "12/5/2020 08:54:11",
+        "Altitude": 83.6,
+        "Accuracy": 9.9,
+        "Heading": 221,
+        "Speed": 23.47,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4655033,
+        "Longitude": 9.4093241,
+        "Timestamp": "12/5/2020 08:54:14",
+        "Altitude": 82.7,
+        "Accuracy": 10.1,
+        "Heading": 221.93,
+        "Speed": 23.74,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4650579,
+        "Longitude": 9.4085524,
+        "Timestamp": "12/5/2020 08:54:17",
+        "Altitude": 81,
+        "Accuracy": 10.4,
+        "Heading": 224.89,
+        "Speed": 21.84,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4646701,
+        "Longitude": 9.4078221,
+        "Timestamp": "12/5/2020 08:54:20",
+        "Altitude": 79.6,
+        "Accuracy": 10.7,
+        "Heading": 226.93,
+        "Speed": 20.37,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4643183,
+        "Longitude": 9.4071669,
+        "Timestamp": "12/5/2020 08:54:23",
+        "Altitude": 78.9,
+        "Accuracy": 10.7,
+        "Heading": 224.06,
+        "Speed": 17.63,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4639081,
+        "Longitude": 9.4064228,
+        "Timestamp": "12/5/2020 08:54:27",
+        "Altitude": 79.6,
+        "Accuracy": 10.7,
+        "Heading": 224.05,
+        "Speed": 16.07,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.463622,
+        "Longitude": 9.4058908,
+        "Timestamp": "12/5/2020 08:54:30",
+        "Altitude": 80.4,
+        "Accuracy": 10.7,
+        "Heading": 225.91,
+        "Speed": 15.6,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4633578,
+        "Longitude": 9.4053543,
+        "Timestamp": "12/5/2020 08:54:33",
+        "Altitude": 79.4,
+        "Accuracy": 10.9,
+        "Heading": 227,
+        "Speed": 13.77,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.463084,
+        "Longitude": 9.4048065,
+        "Timestamp": "12/5/2020 08:54:37",
+        "Altitude": 82.1,
+        "Accuracy": 10.7,
+        "Heading": 226.94,
+        "Speed": 10.86,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4628724,
+        "Longitude": 9.4043799,
+        "Timestamp": "12/5/2020 08:54:41",
+        "Altitude": 81.6,
+        "Accuracy": 10.2,
+        "Heading": 223.05,
+        "Speed": 10.01,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4626705,
+        "Longitude": 9.4040453,
+        "Timestamp": "12/5/2020 08:54:44",
+        "Altitude": 81.2,
+        "Accuracy": 9.6,
+        "Heading": 224.95,
+        "Speed": 10.99,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4624515,
+        "Longitude": 9.4036639,
+        "Timestamp": "12/5/2020 08:54:47",
+        "Altitude": 79.9,
+        "Accuracy": 9.6,
+        "Heading": 223.04,
+        "Speed": 11.31,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4622004,
+        "Longitude": 9.4032643,
+        "Timestamp": "12/5/2020 08:54:50",
+        "Altitude": 79.6,
+        "Accuracy": 9.6,
+        "Heading": 222.96,
+        "Speed": 12.46,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4619376,
+        "Longitude": 9.4028152,
+        "Timestamp": "12/5/2020 08:54:53",
+        "Altitude": 79.2,
+        "Accuracy": 9.6,
+        "Heading": 223,
+        "Speed": 13.21,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4616564,
+        "Longitude": 9.4023124,
+        "Timestamp": "12/5/2020 08:54:56",
+        "Altitude": 79.2,
+        "Accuracy": 9.6,
+        "Heading": 225.92,
+        "Speed": 14.35,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4613638,
+        "Longitude": 9.4017742,
+        "Timestamp": "12/5/2020 08:54:59",
+        "Altitude": 80,
+        "Accuracy": 9.8,
+        "Heading": 225,
+        "Speed": 15.89,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4610656,
+        "Longitude": 9.4012138,
+        "Timestamp": "12/5/2020 08:55:02",
+        "Altitude": 77.6,
+        "Accuracy": 10.1,
+        "Heading": 225.01,
+        "Speed": 14.82,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4607935,
+        "Longitude": 9.4007223,
+        "Timestamp": "12/5/2020 08:55:05",
+        "Altitude": 77.5,
+        "Accuracy": 10.5,
+        "Heading": 224.96,
+        "Speed": 14.52,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.460519,
+        "Longitude": 9.400244,
+        "Timestamp": "12/5/2020 08:55:08",
+        "Altitude": 77.6,
+        "Accuracy": 11.3,
+        "Heading": 224.76,
+        "Speed": 14.39,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4602104,
+        "Longitude": 9.3997306,
+        "Timestamp": "12/5/2020 08:55:12",
+        "Altitude": 75.5,
+        "Accuracy": 12.2,
+        "Heading": 222.88,
+        "Speed": 9.48,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4599942,
+        "Longitude": 9.3994143,
+        "Timestamp": "12/5/2020 08:55:56",
+        "Altitude": 83.6,
+        "Accuracy": 9.6,
+        "Heading": 223.96,
+        "Speed": 4.3,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4598338,
+        "Longitude": 9.3992658,
+        "Timestamp": "12/5/2020 08:56:00",
+        "Altitude": 82.8,
+        "Accuracy": 9.6,
+        "Heading": 163,
+        "Speed": 5.2,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4596496,
+        "Longitude": 9.3994673,
+        "Timestamp": "12/5/2020 08:56:03",
+        "Altitude": 80.5,
+        "Accuracy": 9.8,
+        "Heading": 146.03,
+        "Speed": 8.85,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4593403,
+        "Longitude": 9.3997639,
+        "Timestamp": "12/5/2020 08:56:07",
+        "Altitude": 80.9,
+        "Accuracy": 10.5,
+        "Heading": 157.84,
+        "Speed": 10.53,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.459032,
+        "Longitude": 9.4000078,
+        "Timestamp": "12/5/2020 08:56:10",
+        "Altitude": 79.8,
+        "Accuracy": 10.5,
+        "Heading": 151.25,
+        "Speed": 12.13,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4587702,
+        "Longitude": 9.4003844,
+        "Timestamp": "12/5/2020 08:56:13",
+        "Altitude": 81.1,
+        "Accuracy": 10.7,
+        "Heading": 136.36,
+        "Speed": 11.83,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4585937,
+        "Longitude": 9.4008785,
+        "Timestamp": "12/5/2020 08:56:16",
+        "Altitude": 82.1,
+        "Accuracy": 10.2,
+        "Heading": 115.23,
+        "Speed": 11.52,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4584757,
+        "Longitude": 9.4014337,
+        "Timestamp": "12/5/2020 08:56:19",
+        "Altitude": 81.9,
+        "Accuracy": 9.8,
+        "Heading": 111,
+        "Speed": 12.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4583898,
+        "Longitude": 9.4020249,
+        "Timestamp": "12/5/2020 08:56:22",
+        "Altitude": 83.7,
+        "Accuracy": 10.7,
+        "Heading": 102.09,
+        "Speed": 12.38,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4583165,
+        "Longitude": 9.4026571,
+        "Timestamp": "12/5/2020 08:56:25",
+        "Altitude": 83.7,
+        "Accuracy": 11.4,
+        "Heading": 102,
+        "Speed": 13.83,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4582342,
+        "Longitude": 9.4033421,
+        "Timestamp": "12/5/2020 08:56:28",
+        "Altitude": 84.3,
+        "Accuracy": 11.8,
+        "Heading": 94.7,
+        "Speed": 14.15,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4582074,
+        "Longitude": 9.4040799,
+        "Timestamp": "12/5/2020 08:56:32",
+        "Altitude": 85.9,
+        "Accuracy": 12.6,
+        "Heading": 97.66,
+        "Speed": 9.13,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4580052,
+        "Longitude": 9.4044436,
+        "Timestamp": "12/5/2020 08:56:39",
+        "Altitude": 85.4,
+        "Accuracy": 11.3,
+        "Heading": 179.23,
+        "Speed": 5.28,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4577866,
+        "Longitude": 9.4043341,
+        "Timestamp": "12/5/2020 08:56:42",
+        "Altitude": 86.1,
+        "Accuracy": 10.7,
+        "Heading": 189.95,
+        "Speed": 8.69,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4574877,
+        "Longitude": 9.4041987,
+        "Timestamp": "12/5/2020 08:56:45",
+        "Altitude": 87.7,
+        "Accuracy": 10.2,
+        "Heading": 189.05,
+        "Speed": 10.78,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4571486,
+        "Longitude": 9.4040815,
+        "Timestamp": "12/5/2020 08:56:48",
+        "Altitude": 86.8,
+        "Accuracy": 9.6,
+        "Heading": 189,
+        "Speed": 12.13,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4568473,
+        "Longitude": 9.4039769,
+        "Timestamp": "12/5/2020 08:56:51",
+        "Altitude": 85.4,
+        "Accuracy": 9.8,
+        "Heading": 190.83,
+        "Speed": 9.88,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4565596,
+        "Longitude": 9.40386,
+        "Timestamp": "12/5/2020 08:56:59",
+        "Altitude": 81.9,
+        "Accuracy": 9.6,
+        "Heading": 209.35,
+        "Speed": 3.81,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4565213,
+        "Longitude": 9.4035,
+        "Timestamp": "12/5/2020 08:57:06",
+        "Altitude": 82.7,
+        "Accuracy": 9.6,
+        "Heading": 262.22,
+        "Speed": 3.35,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563308,
+        "Longitude": 9.4033191,
+        "Timestamp": "12/5/2020 08:57:12",
+        "Altitude": 82.9,
+        "Accuracy": 10.7,
+        "Heading": 190.28,
+        "Speed": 5.11,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4561108,
+        "Longitude": 9.403228,
+        "Timestamp": "12/5/2020 08:57:33",
+        "Altitude": 88.5,
+        "Accuracy": 9.8,
+        "Heading": 187.08,
+        "Speed": 6.23,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4558848,
+        "Longitude": 9.4031579,
+        "Timestamp": "12/5/2020 08:57:36",
+        "Altitude": 85.4,
+        "Accuracy": 9.8,
+        "Heading": 189.17,
+        "Speed": 8.42,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4556097,
+        "Longitude": 9.4031098,
+        "Timestamp": "12/5/2020 08:57:39",
+        "Altitude": 85.5,
+        "Accuracy": 10,
+        "Heading": 184.99,
+        "Speed": 8.46,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4553073,
+        "Longitude": 9.4030356,
+        "Timestamp": "12/5/2020 08:57:44",
+        "Altitude": 87.8,
+        "Accuracy": 9.6,
+        "Heading": 174.08,
+        "Speed": 3.76,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4555028,
+        "Longitude": 9.4031618,
+        "Timestamp": "12/5/2020 08:58:09",
+        "Altitude": 91.4,
+        "Accuracy": 10.3,
+        "Heading": 8.05,
+        "Speed": 7.21,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4557343,
+        "Longitude": 9.403216,
+        "Timestamp": "12/5/2020 08:58:12",
+        "Altitude": 91.1,
+        "Accuracy": 10.2,
+        "Heading": 7,
+        "Speed": 7.28,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4559197,
+        "Longitude": 9.4032514,
+        "Timestamp": "12/5/2020 08:58:15",
+        "Altitude": 89.1,
+        "Accuracy": 10.7,
+        "Heading": 6,
+        "Speed": 5.29,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4561342,
+        "Longitude": 9.403286,
+        "Timestamp": "12/5/2020 08:58:19",
+        "Altitude": 89.1,
+        "Accuracy": 10.7,
+        "Heading": 11.38,
+        "Speed": 4.71,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563426,
+        "Longitude": 9.403364,
+        "Timestamp": "12/5/2020 08:58:23",
+        "Altitude": 89.7,
+        "Accuracy": 10.7,
+        "Heading": 8.17,
+        "Speed": 5.88,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4565141,
+        "Longitude": 9.4034837,
+        "Timestamp": "12/5/2020 08:58:29",
+        "Altitude": 90.1,
+        "Accuracy": 9.6,
+        "Heading": 72.84,
+        "Speed": 1.86,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564707,
+        "Longitude": 9.4037141,
+        "Timestamp": "12/5/2020 08:58:33",
+        "Altitude": 88.1,
+        "Accuracy": 9.6,
+        "Heading": 112.8,
+        "Speed": 4.68,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563505,
+        "Longitude": 9.4040043,
+        "Timestamp": "12/5/2020 08:58:37",
+        "Altitude": 87.1,
+        "Accuracy": 9.6,
+        "Heading": 99.95,
+        "Speed": 4.97,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564976,
+        "Longitude": 9.4042118,
+        "Timestamp": "12/5/2020 08:58:42",
+        "Altitude": 87.1,
+        "Accuracy": 9.6,
+        "Heading": 333.45,
+        "Speed": 5.15,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4567126,
+        "Longitude": 9.4040476,
+        "Timestamp": "12/5/2020 08:58:46",
+        "Altitude": 86.8,
+        "Accuracy": 9.6,
+        "Heading": 358.79,
+        "Speed": 7,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.456935,
+        "Longitude": 9.404097,
+        "Timestamp": "12/5/2020 08:58:49",
+        "Altitude": 87,
+        "Accuracy": 9.6,
+        "Heading": 9.03,
+        "Speed": 7.79,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4572134,
+        "Longitude": 9.4041906,
+        "Timestamp": "12/5/2020 08:58:53",
+        "Altitude": 85.5,
+        "Accuracy": 9.6,
+        "Heading": 10.04,
+        "Speed": 7.29,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4574199,
+        "Longitude": 9.4042568,
+        "Timestamp": "12/5/2020 08:58:56",
+        "Altitude": 84.9,
+        "Accuracy": 10,
+        "Heading": 9.15,
+        "Speed": 8.08,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4577315,
+        "Longitude": 9.4043508,
+        "Timestamp": "12/5/2020 08:59:00",
+        "Altitude": 84.3,
+        "Accuracy": 10.2,
+        "Heading": 8.03,
+        "Speed": 8.15,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4580091,
+        "Longitude": 9.4044127,
+        "Timestamp": "12/5/2020 08:59:04",
+        "Altitude": 82.1,
+        "Accuracy": 9.6,
+        "Heading": 11.82,
+        "Speed": 6.49,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4581657,
+        "Longitude": 9.4046025,
+        "Timestamp": "12/5/2020 08:59:08",
+        "Altitude": 81.4,
+        "Accuracy": 9.6,
+        "Heading": 26.92,
+        "Speed": 5.1,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4582642,
+        "Longitude": 9.4042794,
+        "Timestamp": "12/5/2020 08:59:14",
+        "Altitude": 79.2,
+        "Accuracy": 6.8,
+        "Heading": 247.7,
+        "Speed": 4.95,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4582777,
+        "Longitude": 9.4038562,
+        "Timestamp": "12/5/2020 08:59:18",
+        "Altitude": 79.8,
+        "Accuracy": 4,
+        "Heading": 281.89,
+        "Speed": 8.67,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4583403,
+        "Longitude": 9.403251,
+        "Timestamp": "12/5/2020 08:59:22",
+        "Altitude": 84,
+        "Accuracy": 5.1,
+        "Heading": 279.97,
+        "Speed": 10.18,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4583978,
+        "Longitude": 9.4027435,
+        "Timestamp": "12/5/2020 08:59:25",
+        "Altitude": 85.8,
+        "Accuracy": 5.1,
+        "Heading": 280.97,
+        "Speed": 10.74,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4584592,
+        "Longitude": 9.4022141,
+        "Timestamp": "12/5/2020 08:59:28",
+        "Altitude": 85.8,
+        "Accuracy": 4.5,
+        "Heading": 280,
+        "Speed": 11.27,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4585111,
+        "Longitude": 9.4016919,
+        "Timestamp": "12/5/2020 08:59:31",
+        "Altitude": 87.2,
+        "Accuracy": 4.3,
+        "Heading": 281,
+        "Speed": 10.78,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4585703,
+        "Longitude": 9.4011675,
+        "Timestamp": "12/5/2020 08:59:34",
+        "Altitude": 85.5,
+        "Accuracy": 4.2,
+        "Heading": 281.98,
+        "Speed": 11.47,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4586936,
+        "Longitude": 9.4006166,
+        "Timestamp": "12/5/2020 08:59:37",
+        "Altitude": 86.1,
+        "Accuracy": 4.2,
+        "Heading": 298.8,
+        "Speed": 12.45,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4589135,
+        "Longitude": 9.4001769,
+        "Timestamp": "12/5/2020 08:59:40",
+        "Altitude": 87.8,
+        "Accuracy": 4.2,
+        "Heading": 316.82,
+        "Speed": 11.69,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4591701,
+        "Longitude": 9.3998711,
+        "Timestamp": "12/5/2020 08:59:43",
+        "Altitude": 87,
+        "Accuracy": 4.2,
+        "Heading": 331.86,
+        "Speed": 10.76,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4594382,
+        "Longitude": 9.3997221,
+        "Timestamp": "12/5/2020 08:59:46",
+        "Altitude": 87.3,
+        "Accuracy": 4.3,
+        "Heading": 342.98,
+        "Speed": 9.93,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4597292,
+        "Longitude": 9.3995446,
+        "Timestamp": "12/5/2020 08:59:51",
+        "Altitude": 87.3,
+        "Accuracy": 4.3,
+        "Heading": 327.18,
+        "Speed": 4.32,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4598693,
+        "Longitude": 9.3993231,
+        "Timestamp": "12/5/2020 09:00:15",
+        "Altitude": 83.5,
+        "Accuracy": 4.5,
+        "Heading": 321.01,
+        "Speed": 5.48,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4600289,
+        "Longitude": 9.3991067,
+        "Timestamp": "12/5/2020 09:00:18",
+        "Altitude": 82.9,
+        "Accuracy": 4.3,
+        "Heading": 319.03,
+        "Speed": 7.79,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4602458,
+        "Longitude": 9.3987698,
+        "Timestamp": "12/5/2020 09:00:22",
+        "Altitude": 83,
+        "Accuracy": 5.9,
+        "Heading": 321.87,
+        "Speed": 7.24,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4604235,
+        "Longitude": 9.3985215,
+        "Timestamp": "12/5/2020 09:00:26",
+        "Altitude": 82.4,
+        "Accuracy": 5.8,
+        "Heading": 326.36,
+        "Speed": 4.93,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4605679,
+        "Longitude": 9.3987252,
+        "Timestamp": "12/5/2020 09:00:33",
+        "Altitude": 81.8,
+        "Accuracy": 4.5,
+        "Heading": 52.95,
+        "Speed": 3.13,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4606991,
+        "Longitude": 9.3989853,
+        "Timestamp": "12/5/2020 09:00:40",
+        "Altitude": 81.3,
+        "Accuracy": 4.3,
+        "Heading": 34.39,
+        "Speed": 2.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4607776,
+        "Longitude": 9.3988788,
+        "Timestamp": "12/5/2020 09:00:45",
+        "Altitude": 84,
+        "Accuracy": 4,
+        "Heading": 304.8,
+        "Speed": 1.03,
+        "SpeedAccuracy": 0
+      }
+    ],
+    "TripDuration": "11",
+    "TripDate": "12/5/2020 08:26:33.031",
+    "Transport": "2",
+    "MaxSpeed": 25.05,
+    "MinSpeed": -1,
+    "AverageSpeed": 16.3947976878613
+  },
+  {
+    "_id": "52ce07b2-8f22-472a-ba53-a8ebdc2b871f",
+    "TripPositions": [
+      {
+        "Latitude": 56.4585745,
+        "Longitude": 9.4009113,
+        "Timestamp": "12/5/2020 09:26:36.758",
+        "Altitude": 73.9,
+        "Accuracy": 9.6,
+        "Heading": 114.11,
+        "Speed": 13.56,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4584602,
+        "Longitude": 9.4016076,
+        "Timestamp": "12/5/2020 09:26:40",
+        "Altitude": 74.2,
+        "Accuracy": 9.9,
+        "Heading": 106.1,
+        "Speed": 14.35,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4583926,
+        "Longitude": 9.4023473,
+        "Timestamp": "12/5/2020 09:26:43",
+        "Altitude": 75.2,
+        "Accuracy": 8.6,
+        "Heading": 99.96,
+        "Speed": 15.18,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.458318,
+        "Longitude": 9.4030806,
+        "Timestamp": "12/5/2020 09:26:46",
+        "Altitude": 74.4,
+        "Accuracy": 7,
+        "Heading": 101,
+        "Speed": 15.32,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.458266,
+        "Longitude": 9.4037676,
+        "Timestamp": "12/5/2020 09:26:49",
+        "Altitude": 77.2,
+        "Accuracy": 5.7,
+        "Heading": 97.86,
+        "Speed": 13.84,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4581424,
+        "Longitude": 9.4044191,
+        "Timestamp": "12/5/2020 09:26:55",
+        "Altitude": 76.5,
+        "Accuracy": 5.1,
+        "Heading": 142.22,
+        "Speed": 5.06,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4579256,
+        "Longitude": 9.4043859,
+        "Timestamp": "12/5/2020 09:26:59",
+        "Altitude": 79.1,
+        "Accuracy": 4.3,
+        "Heading": 188.95,
+        "Speed": 7.79,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.457557,
+        "Longitude": 9.4042666,
+        "Timestamp": "12/5/2020 09:27:03",
+        "Altitude": 79.6,
+        "Accuracy": 4.3,
+        "Heading": 189.99,
+        "Speed": 11.21,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4572238,
+        "Longitude": 9.4041654,
+        "Timestamp": "12/5/2020 09:27:06",
+        "Altitude": 80.2,
+        "Accuracy": 4.9,
+        "Heading": 189.01,
+        "Speed": 12.89,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4567915,
+        "Longitude": 9.4040184,
+        "Timestamp": "12/5/2020 09:27:10",
+        "Altitude": 81,
+        "Accuracy": 5.4,
+        "Heading": 190.98,
+        "Speed": 10.31,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4565204,
+        "Longitude": 9.403889,
+        "Timestamp": "12/5/2020 09:27:16",
+        "Altitude": 81.2,
+        "Accuracy": 4.3,
+        "Heading": 243.32,
+        "Speed": 4.29,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4565428,
+        "Longitude": 9.4035265,
+        "Timestamp": "12/5/2020 09:27:21",
+        "Altitude": 77.7,
+        "Accuracy": 4.4,
+        "Heading": 263.1,
+        "Speed": 3.69,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563586,
+        "Longitude": 9.4034299,
+        "Timestamp": "12/5/2020 09:27:26",
+        "Altitude": 78.6,
+        "Accuracy": 5.8,
+        "Heading": 192.15,
+        "Speed": 5.08,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4561577,
+        "Longitude": 9.4033492,
+        "Timestamp": "12/5/2020 09:27:30",
+        "Altitude": 81.9,
+        "Accuracy": 7.7,
+        "Heading": 186.68,
+        "Speed": 5.28,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4559605,
+        "Longitude": 9.4033416,
+        "Timestamp": "12/5/2020 09:27:37",
+        "Altitude": 84.7,
+        "Accuracy": 5.1,
+        "Heading": 128.71,
+        "Speed": 2.86,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4559834,
+        "Longitude": 9.4034657,
+        "Timestamp": "12/5/2020 09:28:44",
+        "Altitude": 83.5,
+        "Accuracy": 9.6,
+        "Heading": 269.94,
+        "Speed": 0,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4558928,
+        "Longitude": 9.403515,
+        "Timestamp": "12/5/2020 09:29:10",
+        "Altitude": 79.3,
+        "Accuracy": 9.6,
+        "Heading": 166.63,
+        "Speed": 1.13,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4557891,
+        "Longitude": 9.4035067,
+        "Timestamp": "12/5/2020 09:29:17",
+        "Altitude": 82.7,
+        "Accuracy": 9.6,
+        "Heading": 172.69,
+        "Speed": 1.16,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4557062,
+        "Longitude": 9.4035851,
+        "Timestamp": "12/5/2020 09:29:29",
+        "Altitude": 76.9,
+        "Accuracy": 10.3,
+        "Heading": 128.74,
+        "Speed": 0.57,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4557018,
+        "Longitude": 9.403752,
+        "Timestamp": "12/5/2020 09:29:34.482",
+        "Altitude": 95,
+        "Accuracy": 10,
+        "Heading": 99.51,
+        "Speed": 0.98,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4556943,
+        "Longitude": 9.4039299,
+        "Timestamp": "12/5/2020 09:29:42",
+        "Altitude": 89.6,
+        "Accuracy": 10,
+        "Heading": 100.94,
+        "Speed": 1.03,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4556721,
+        "Longitude": 9.4040942,
+        "Timestamp": "12/5/2020 09:29:49.49",
+        "Altitude": 89.6,
+        "Accuracy": 10.7,
+        "Heading": 102.3,
+        "Speed": 1.19,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.455658,
+        "Longitude": 9.4042587,
+        "Timestamp": "12/5/2020 09:30:00",
+        "Altitude": 88.6,
+        "Accuracy": 10.7,
+        "Heading": 88.95,
+        "Speed": 0.99,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4556187,
+        "Longitude": 9.4044289,
+        "Timestamp": "12/5/2020 09:30:09",
+        "Altitude": 89.6,
+        "Accuracy": 11.5,
+        "Heading": 100.75,
+        "Speed": 1.1,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.455603,
+        "Longitude": 9.4046038,
+        "Timestamp": "12/5/2020 09:30:15",
+        "Altitude": 86.5,
+        "Accuracy": 11.2,
+        "Heading": 92.6,
+        "Speed": 1.22,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4555761,
+        "Longitude": 9.4047589,
+        "Timestamp": "12/5/2020 09:30:21",
+        "Altitude": 88.6,
+        "Accuracy": 11.3,
+        "Heading": 100.51,
+        "Speed": 1.28,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4555525,
+        "Longitude": 9.4049311,
+        "Timestamp": "12/5/2020 09:30:27",
+        "Altitude": 86.5,
+        "Accuracy": 10.7,
+        "Heading": 102.13,
+        "Speed": 1.49,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4555363,
+        "Longitude": 9.4050987,
+        "Timestamp": "12/5/2020 09:30:34",
+        "Altitude": 86.5,
+        "Accuracy": 9.6,
+        "Heading": 102.95,
+        "Speed": 1.48,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4555581,
+        "Longitude": 9.4052714,
+        "Timestamp": "12/5/2020 09:30:44",
+        "Altitude": 86.5,
+        "Accuracy": 9.6,
+        "Heading": 74.36,
+        "Speed": 1.09,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4556447,
+        "Longitude": 9.405366,
+        "Timestamp": "12/5/2020 09:30:52",
+        "Altitude": 87.1,
+        "Accuracy": 9.6,
+        "Heading": 36.38,
+        "Speed": 1.05,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4557351,
+        "Longitude": 9.4053616,
+        "Timestamp": "12/5/2020 09:30:58",
+        "Altitude": 87.1,
+        "Accuracy": 9.6,
+        "Heading": 3.13,
+        "Speed": 1.05,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4558264,
+        "Longitude": 9.4053958,
+        "Timestamp": "12/5/2020 09:31:04.703",
+        "Altitude": 87.4,
+        "Accuracy": 9.6,
+        "Heading": 13.29,
+        "Speed": 1.13,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4559282,
+        "Longitude": 9.4054202,
+        "Timestamp": "12/5/2020 09:31:14",
+        "Altitude": 86.2,
+        "Accuracy": 9.6,
+        "Heading": 6.29,
+        "Speed": 1.17,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4560274,
+        "Longitude": 9.4054344,
+        "Timestamp": "12/5/2020 09:31:21",
+        "Altitude": 86.2,
+        "Accuracy": 10.4,
+        "Heading": 7.62,
+        "Speed": 1.3,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4560917,
+        "Longitude": 9.405561,
+        "Timestamp": "12/5/2020 09:31:29",
+        "Altitude": 86.6,
+        "Accuracy": 13.3,
+        "Heading": 10.16,
+        "Speed": 0.98,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4561885,
+        "Longitude": 9.4055873,
+        "Timestamp": "12/5/2020 09:31:38",
+        "Altitude": 87.5,
+        "Accuracy": 10.7,
+        "Heading": 26.36,
+        "Speed": 1.13,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4562437,
+        "Longitude": 9.4057312,
+        "Timestamp": "12/5/2020 09:31:47",
+        "Altitude": 87.7,
+        "Accuracy": 10.7,
+        "Heading": 43.39,
+        "Speed": 1.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4562662,
+        "Longitude": 9.4059015,
+        "Timestamp": "12/5/2020 09:31:55",
+        "Altitude": 87.5,
+        "Accuracy": 9.8,
+        "Heading": 73.16,
+        "Speed": 1.01,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4562314,
+        "Longitude": 9.4060662,
+        "Timestamp": "12/5/2020 09:32:02",
+        "Altitude": 86.7,
+        "Accuracy": 9.6,
+        "Heading": 101.45,
+        "Speed": 1.28,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4561844,
+        "Longitude": 9.4062234,
+        "Timestamp": "12/5/2020 09:32:08",
+        "Altitude": 88.7,
+        "Accuracy": 13,
+        "Heading": 97.32,
+        "Speed": 1.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4562133,
+        "Longitude": 9.4063948,
+        "Timestamp": "12/5/2020 09:32:19",
+        "Altitude": 86.7,
+        "Accuracy": 9.6,
+        "Heading": 95.35,
+        "Speed": 1.11,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4561249,
+        "Longitude": 9.4064347,
+        "Timestamp": "12/5/2020 09:32:24",
+        "Altitude": 88.7,
+        "Accuracy": 13.6,
+        "Heading": 109.54,
+        "Speed": 1.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4561871,
+        "Longitude": 9.4065765,
+        "Timestamp": "12/5/2020 09:32:28",
+        "Altitude": 86.3,
+        "Accuracy": 13.3,
+        "Heading": 85.26,
+        "Speed": 1.17,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4562475,
+        "Longitude": 9.4067165,
+        "Timestamp": "12/5/2020 09:32:33",
+        "Altitude": 86.3,
+        "Accuracy": 13.5,
+        "Heading": 76.42,
+        "Speed": 0.93,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563163,
+        "Longitude": 9.4068419,
+        "Timestamp": "12/5/2020 09:32:42",
+        "Altitude": 86.3,
+        "Accuracy": 9.6,
+        "Heading": 47.83,
+        "Speed": 1.18,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564006,
+        "Longitude": 9.406781,
+        "Timestamp": "12/5/2020 09:32:58",
+        "Altitude": 87,
+        "Accuracy": 10,
+        "Heading": 345.11,
+        "Speed": 0.65,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564342,
+        "Longitude": 9.4069365,
+        "Timestamp": "12/5/2020 09:33:27",
+        "Altitude": 87,
+        "Accuracy": 15.8,
+        "Heading": 60.85,
+        "Speed": 0.97,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564157,
+        "Longitude": 9.406768,
+        "Timestamp": "12/5/2020 09:33:32",
+        "Altitude": 87.2,
+        "Accuracy": 13.4,
+        "Heading": 257.92,
+        "Speed": 3.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564109,
+        "Longitude": 9.4064243,
+        "Timestamp": "12/5/2020 09:33:42",
+        "Altitude": 87.6,
+        "Accuracy": 10.7,
+        "Heading": 264.12,
+        "Speed": 1.43,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563988,
+        "Longitude": 9.4062257,
+        "Timestamp": "12/5/2020 09:33:47",
+        "Altitude": 87.2,
+        "Accuracy": 10.7,
+        "Heading": 273.89,
+        "Speed": 1.61,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564013,
+        "Longitude": 9.4060514,
+        "Timestamp": "12/5/2020 09:33:53",
+        "Altitude": 87,
+        "Accuracy": 10.7,
+        "Heading": 274.72,
+        "Speed": 1.23,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563953,
+        "Longitude": 9.4058888,
+        "Timestamp": "12/5/2020 09:33:59",
+        "Altitude": 87.5,
+        "Accuracy": 10.7,
+        "Heading": 262.95,
+        "Speed": 1.3,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563819,
+        "Longitude": 9.4057231,
+        "Timestamp": "12/5/2020 09:34:05",
+        "Altitude": 87.2,
+        "Accuracy": 11.2,
+        "Heading": 262.05,
+        "Speed": 1.33,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564099,
+        "Longitude": 9.4055535,
+        "Timestamp": "12/5/2020 09:34:11",
+        "Altitude": 87.7,
+        "Accuracy": 11.1,
+        "Heading": 278.52,
+        "Speed": 1.52,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564376,
+        "Longitude": 9.4053937,
+        "Timestamp": "12/5/2020 09:34:17",
+        "Altitude": 87.7,
+        "Accuracy": 10.7,
+        "Heading": 276.6,
+        "Speed": 1.41,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564694,
+        "Longitude": 9.4052354,
+        "Timestamp": "12/5/2020 09:34:24",
+        "Altitude": 87.6,
+        "Accuracy": 10.7,
+        "Heading": 283.72,
+        "Speed": 1.31,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564682,
+        "Longitude": 9.4050642,
+        "Timestamp": "12/5/2020 09:34:32",
+        "Altitude": 87.6,
+        "Accuracy": 10.7,
+        "Heading": 271.79,
+        "Speed": 1.24,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564768,
+        "Longitude": 9.4048831,
+        "Timestamp": "12/5/2020 09:34:39",
+        "Altitude": 87.5,
+        "Accuracy": 10.7,
+        "Heading": 269.05,
+        "Speed": 1.38,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4564492,
+        "Longitude": 9.4047207,
+        "Timestamp": "12/5/2020 09:34:47",
+        "Altitude": 87.7,
+        "Accuracy": 11.3,
+        "Heading": 258.33,
+        "Speed": 1.29,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563746,
+        "Longitude": 9.404618,
+        "Timestamp": "12/5/2020 09:34:54",
+        "Altitude": 89,
+        "Accuracy": 11.8,
+        "Heading": 240.13,
+        "Speed": 1.2,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563392,
+        "Longitude": 9.4044454,
+        "Timestamp": "12/5/2020 09:35:03",
+        "Altitude": 87.7,
+        "Accuracy": 10.7,
+        "Heading": 260.99,
+        "Speed": 1.09,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563574,
+        "Longitude": 9.404279,
+        "Timestamp": "12/5/2020 09:35:09",
+        "Altitude": 87.7,
+        "Accuracy": 10.7,
+        "Heading": 276.09,
+        "Speed": 1.2,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4563706,
+        "Longitude": 9.4041054,
+        "Timestamp": "12/5/2020 09:35:19",
+        "Altitude": 87.7,
+        "Accuracy": 10,
+        "Heading": 252.67,
+        "Speed": 1.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4562799,
+        "Longitude": 9.4040492,
+        "Timestamp": "12/5/2020 09:35:28",
+        "Altitude": 95.7,
+        "Accuracy": 10.7,
+        "Heading": 202.29,
+        "Speed": 0.92,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4561894,
+        "Longitude": 9.4040238,
+        "Timestamp": "12/5/2020 09:35:35",
+        "Altitude": 95.7,
+        "Accuracy": 10.3,
+        "Heading": 194.92,
+        "Speed": 1.04,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4560931,
+        "Longitude": 9.4039808,
+        "Timestamp": "12/5/2020 09:35:42",
+        "Altitude": 95.7,
+        "Accuracy": 9.6,
+        "Heading": 184.92,
+        "Speed": 1.07,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4560028,
+        "Longitude": 9.4039486,
+        "Timestamp": "12/5/2020 09:35:48",
+        "Altitude": 95.7,
+        "Accuracy": 9.6,
+        "Heading": 180.04,
+        "Speed": 1.14,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4559115,
+        "Longitude": 9.4039126,
+        "Timestamp": "12/5/2020 09:35:55",
+        "Altitude": 95,
+        "Accuracy": 10.4,
+        "Heading": 187.86,
+        "Speed": 1.24,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4558167,
+        "Longitude": 9.4039128,
+        "Timestamp": "12/5/2020 09:36:04",
+        "Altitude": 87.7,
+        "Accuracy": 10.7,
+        "Heading": 181.32,
+        "Speed": 0.98,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4557844,
+        "Longitude": 9.4037614,
+        "Timestamp": "12/5/2020 09:36:12.402",
+        "Altitude": 95,
+        "Accuracy": 9.6,
+        "Heading": 220.55,
+        "Speed": 0.55,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4557155,
+        "Longitude": 9.4036395,
+        "Timestamp": "12/5/2020 09:36:22",
+        "Altitude": 89.3,
+        "Accuracy": 9.6,
+        "Heading": 216.25,
+        "Speed": 0.89,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4558051,
+        "Longitude": 9.4035714,
+        "Timestamp": "12/5/2020 09:36:39",
+        "Altitude": 89.3,
+        "Accuracy": 9.6,
+        "Heading": 346.44,
+        "Speed": 0.59,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4558892,
+        "Longitude": 9.4034651,
+        "Timestamp": "12/5/2020 09:36:47",
+        "Altitude": 89.3,
+        "Accuracy": 9.6,
+        "Heading": 330.69,
+        "Speed": 0.87,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4559795,
+        "Longitude": 9.4034637,
+        "Timestamp": "12/5/2020 09:37:00",
+        "Altitude": 95,
+        "Accuracy": 9.6,
+        "Heading": 8.73,
+        "Speed": 0.53,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4559485,
+        "Longitude": 9.4034799,
+        "Timestamp": "12/5/2020 09:38:01",
+        "Altitude": 95,
+        "Accuracy": 9.6,
+        "Heading": 189.49,
+        "Speed": 0.03,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4552459,
+        "Longitude": 9.4032972,
+        "Timestamp": "12/5/2020 09:41:25.873",
+        "Altitude": 89.3,
+        "Accuracy": 8.8,
+        "Heading": 188.19,
+        "Speed": 38.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4551023,
+        "Longitude": 9.4032599,
+        "Timestamp": "12/5/2020 09:41:27",
+        "Altitude": 89.3,
+        "Accuracy": 8.2,
+        "Heading": 188.19,
+        "Speed": 38.56,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4559892,
+        "Longitude": 9.4034906,
+        "Timestamp": "12/5/2020 09:41:30",
+        "Altitude": 89.3,
+        "Accuracy": 5.4,
+        "Heading": 8.18,
+        "Speed": 27,
+        "SpeedAccuracy": 0
+      }
+    ],
+    "TripDuration": "53",
+    "TripDate": "12/5/2020 09:26:36.758",
+    "Transport": "2",
+    "MaxSpeed": 38.56,
+    "MinSpeed": 0,
+    "AverageSpeed": 3.99564102564103
+  },
+  {
+    "_id": "5e762eaa-4696-4415-8044-33154173a0f0",
+    "TripPositions": [
+      {
+        "Latitude": 56.4556051,
+        "Longitude": 9.4033314,
+        "Timestamp": "12/5/2020 10:02:57.527",
+        "Altitude": 68.2,
+        "Accuracy": 48.4,
+        "Heading": -1,
+        "Speed": -1,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4559687,
+        "Longitude": 9.4034943,
+        "Timestamp": "12/5/2020 10:03:00",
+        "Altitude": 70.5,
+        "Accuracy": 29.6,
+        "Heading": 13.91,
+        "Speed": 0.01,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.457563,
+        "Longitude": 9.4043631,
+        "Timestamp": "12/5/2020 10:04:34.793",
+        "Altitude": 97,
+        "Accuracy": 9.6,
+        "Heading": 9.95,
+        "Speed": 10.75,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4578814,
+        "Longitude": 9.4044882,
+        "Timestamp": "12/5/2020 10:04:38",
+        "Altitude": 97.9,
+        "Accuracy": 8.8,
+        "Heading": 10.78,
+        "Speed": 10.03,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4581677,
+        "Longitude": 9.4045977,
+        "Timestamp": "12/5/2020 10:04:43",
+        "Altitude": 94.1,
+        "Accuracy": 7.3,
+        "Heading": 39.69,
+        "Speed": 5.73,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.45825,
+        "Longitude": 9.4042117,
+        "Timestamp": "12/5/2020 10:04:52",
+        "Altitude": 83.5,
+        "Accuracy": 3.9,
+        "Heading": 268.43,
+        "Speed": 6.51,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4583089,
+        "Longitude": 9.4037778,
+        "Timestamp": "12/5/2020 10:04:55",
+        "Altitude": 84.3,
+        "Accuracy": 3.9,
+        "Heading": 280.04,
+        "Speed": 9.82,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4583623,
+        "Longitude": 9.4032385,
+        "Timestamp": "12/5/2020 10:04:58",
+        "Altitude": 80.9,
+        "Accuracy": 3.9,
+        "Heading": 279.03,
+        "Speed": 11.6,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4584269,
+        "Longitude": 9.4026536,
+        "Timestamp": "12/5/2020 10:05:01",
+        "Altitude": 79.4,
+        "Accuracy": 3.9,
+        "Heading": 280,
+        "Speed": 11.7,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.458485,
+        "Longitude": 9.4020711,
+        "Timestamp": "12/5/2020 10:05:04",
+        "Altitude": 78.9,
+        "Accuracy": 4,
+        "Heading": 280,
+        "Speed": 11.39,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4585345,
+        "Longitude": 9.4014926,
+        "Timestamp": "12/5/2020 10:05:07",
+        "Altitude": 77.4,
+        "Accuracy": 4.2,
+        "Heading": 279.98,
+        "Speed": 11.74,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4586161,
+        "Longitude": 9.400935,
+        "Timestamp": "12/5/2020 10:05:10",
+        "Altitude": 76.2,
+        "Accuracy": 4.2,
+        "Heading": 288.87,
+        "Speed": 11.69,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4587744,
+        "Longitude": 9.4004315,
+        "Timestamp": "12/5/2020 10:05:13",
+        "Altitude": 76.2,
+        "Accuracy": 4.2,
+        "Heading": 305.75,
+        "Speed": 11.06,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.458978,
+        "Longitude": 9.4000852,
+        "Timestamp": "12/5/2020 10:05:16",
+        "Altitude": 75.8,
+        "Accuracy": 4.3,
+        "Heading": 318.85,
+        "Speed": 10.58,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.459224,
+        "Longitude": 9.3998207,
+        "Timestamp": "12/5/2020 10:05:19",
+        "Altitude": 79.4,
+        "Accuracy": 4.3,
+        "Heading": 337.79,
+        "Speed": 10.44,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4595011,
+        "Longitude": 9.3997291,
+        "Timestamp": "12/5/2020 10:05:22",
+        "Altitude": 76.6,
+        "Accuracy": 4.5,
+        "Heading": 349.09,
+        "Speed": 9.79,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4597782,
+        "Longitude": 9.3995067,
+        "Timestamp": "12/5/2020 10:05:27",
+        "Altitude": 76.9,
+        "Accuracy": 4.7,
+        "Heading": 325.22,
+        "Speed": 3.79,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4599421,
+        "Longitude": 9.3993403,
+        "Timestamp": "12/5/2020 10:06:07",
+        "Altitude": 77.7,
+        "Accuracy": 4.3,
+        "Heading": 353.09,
+        "Speed": 1.73,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4600046,
+        "Longitude": 9.3994766,
+        "Timestamp": "12/5/2020 10:06:10",
+        "Altitude": 79.3,
+        "Accuracy": 4.5,
+        "Heading": 41.77,
+        "Speed": 4.09,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4601255,
+        "Longitude": 9.3997313,
+        "Timestamp": "12/5/2020 10:06:13",
+        "Altitude": 81.3,
+        "Accuracy": 4.2,
+        "Heading": 43.02,
+        "Speed": 7.36,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4603313,
+        "Longitude": 9.4000627,
+        "Timestamp": "12/5/2020 10:06:16",
+        "Altitude": 82.4,
+        "Accuracy": 3.9,
+        "Heading": 42.05,
+        "Speed": 10.96,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4605793,
+        "Longitude": 9.4004651,
+        "Timestamp": "12/5/2020 10:06:19",
+        "Altitude": 82.3,
+        "Accuracy": 3.9,
+        "Heading": 44.94,
+        "Speed": 11.43,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4608063,
+        "Longitude": 9.4008912,
+        "Timestamp": "12/5/2020 10:06:22",
+        "Altitude": 82.1,
+        "Accuracy": 3.9,
+        "Heading": 44.97,
+        "Speed": 12.98,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4610749,
+        "Longitude": 9.4013663,
+        "Timestamp": "12/5/2020 10:06:25",
+        "Altitude": 82.5,
+        "Accuracy": 4.1,
+        "Heading": 45,
+        "Speed": 14.8,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4613599,
+        "Longitude": 9.4018608,
+        "Timestamp": "12/5/2020 10:06:28",
+        "Altitude": 85.5,
+        "Accuracy": 5,
+        "Heading": 44,
+        "Speed": 14.33,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4616237,
+        "Longitude": 9.4023504,
+        "Timestamp": "12/5/2020 10:06:31",
+        "Altitude": 85.5,
+        "Accuracy": 5.8,
+        "Heading": 45,
+        "Speed": 14.3,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4618869,
+        "Longitude": 9.4028196,
+        "Timestamp": "12/5/2020 10:06:34",
+        "Altitude": 85,
+        "Accuracy": 5.2,
+        "Heading": 45,
+        "Speed": 13.21,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4621706,
+        "Longitude": 9.4033565,
+        "Timestamp": "12/5/2020 10:06:38",
+        "Altitude": 83.8,
+        "Accuracy": 4.5,
+        "Heading": 45.94,
+        "Speed": 10.09,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4623567,
+        "Longitude": 9.403752,
+        "Timestamp": "12/5/2020 10:07:10",
+        "Altitude": 89.9,
+        "Accuracy": 4.3,
+        "Heading": 49.93,
+        "Speed": 2.6,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.462498,
+        "Longitude": 9.4040588,
+        "Timestamp": "12/5/2020 10:07:15",
+        "Altitude": 89.6,
+        "Accuracy": 4.3,
+        "Heading": 44.97,
+        "Speed": 5.34,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4626481,
+        "Longitude": 9.4043465,
+        "Timestamp": "12/5/2020 10:07:18",
+        "Altitude": 90.9,
+        "Accuracy": 4.5,
+        "Heading": 44.06,
+        "Speed": 9.78,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4628529,
+        "Longitude": 9.4046876,
+        "Timestamp": "12/5/2020 10:07:21",
+        "Altitude": 88.5,
+        "Accuracy": 4.5,
+        "Heading": 44,
+        "Speed": 10.14,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4630895,
+        "Longitude": 9.4050708,
+        "Timestamp": "12/5/2020 10:07:24",
+        "Altitude": 85.7,
+        "Accuracy": 4.3,
+        "Heading": 43,
+        "Speed": 12.72,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4633674,
+        "Longitude": 9.4055412,
+        "Timestamp": "12/5/2020 10:07:27",
+        "Altitude": 85.9,
+        "Accuracy": 4.3,
+        "Heading": 43.03,
+        "Speed": 14.81,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4636496,
+        "Longitude": 9.4060526,
+        "Timestamp": "12/5/2020 10:07:30",
+        "Altitude": 84.2,
+        "Accuracy": 4.3,
+        "Heading": 44,
+        "Speed": 15.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4639601,
+        "Longitude": 9.4066055,
+        "Timestamp": "12/5/2020 10:07:33",
+        "Altitude": 83.5,
+        "Accuracy": 4.8,
+        "Heading": 44.96,
+        "Speed": 16.53,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4643031,
+        "Longitude": 9.407221,
+        "Timestamp": "12/5/2020 10:07:36",
+        "Altitude": 85.7,
+        "Accuracy": 5.4,
+        "Heading": 45,
+        "Speed": 18.78,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4646739,
+        "Longitude": 9.4079363,
+        "Timestamp": "12/5/2020 10:07:39",
+        "Altitude": 82.3,
+        "Accuracy": 5.4,
+        "Heading": 45,
+        "Speed": 20.51,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4650598,
+        "Longitude": 9.4086339,
+        "Timestamp": "12/5/2020 10:07:42",
+        "Altitude": 84.1,
+        "Accuracy": 5.4,
+        "Heading": 45,
+        "Speed": 19.51,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4654474,
+        "Longitude": 9.4093044,
+        "Timestamp": "12/5/2020 10:07:45",
+        "Altitude": 81.5,
+        "Accuracy": 4.7,
+        "Heading": 44,
+        "Speed": 19.2,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4658172,
+        "Longitude": 9.4099643,
+        "Timestamp": "12/5/2020 10:07:48",
+        "Altitude": 78.4,
+        "Accuracy": 4.7,
+        "Heading": 45,
+        "Speed": 19.38,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4661875,
+        "Longitude": 9.4106346,
+        "Timestamp": "12/5/2020 10:07:51",
+        "Altitude": 81,
+        "Accuracy": 7.5,
+        "Heading": 45,
+        "Speed": 19.94,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4665809,
+        "Longitude": 9.4113308,
+        "Timestamp": "12/5/2020 10:07:54",
+        "Altitude": 81.7,
+        "Accuracy": 9.2,
+        "Heading": 42.06,
+        "Speed": 20.81,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4670172,
+        "Longitude": 9.4119966,
+        "Timestamp": "12/5/2020 10:07:57",
+        "Altitude": 82.9,
+        "Accuracy": 6.4,
+        "Heading": 39,
+        "Speed": 21.62,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4674854,
+        "Longitude": 9.4126554,
+        "Timestamp": "12/5/2020 10:08:00",
+        "Altitude": 83.7,
+        "Accuracy": 4.1,
+        "Heading": 36.11,
+        "Speed": 21.94,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4679914,
+        "Longitude": 9.4132622,
+        "Timestamp": "12/5/2020 10:08:03",
+        "Altitude": 85.4,
+        "Accuracy": 4.6,
+        "Heading": 32.09,
+        "Speed": 22,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4684964,
+        "Longitude": 9.4137862,
+        "Timestamp": "12/5/2020 10:08:06",
+        "Altitude": 85.9,
+        "Accuracy": 4.5,
+        "Heading": 29,
+        "Speed": 21.52,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4690343,
+        "Longitude": 9.4142576,
+        "Timestamp": "12/5/2020 10:08:09",
+        "Altitude": 86.3,
+        "Accuracy": 4,
+        "Heading": 25.01,
+        "Speed": 21.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4695943,
+        "Longitude": 9.4146336,
+        "Timestamp": "12/5/2020 10:08:12",
+        "Altitude": 85.8,
+        "Accuracy": 4.2,
+        "Heading": 19.08,
+        "Speed": 21.52,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4701541,
+        "Longitude": 9.4149692,
+        "Timestamp": "12/5/2020 10:08:15",
+        "Altitude": 86.7,
+        "Accuracy": 4,
+        "Heading": 17.02,
+        "Speed": 21.62,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4707196,
+        "Longitude": 9.4152689,
+        "Timestamp": "12/5/2020 10:08:18",
+        "Altitude": 82.8,
+        "Accuracy": 3.9,
+        "Heading": 14.02,
+        "Speed": 21.81,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4712887,
+        "Longitude": 9.4154864,
+        "Timestamp": "12/5/2020 10:08:21",
+        "Altitude": 81.2,
+        "Accuracy": 4,
+        "Heading": 10.05,
+        "Speed": 21.91,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4718809,
+        "Longitude": 9.4156678,
+        "Timestamp": "12/5/2020 10:08:24",
+        "Altitude": 79.8,
+        "Accuracy": 4.6,
+        "Heading": 9,
+        "Speed": 22.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4724744,
+        "Longitude": 9.4158166,
+        "Timestamp": "12/5/2020 10:08:27",
+        "Altitude": 80.1,
+        "Accuracy": 5,
+        "Heading": 7.99,
+        "Speed": 21.38,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4730258,
+        "Longitude": 9.4159889,
+        "Timestamp": "12/5/2020 10:08:30",
+        "Altitude": 77.6,
+        "Accuracy": 5.2,
+        "Heading": 9,
+        "Speed": 19.88,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4735152,
+        "Longitude": 9.4161393,
+        "Timestamp": "12/5/2020 10:08:33",
+        "Altitude": 75.7,
+        "Accuracy": 5.4,
+        "Heading": 9.96,
+        "Speed": 17.73,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4740788,
+        "Longitude": 9.4163229,
+        "Timestamp": "12/5/2020 10:08:37",
+        "Altitude": 76.4,
+        "Accuracy": 4.6,
+        "Heading": 10.96,
+        "Speed": 15.25,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.474475,
+        "Longitude": 9.4165288,
+        "Timestamp": "12/5/2020 10:08:41",
+        "Altitude": 75.2,
+        "Accuracy": 4.2,
+        "Heading": 25.81,
+        "Speed": 9.69,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4747041,
+        "Longitude": 9.4169509,
+        "Timestamp": "12/5/2020 10:08:45",
+        "Altitude": 74.5,
+        "Accuracy": 4.5,
+        "Heading": 69.54,
+        "Speed": 8.66,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4746714,
+        "Longitude": 9.4176104,
+        "Timestamp": "12/5/2020 10:08:49",
+        "Altitude": 74.2,
+        "Accuracy": 4.8,
+        "Heading": 104.8,
+        "Speed": 12.79,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4745215,
+        "Longitude": 9.4183778,
+        "Timestamp": "12/5/2020 10:08:52",
+        "Altitude": 68.3,
+        "Accuracy": 4.6,
+        "Heading": 106.01,
+        "Speed": 17.52,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4743523,
+        "Longitude": 9.4193005,
+        "Timestamp": "12/5/2020 10:08:55",
+        "Altitude": 65.3,
+        "Accuracy": 4.5,
+        "Heading": 106.94,
+        "Speed": 19.19,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4741885,
+        "Longitude": 9.4203046,
+        "Timestamp": "12/5/2020 10:08:58",
+        "Altitude": 64.6,
+        "Accuracy": 4.9,
+        "Heading": 106,
+        "Speed": 22.32,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4740115,
+        "Longitude": 9.4214629,
+        "Timestamp": "12/5/2020 10:09:01",
+        "Altitude": 62.5,
+        "Accuracy": 4.6,
+        "Heading": 105,
+        "Speed": 23.91,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4738611,
+        "Longitude": 9.4226165,
+        "Timestamp": "12/5/2020 10:09:04",
+        "Altitude": 59.1,
+        "Accuracy": 4.3,
+        "Heading": 101.07,
+        "Speed": 23.53,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4737555,
+        "Longitude": 9.4237492,
+        "Timestamp": "12/5/2020 10:09:07",
+        "Altitude": 58.1,
+        "Accuracy": 4.6,
+        "Heading": 98.12,
+        "Speed": 23.4,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4737035,
+        "Longitude": 9.4248758,
+        "Timestamp": "12/5/2020 10:09:10",
+        "Altitude": 55.3,
+        "Accuracy": 5.2,
+        "Heading": 93.07,
+        "Speed": 23.37,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4736916,
+        "Longitude": 9.4260239,
+        "Timestamp": "12/5/2020 10:09:13",
+        "Altitude": 55.6,
+        "Accuracy": 4.9,
+        "Heading": 90.03,
+        "Speed": 23.76,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4736768,
+        "Longitude": 9.4271864,
+        "Timestamp": "12/5/2020 10:09:16",
+        "Altitude": 61.1,
+        "Accuracy": 5,
+        "Heading": 89.04,
+        "Speed": 24.06,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4736637,
+        "Longitude": 9.4283539,
+        "Timestamp": "12/5/2020 10:09:19",
+        "Altitude": 61.2,
+        "Accuracy": 4.7,
+        "Heading": 90.95,
+        "Speed": 23.7,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4736198,
+        "Longitude": 9.4294913,
+        "Timestamp": "12/5/2020 10:09:22",
+        "Altitude": 62.7,
+        "Accuracy": 5.6,
+        "Heading": 94.93,
+        "Speed": 23.1,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.473539,
+        "Longitude": 9.4305896,
+        "Timestamp": "12/5/2020 10:09:25",
+        "Altitude": 61.1,
+        "Accuracy": 5.9,
+        "Heading": 97.94,
+        "Speed": 22.63,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4734111,
+        "Longitude": 9.4316841,
+        "Timestamp": "12/5/2020 10:09:28",
+        "Altitude": 58.4,
+        "Accuracy": 6.1,
+        "Heading": 101.94,
+        "Speed": 22.61,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4732643,
+        "Longitude": 9.4327227,
+        "Timestamp": "12/5/2020 10:09:31",
+        "Altitude": 58,
+        "Accuracy": 6.1,
+        "Heading": 105,
+        "Speed": 22.25,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4730986,
+        "Longitude": 9.4337487,
+        "Timestamp": "12/5/2020 10:09:34",
+        "Altitude": 56.6,
+        "Accuracy": 5.8,
+        "Heading": 106,
+        "Speed": 21.77,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4729381,
+        "Longitude": 9.4347416,
+        "Timestamp": "12/5/2020 10:09:37",
+        "Altitude": 58.4,
+        "Accuracy": 6,
+        "Heading": 106,
+        "Speed": 21.62,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4728091,
+        "Longitude": 9.4357461,
+        "Timestamp": "12/5/2020 10:09:40",
+        "Altitude": 56.3,
+        "Accuracy": 5.6,
+        "Heading": 102.05,
+        "Speed": 21.99,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4727089,
+        "Longitude": 9.4368049,
+        "Timestamp": "12/5/2020 10:09:43",
+        "Altitude": 58.1,
+        "Accuracy": 8,
+        "Heading": 98.04,
+        "Speed": 22.36,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4726414,
+        "Longitude": 9.437911,
+        "Timestamp": "12/5/2020 10:09:46",
+        "Altitude": 57.4,
+        "Accuracy": 9.9,
+        "Heading": 96,
+        "Speed": 23.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4725726,
+        "Longitude": 9.4390254,
+        "Timestamp": "12/5/2020 10:09:49",
+        "Altitude": 57.1,
+        "Accuracy": 10.1,
+        "Heading": 96,
+        "Speed": 23.09,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4724789,
+        "Longitude": 9.4401331,
+        "Timestamp": "12/5/2020 10:09:52",
+        "Altitude": 57.7,
+        "Accuracy": 11.6,
+        "Heading": 98.87,
+        "Speed": 23.18,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4723787,
+        "Longitude": 9.4412703,
+        "Timestamp": "12/5/2020 10:09:55",
+        "Altitude": 58.5,
+        "Accuracy": 13.1,
+        "Heading": 98.9,
+        "Speed": 23.53,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4722773,
+        "Longitude": 9.4423862,
+        "Timestamp": "12/5/2020 10:09:58",
+        "Altitude": 60.2,
+        "Accuracy": 12.9,
+        "Heading": 96.14,
+        "Speed": 22.47,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4722047,
+        "Longitude": 9.4433963,
+        "Timestamp": "12/5/2020 10:10:01",
+        "Altitude": 61.3,
+        "Accuracy": 12.1,
+        "Heading": 96.92,
+        "Speed": 19.87,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4721349,
+        "Longitude": 9.4442149,
+        "Timestamp": "12/5/2020 10:10:04",
+        "Altitude": 60.5,
+        "Accuracy": 11.3,
+        "Heading": 101.46,
+        "Speed": 15.89,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.471881,
+        "Longitude": 9.4450006,
+        "Timestamp": "12/5/2020 10:10:07",
+        "Altitude": 58.6,
+        "Accuracy": 10.7,
+        "Heading": 130.54,
+        "Speed": 9.61,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4715362,
+        "Longitude": 9.4449124,
+        "Timestamp": "12/5/2020 10:10:13",
+        "Altitude": 59.5,
+        "Accuracy": 10.3,
+        "Heading": 169.09,
+        "Speed": 12.88,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4711004,
+        "Longitude": 9.4450619,
+        "Timestamp": "12/5/2020 10:10:16",
+        "Altitude": 60.2,
+        "Accuracy": 10.4,
+        "Heading": 165.04,
+        "Speed": 16.12,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4706125,
+        "Longitude": 9.4453093,
+        "Timestamp": "12/5/2020 10:10:19",
+        "Altitude": 66.3,
+        "Accuracy": 10.2,
+        "Heading": 162.06,
+        "Speed": 17.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4701561,
+        "Longitude": 9.4455917,
+        "Timestamp": "12/5/2020 10:10:22",
+        "Altitude": 67.4,
+        "Accuracy": 9.6,
+        "Heading": 160,
+        "Speed": 17.93,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4696699,
+        "Longitude": 9.4458871,
+        "Timestamp": "12/5/2020 10:10:25",
+        "Altitude": 67.2,
+        "Accuracy": 9.8,
+        "Heading": 160.08,
+        "Speed": 19.27,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4691673,
+        "Longitude": 9.4461964,
+        "Timestamp": "12/5/2020 10:10:28",
+        "Altitude": 67.8,
+        "Accuracy": 10.2,
+        "Heading": 161,
+        "Speed": 17.91,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4687124,
+        "Longitude": 9.4464636,
+        "Timestamp": "12/5/2020 10:10:31",
+        "Altitude": 68.7,
+        "Accuracy": 9.9,
+        "Heading": 162.93,
+        "Speed": 17.03,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4682803,
+        "Longitude": 9.4466447,
+        "Timestamp": "12/5/2020 10:10:34",
+        "Altitude": 71.7,
+        "Accuracy": 9.6,
+        "Heading": 166,
+        "Speed": 16.83,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4678609,
+        "Longitude": 9.4467804,
+        "Timestamp": "12/5/2020 10:10:37",
+        "Altitude": 77.3,
+        "Accuracy": 9.6,
+        "Heading": 168.96,
+        "Speed": 16.15,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4674412,
+        "Longitude": 9.4468965,
+        "Timestamp": "12/5/2020 10:10:40",
+        "Altitude": 80.8,
+        "Accuracy": 9.6,
+        "Heading": 170,
+        "Speed": 16.6,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4670058,
+        "Longitude": 9.4469914,
+        "Timestamp": "12/5/2020 10:10:43",
+        "Altitude": 81.3,
+        "Accuracy": 9.6,
+        "Heading": 173.91,
+        "Speed": 16.79,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4665514,
+        "Longitude": 9.4470426,
+        "Timestamp": "12/5/2020 10:10:46",
+        "Altitude": 80.2,
+        "Accuracy": 9.6,
+        "Heading": 175.95,
+        "Speed": 17.38,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4660781,
+        "Longitude": 9.4470778,
+        "Timestamp": "12/5/2020 10:10:49",
+        "Altitude": 81.8,
+        "Accuracy": 9.6,
+        "Heading": 177.95,
+        "Speed": 17.97,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4655944,
+        "Longitude": 9.4470556,
+        "Timestamp": "12/5/2020 10:10:52",
+        "Altitude": 82.7,
+        "Accuracy": 9.6,
+        "Heading": 180.96,
+        "Speed": 17.37,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4651448,
+        "Longitude": 9.4469972,
+        "Timestamp": "12/5/2020 10:10:55",
+        "Altitude": 83.9,
+        "Accuracy": 9.6,
+        "Heading": 183,
+        "Speed": 16.47,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4647116,
+        "Longitude": 9.4469292,
+        "Timestamp": "12/5/2020 10:10:58",
+        "Altitude": 84.3,
+        "Accuracy": 9.6,
+        "Heading": 185.91,
+        "Speed": 15.76,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4643166,
+        "Longitude": 9.4468312,
+        "Timestamp": "12/5/2020 10:11:01",
+        "Altitude": 85,
+        "Accuracy": 9.6,
+        "Heading": 187,
+        "Speed": 14.17,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4639581,
+        "Longitude": 9.4467187,
+        "Timestamp": "12/5/2020 10:11:04",
+        "Altitude": 86.6,
+        "Accuracy": 9.6,
+        "Heading": 190,
+        "Speed": 14.18,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.463558,
+        "Longitude": 9.4465758,
+        "Timestamp": "12/5/2020 10:11:07",
+        "Altitude": 87.7,
+        "Accuracy": 9.6,
+        "Heading": 192.9,
+        "Speed": 15.76,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4631392,
+        "Longitude": 9.4463599,
+        "Timestamp": "12/5/2020 10:11:10",
+        "Altitude": 84.9,
+        "Accuracy": 9.6,
+        "Heading": 194.95,
+        "Speed": 15.9,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4627551,
+        "Longitude": 9.4461637,
+        "Timestamp": "12/5/2020 10:11:13",
+        "Altitude": 86.3,
+        "Accuracy": 9.8,
+        "Heading": 196.87,
+        "Speed": 13.6,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4623744,
+        "Longitude": 9.4458874,
+        "Timestamp": "12/5/2020 10:11:18",
+        "Altitude": 80.8,
+        "Accuracy": 9.6,
+        "Heading": 195.9,
+        "Speed": 7.23,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4622112,
+        "Longitude": 9.4457349,
+        "Timestamp": "12/5/2020 10:11:22",
+        "Altitude": 80.4,
+        "Accuracy": 9.6,
+        "Heading": 182.05,
+        "Speed": 5.34,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4620611,
+        "Longitude": 9.4459841,
+        "Timestamp": "12/5/2020 10:11:26",
+        "Altitude": 81.4,
+        "Accuracy": 9.6,
+        "Heading": 103.79,
+        "Speed": 6.17,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4619845,
+        "Longitude": 9.4463311,
+        "Timestamp": "12/5/2020 10:11:29",
+        "Altitude": 83.5,
+        "Accuracy": 9.6,
+        "Heading": 114.44,
+        "Speed": 6.77,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4619542,
+        "Longitude": 9.446683,
+        "Timestamp": "12/5/2020 10:11:32",
+        "Altitude": 83.3,
+        "Accuracy": 9.6,
+        "Heading": 94.1,
+        "Speed": 6.01,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4619568,
+        "Longitude": 9.4470282,
+        "Timestamp": "12/5/2020 10:11:36",
+        "Altitude": 86.9,
+        "Accuracy": 9.8,
+        "Heading": 99.89,
+        "Speed": 4.32,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4621232,
+        "Longitude": 9.4471528,
+        "Timestamp": "12/5/2020 10:11:44",
+        "Altitude": 87.6,
+        "Accuracy": 10,
+        "Heading": 25.39,
+        "Speed": 3.38,
+        "SpeedAccuracy": 0
+      }
+    ],
+    "TripDuration": "46",
+    "TripDate": "12/5/2020 10:02:57.527",
+    "Transport": "2",
+    "MaxSpeed": 24.06,
+    "MinSpeed": -1,
+    "AverageSpeed": 15.3945614035088
+  },
+  {
+    "_id": "9780cde0-5a98-4865-8bab-6e5824195306",
+    "TripPositions": [
+      {
+        "Latitude": 56.4839442,
+        "Longitude": 9.6263801,
+        "Timestamp": "12/5/2020 10:30:22",
+        "Altitude": 90,
+        "Accuracy": 9.6,
+        "Heading": 350,
+        "Speed": 9.26,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4842545,
+        "Longitude": 9.6264868,
+        "Timestamp": "12/5/2020 10:30:25",
+        "Altitude": 65.6,
+        "Accuracy": 8.3,
+        "Heading": 23.44,
+        "Speed": 10.31,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4844917,
+        "Longitude": 9.6267753,
+        "Timestamp": "12/5/2020 10:30:28",
+        "Altitude": 66.1,
+        "Accuracy": 6.3,
+        "Heading": 29.02,
+        "Speed": 10.96,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4847526,
+        "Longitude": 9.6270735,
+        "Timestamp": "12/5/2020 10:30:31",
+        "Altitude": 71.2,
+        "Accuracy": 4.1,
+        "Heading": 31.85,
+        "Speed": 10.69,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4850113,
+        "Longitude": 9.6273948,
+        "Timestamp": "12/5/2020 10:30:35",
+        "Altitude": 72.9,
+        "Accuracy": 3.9,
+        "Heading": 41.66,
+        "Speed": 9.07,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4851979,
+        "Longitude": 9.6278066,
+        "Timestamp": "12/5/2020 10:30:38",
+        "Altitude": 79.9,
+        "Accuracy": 3.9,
+        "Heading": 49.04,
+        "Speed": 11.02,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4854003,
+        "Longitude": 9.6282377,
+        "Timestamp": "12/5/2020 10:30:41",
+        "Altitude": 78.9,
+        "Accuracy": 3.9,
+        "Heading": 50.96,
+        "Speed": 10.76,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4855902,
+        "Longitude": 9.6286127,
+        "Timestamp": "12/5/2020 10:30:45",
+        "Altitude": 80.7,
+        "Accuracy": 4,
+        "Heading": 50,
+        "Speed": 6.7,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4857336,
+        "Longitude": 9.6288664,
+        "Timestamp": "12/5/2020 10:30:49",
+        "Altitude": 87.7,
+        "Accuracy": 4.6,
+        "Heading": 34.81,
+        "Speed": 3.77,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.4859317,
+        "Longitude": 9.628751,
+        "Timestamp": "12/5/2020 10:30:59",
+        "Altitude": 90.2,
+        "Accuracy": 4.3,
+        "Heading": 359.38,
+        "Speed": 2.76,
+        "SpeedAccuracy": 0
+      },
+      {
+        "Latitude": 56.486092,
+        "Longitude": 9.6285599,
+        "Timestamp": "12/5/2020 10:32:29",
+        "Altitude": 95.8,
+        "Accuracy": 100.7,
+        "Heading": 350.74,
+        "Speed": 0.86,
+        "SpeedAccuracy": 0
+      }
+    ],
+    "TripDuration": "7",
+    "TripDate": "12/5/2020 10:30:22",
+    "Transport": "2",
+    "MaxSpeed": 11.02,
+    "MinSpeed": 0.86,
+    "AverageSpeed": 7.83272727272727
+  }
+]
