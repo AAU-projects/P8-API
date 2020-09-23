@@ -1,6 +1,10 @@
 name: .NET Core
 
-on: [push]
+on:
+  pull_request:
+    branches: 
+      - develop
+      - master
 
 jobs:
   test-and-build:
@@ -25,4 +29,5 @@ jobs:
     # Build
     - name: Build with dotnet
       working-directory: P8-API
-      run: dotnet build
+      run: dotnet build --configuration Release
+    

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace P8_API.Services
 {
-    public interface IDatabaseService
+    public interface ITripService
     {
-        User GetUser(string id);
-        List<User> GetAllUsers();
+        Transport PredictTransport(Trip trip);
     }
 }
