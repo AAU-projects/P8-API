@@ -23,6 +23,7 @@ namespace P8_API.Services
 
         public Transport PredictTransport(Trip trip)
         {
+            trip.CalculateSpeed();
             Transport prediction = Transport.Unknown;
 
             if (IsWithin(trip.AverageSpeed, 0, 3) && trip.TopMedian < 6)
@@ -40,7 +41,7 @@ namespace P8_API.Services
             } else
             {
                 double percentageTransitStops = DetectTransitStops(trip);
-                if (IsWithin(trip.AverageSpeed, 0, 30) && percentageTransitStops >= 0.1)
+                if (IsWithin(trip.AverageSpeed, 0, 30) && percentageTransitStops >= 0.075)
                     prediction = Transport.Public;
                 else
                     prediction = Transport.Car;
@@ -55,7 +56,7 @@ namespace P8_API.Services
 
             foreach (Position pos in trip.TripPositions)
             {
-                if (pos.Speed == 0 && pos.Accuracy <= 30)
+                if (pos.Speed < 8 && pos.Accuracy <= 30)
                 {
                     stops++;
 

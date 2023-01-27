@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Moq;
 using NUnit.Framework;
@@ -37,6 +36,7 @@ namespace P8_API_Tests.Controllers
             User mockUser = new User("13439332", "exist@gmail.com", 24.0);
             mockUser.UpdatePincode("1234", DateTime.Now.AddDays(365));
             _userService.Setup(x => x.Get("exist@gmail.com")).Returns(mockUser);
+            _userService.Setup(x => x.Get("existID")).Returns(mockUser);
         }
 
         [TestCase("1", ExpectedResult = true)]
@@ -69,20 +69,18 @@ namespace P8_API_Tests.Controllers
             Assert.AreEqual(result.Count, 2);
         }
 
-        [Test]
-        public void UpdateUser()
+        [TestCase("1", "notexist@gmail.com", "1234", 24, ExpectedResult = StatusCodes.Status404NotFound)]
+        [TestCase("existID", "exist@gmail.com", "1234", 24, ExpectedResult = StatusCodes.Status200OK)]
+        public int? UpdateUser(string id, string email, string pincode, double carEmission)
         {
             // Arrange
-            User mockUser = new User("1", "test1@gmail.com", 24.0);
-            User UpdatedUser = new User("1", "testnew@gmail.com", 24.0);
-            _userService.Setup(x => x.Get("1")).Returns(mockUser);
-            _userService.Setup(x => x.UpdateEmail("1", UpdatedUser.Email)).Callback((string id, string email) => mockUser.Email = email);
-            
+            User mockUser = new User(id, email, carEmission);
+
             // Act
-            _controller.Put(UpdatedUser);
+            IStatusCodeActionResult result = (IStatusCodeActionResult)_controller.Put(mockUser);
 
             // Assert
-            Assert.AreEqual(mockUser.Email, UpdatedUser.Email);
+            return result.StatusCode;
         }
 
         [TestCase("1", "test@gmail.com", "1234", 24, ExpectedResult = StatusCodes.Status400BadRequest)]

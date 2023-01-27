@@ -1,8 +1,10 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace P8_API.Models
 {
+    [ExcludeFromCodeCoverage]
     public class TripDocument
     {
         [BsonId]

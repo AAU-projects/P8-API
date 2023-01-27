@@ -23,11 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Assets\tripData.json">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

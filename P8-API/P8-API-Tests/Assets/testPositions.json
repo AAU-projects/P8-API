@@ -1,0 +1,52 @@
+[
+	{
+		"Latitude": 57.0299084,
+		"Longitude": 9.9792562,
+		"Timestamp": "13/5/2020 07:32:40.392",
+		"Altitude": 72.5,
+		"Accuracy": 22.8,
+		"Heading": 115.04,
+		"Speed": 0.01,
+		"SpeedAccuracy": 0
+	},
+	{
+		"Latitude": 57.0282921,
+		"Longitude": 9.980336,
+		"Timestamp": "13/5/2020 07:49:23",
+		"Altitude": 71.1,
+		"Accuracy": 7.5,
+		"Heading": 187.22,
+		"Speed": 5.53,
+		"SpeedAccuracy": 0
+	},
+	{
+		"Latitude": 57.0282491,
+		"Longitude": 9.9802515,
+		"Timestamp": "13/5/2020 07:49:27",
+		"Altitude": 71.1,
+		"Accuracy": 13.8,
+		"Heading": 205.35,
+		"Speed": 2.41,
+		"SpeedAccuracy": 0
+	},
+	{
+		"Latitude": 57.0281326,
+		"Longitude": 9.9802286,
+		"Timestamp": "13/5/2020 07:49:30",
+		"Altitude": 71.1,
+		"Accuracy": 14.4,
+		"Heading": 192.76,
+		"Speed": 3.06,
+		"SpeedAccuracy": 0
+	},
+	{
+		"Latitude": 57.0279448,
+		"Longitude": 9.9803219,
+		"Timestamp": "13/5/2020 07:49:36",
+		"Altitude": 71.1,
+		"Accuracy": 10,
+		"Heading": 122.68,
+		"Speed": 4.06,
+		"SpeedAccuracy": 0
+	}
+]
